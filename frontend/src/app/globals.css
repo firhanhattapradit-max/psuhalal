@@ -1,0 +1,113 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-islamic-green: #059669; /* emerald-600 */
+  --color-gold: #f59e0b; /* amber-500 */
+  --font-noto-thai: 'Noto Sans Thai', sans-serif;
+  --font-noto-arabic: 'Noto Kufi Arabic', sans-serif;
+}
+
+body {
+  font-family: var(--font-noto-thai), system-ui, sans-serif;
+}
+
+/* RTL Utilities */
+html[dir='rtl'] {
+  font-family: var(--font-noto-arabic), system-ui, sans-serif;
+  text-align: right;
+}
+
+html[dir='rtl'] .ml-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Custom Scrollbar (Thin, Green) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-islamic-green); 
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+/* Animations */
+@keyframes unlockBadge {
+  0% { transform: scale(0.5) rotate(-15deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+.animate-unlock {
+  animation: unlockBadge 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+  70% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 15px rgba(5, 150, 105, 0); }
+  100% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+.location-dot {
+  animation: pulseRing 2s infinite;
+}
+
+/* Arabic Font Rendering Improvements */
+.arabic-text {
+  font-feature-settings: "liga" 1, "dlig" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Leaflet Map Z-Index Fixes */
+.leaflet-container {
+  z-index: 10 !important;
+}
+.leaflet-control-container .leaflet-top,
+.leaflet-control-container .leaflet-bottom {
+  z-index: 15 !important;
+}
+
+/* Marker Interpolation Smooth Animation */
+.leaflet-marker-icon {
+  transition: transform 0.3s linear, opacity 0.3s ease;
+}
+
+/* Print Styles for QR Codes & Tickets */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Loading Skeleton Animation */
+.skeleton-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.dark .skeleton-loading {
+  background: linear-gradient(90deg, #2d3748 25%, #4a5568 50%, #2d3748 75%);
+  background-size: 200% 100%;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

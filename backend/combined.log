@@ -1,0 +1,2 @@
+{"level":"info","message":"Server listening on port 3001","timestamp":"2026-08-25T16:03:48.192Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis connection error","stack":"AggregateError\n    at internalConnectMultiple (node:net:1339:18)\n    at afterConnectMultiple (node:net:1942:7)","timestamp":"2026-08-25T16:03:48.241Z"}

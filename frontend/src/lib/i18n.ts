@@ -268,7 +268,7 @@ const rawResources = {
     },
     prayer: {
       prayer_times: 'เวลาละหมาดประจำวัน',
-      fajr: 'ฟัจร์ (Fajr)',
+      fajr: 'ซุบฮี (Subh / Fajr)',
       dhuhr: 'ดุฮฺริ (Dhuhr)',
       asr: 'อัสริ (Asr)',
       maghrib: 'มัฆริบ (Maghrib)',

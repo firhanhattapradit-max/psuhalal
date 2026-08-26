@@ -2,82 +2,276 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '@/lib/i18n';
+import { calculateRealPrayerTimes, calculateQiblaBearing, detectCityName, PrayerTimesResult } from '@/lib/prayerCalc';
+import { Compass, MapPin, RefreshCw, Navigation } from 'lucide-react';
+
+const PRESET_CITIES = [
+  { name: 'Pattani (ปัตตานี)', lat: 6.8691, lng: 101.2503 },
+  { name: 'Yala (ยะลา)', lat: 6.5411, lng: 101.2804 },
+  { name: 'Narathiwat (นราธิวาส)', lat: 6.4255, lng: 101.8253 },
+  { name: 'Songkhla (สงขลา / หาดใหญ่)', lat: 7.1988, lng: 100.5951 },
+  { name: 'Bangkok (กรุงเทพฯ)', lat: 13.7563, lng: 100.5018 },
+  { name: 'Phuket (ภูเก็ต)', lat: 7.8804, lng: 98.3923 },
+];
 
 export default function PrayerPage() {
   const { t } = useTranslation();
-  const [qiblaDir, setQiblaDir] = useState(0);
 
-  const prayers = [
-    { key: 'fajr', time: '05:12 AM', name: t('prayer.fajr', 'Fajr'), current: false },
-    { key: 'dhuhr', time: '12:34 PM', name: t('prayer.dhuhr', 'Dhuhr'), current: true },
-    { key: 'asr', time: '03:45 PM', name: t('prayer.asr', 'Asr'), current: false },
-    { key: 'maghrib', time: '06:21 PM', name: t('prayer.maghrib', 'Maghrib'), current: false },
-    { key: 'isha', time: '07:34 PM', name: t('prayer.isha', 'Isha'), current: false }
-  ];
+  // Coordinates state (Default to Pattani if permission pending)
+  const [coords, setCoords] = useState<{ lat: number; lng: number }>({ lat: 6.8691, lng: 101.2503 });
+  const [locationName, setLocationName] = useState<string>('Pattani, TH');
+  const [isUsingGPS, setIsUsingGPS] = useState<boolean>(false);
+  const [loadingLoc, setLoadingLoc] = useState<boolean>(false);
+
+  // Compass orientation
+  const [deviceHeading, setDeviceHeading] = useState<number>(0);
+  const [qiblaBearing, setQiblaBearing] = useState<number>(291.5); // Default Pattani Qibla angle ~291.5 deg
+
+  // Calculated times
+  const [prayerData, setPrayerData] = useState<PrayerTimesResult | null>(null);
+
+  // 1. Get browser location
+  const fetchGPSLocation = () => {
+    if (typeof window === 'undefined' || !navigator.geolocation) return;
+    setLoadingLoc(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        setCoords({ lat, lng });
+        setIsUsingGPS(true);
+        setLoadingLoc(false);
+
+        // Try reverse geocoding via Nominatim
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+          .then(res => res.json())
+          .then(data => {
+            const city = data.address?.city || data.address?.town || data.address?.province || data.address?.state;
+            const country = data.address?.country_code?.toUpperCase() || 'TH';
+            if (city) {
+              setLocationName(`${city}, ${country}`);
+            } else {
+              setLocationName(detectCityName(lat, lng));
+            }
+          })
+          .catch(() => {
+            setLocationName(detectCityName(lat, lng));
+          });
+      },
+      (err) => {
+        console.warn('Geolocation error or denied:', err);
+        setLoadingLoc(false);
+        setLocationName(detectCityName(coords.lat, coords.lng));
+      },
+      { timeout: 10000, enableHighAccuracy: true }
+    );
+  };
 
   useEffect(() => {
+    fetchGPSLocation();
+  }, []);
+
+  // 2. Recalculate prayer times and Qibla when coordinates change
+  useEffect(() => {
+    const data = calculateRealPrayerTimes(coords.lat, coords.lng, new Date());
+    setPrayerData(data);
+
+    const qBearing = calculateQiblaBearing(coords.lat, coords.lng);
+    setQiblaBearing(qBearing);
+  }, [coords]);
+
+  // Timer interval to update prayer calculation & countdown every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPrayerData(calculateRealPrayerTimes(coords.lat, coords.lng, new Date()));
+    }, 30000);
+    return () => clearInterval(interval);
+  }, [coords]);
+
+  // Device Orientation Handler for mobile compass
+  useEffect(() => {
     const handleOrientation = (event: DeviceOrientationEvent) => {
-      let compassHeading = event.alpha || 0;
-      setQiblaDir(compassHeading);
+      let heading = event.alpha || 0;
+      // Handle webkitAbsolute / iOS
+      if ((event as any).webkitCompassHeading) {
+        heading = (event as any).webkitCompassHeading;
+      }
+      setDeviceHeading(heading);
     };
 
     if (typeof window !== 'undefined' && window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', handleOrientation);
     }
     return () => {
-      if (typeof window !== 'undefined') window.removeEventListener('deviceorientation', handleOrientation);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('deviceorientation', handleOrientation);
+      }
     };
   }, []);
 
+  // Preset City Change
+  const handleCitySelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selected = PRESET_CITIES.find(c => c.name === e.target.value);
+    if (selected) {
+      setCoords({ lat: selected.lat, lng: selected.lng });
+      setLocationName(selected.name.split(' ')[0] + ', TH');
+      setIsUsingGPS(false);
+    }
+  };
+
+  const prayersList = [
+    { key: 'fajr', time: prayerData?.fajr || '05:00 AM', name: t('prayer.fajr', 'Fajr') },
+    { key: 'dhuhr', time: prayerData?.dhuhr || '12:20 PM', name: t('prayer.dhuhr', 'Dhuhr') },
+    { key: 'asr', time: prayerData?.asr || '03:30 PM', name: t('prayer.asr', 'Asr') },
+    { key: 'maghrib', time: prayerData?.maghrib || '06:30 PM', name: t('prayer.maghrib', 'Maghrib') },
+    { key: 'isha', time: prayerData?.isha || '07:40 PM', name: t('prayer.isha', 'Isha') },
+  ];
+
+  // Calculated compass rotation angle (Relative to North & Qibla)
+  const compassRotation = (qiblaBearing - deviceHeading + 360) % 360;
+
   return (
-    <div className="max-w-4xl mx-auto p-4 md:p-6 w-full flex flex-col md:flex-row gap-6">
-      {/* Qibla Compass */}
-      <div className="flex-1 bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6 flex flex-col items-center justify-center min-h-[320px] border border-gray-100 dark:border-gray-700">
-        <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-          <span>🧭</span>
-          <span>{t('prayer.qibla', 'Qibla Compass')}</span>
-        </h2>
-        <div className="relative w-48 h-48 rounded-full border-4 border-emerald-500 flex items-center justify-center shadow-inner bg-emerald-50/50 dark:bg-emerald-950/20">
-          <div 
-            className="w-full h-full rounded-full flex items-center justify-center transition-transform duration-200"
-            style={{ transform: `rotate(${-qiblaDir}deg)` }}
-          >
-            <div className="w-1 h-full bg-transparent relative">
-              <div className="absolute top-2 -left-3 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[24px] border-l-transparent border-r-transparent border-b-emerald-600"></div>
-            </div>
-          </div>
-          <div className="absolute text-center">
-            <span className="text-4xl">🕋</span>
-          </div>
+    <div className="max-w-4xl mx-auto p-4 md:p-6 w-full space-y-6">
+      
+      {/* Geolocation Control Bar */}
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="flex items-center gap-2 text-sm">
+          <MapPin className="w-5 h-5 text-emerald-600 animate-bounce" />
+          <span className="font-bold text-gray-700 dark:text-gray-200">
+            {t('prayer.current_location', 'ตำแหน่งของคุณ:')}
+          </span>
+          <span className="font-extrabold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+            {locationName} {isUsingGPS ? '📡 (GPS)' : ''}
+          </span>
         </div>
-        <p className="mt-6 text-gray-500 text-xs text-center leading-relaxed">
-          {t('prayer.direction', 'Rotate your device to align with Qibla (Makkah).')}
-        </p>
+
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <select 
+            onChange={handleCitySelect} 
+            className="text-xs font-bold p-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 outline-none cursor-pointer flex-1"
+          >
+            <option value="">-- {t('prayer.select_city', 'เลือกเมืองทดสอบ')} --</option>
+            {PRESET_CITIES.map(c => (
+              <option key={c.name} value={c.name}>{c.name}</option>
+            ))}
+          </select>
+
+          <button 
+            onClick={fetchGPSLocation}
+            disabled={loadingLoc}
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition disabled:opacity-50 whitespace-nowrap"
+            title="Update Location from GPS"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${loadingLoc ? 'animate-spin' : ''}`} />
+            <span>{loadingLoc ? t('common.loading', 'กำลังหาพิกัด...') : t('prayer.use_gps', 'ใช้พิกัดจริง')}</span>
+          </button>
+        </div>
       </div>
 
-      <div className="flex-1 space-y-6">
-        {/* Today's Prayers */}
-        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6 border border-gray-100 dark:border-gray-700 space-y-4">
-          <h2 className="text-xl font-bold border-b border-gray-100 dark:border-gray-700 pb-3 flex justify-between items-center">
-            <span>{t('prayer.prayer_times', "Today's Prayers")}</span>
-            <span className="text-emerald-600 font-semibold text-xs bg-emerald-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
-              📍 Pattani, TH
-            </span>
-          </h2>
-          <div className="space-y-2">
-            {prayers.map((prayer) => (
-              <div 
-                key={prayer.key}
-                className={`flex justify-between items-center p-3 rounded-2xl transition ${
-                  prayer.current 
-                    ? 'bg-emerald-600 text-white font-bold shadow-md scale-[1.02]' 
-                    : 'bg-gray-50 dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-700/50'
-                }`}
-              >
-                <span className="text-sm">{prayer.name}</span>
-                <span className="text-sm font-mono">{prayer.time}</span>
+      <div className="flex flex-col md:flex-row gap-6">
+        
+        {/* Qibla Compass Card */}
+        <div className="flex-1 bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6 flex flex-col items-center justify-between min-h-[360px] border border-gray-100 dark:border-gray-700">
+          <div className="text-center">
+            <h2 className="text-xl font-bold flex items-center justify-center gap-2">
+              <Compass className="w-6 h-6 text-emerald-600" />
+              <span>{t('prayer.qibla', 'เข็มทิศกิบลัต')}</span>
+            </h2>
+            <p className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+              ทิศกิบลัต: {qiblaBearing.toFixed(1)}° (จากทิศเหนือ)
+            </p>
+          </div>
+
+          {/* Compass Dial */}
+          <div className="relative w-52 h-52 my-4 rounded-full border-4 border-emerald-500 flex items-center justify-center shadow-inner bg-gradient-to-b from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
+            {/* North Mark */}
+            <div className="absolute top-2 text-[10px] font-extrabold text-red-500">N</div>
+            <div className="absolute right-3 text-[10px] font-bold text-gray-400">E</div>
+            <div className="absolute bottom-2 text-[10px] font-bold text-gray-400">S</div>
+            <div className="absolute left-3 text-[10px] font-bold text-gray-400">W</div>
+
+            {/* Rotating Qibla Pointer */}
+            <div 
+              className="w-full h-full rounded-full flex items-center justify-center transition-transform duration-300"
+              style={{ transform: `rotate(${compassRotation}deg)` }}
+            >
+              <div className="w-1 h-full relative">
+                {/* Pointer Arrow */}
+                <div className="absolute top-3 -left-3 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[24px] border-l-transparent border-r-transparent border-b-emerald-600 drop-shadow-md"></div>
               </div>
-            ))}
+            </div>
+
+            {/* Center Kaaba Icon */}
+            <div className="absolute text-center flex flex-col items-center justify-center pointer-events-none">
+              <span className="text-4xl shadow-sm">🕋</span>
+              <span className="text-[10px] font-extrabold text-emerald-800 dark:text-emerald-200 mt-1 bg-white/80 dark:bg-gray-900/80 px-2 py-0.5 rounded-full border">
+                {qiblaBearing.toFixed(0)}° NW
+              </span>
+            </div>
+          </div>
+
+          <p className="text-gray-500 dark:text-gray-400 text-xs text-center leading-relaxed">
+            {t('prayer.direction', 'หมุนอุปกรณ์ของคุณให้ตรงกับทิศทางมักกะฮ์')}
+          </p>
+        </div>
+
+        {/* Today's Real Prayer Times List */}
+        <div className="flex-1 space-y-6">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6 border border-gray-100 dark:border-gray-700 space-y-4">
+            <div className="border-b border-gray-100 dark:border-gray-700 pb-3 flex justify-between items-center">
+              <div>
+                <h2 className="text-xl font-extrabold">{t('prayer.prayer_times', 'เวลาละหมาดประจำวัน')}</h2>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  คำนวณตามพิกัดจริง ({coords.lat.toFixed(3)}°, {coords.lng.toFixed(3)}°)
+                </p>
+              </div>
+              <span className="text-emerald-700 dark:text-emerald-400 font-extrabold text-xs bg-emerald-50 dark:bg-emerald-950 px-3 py-1.5 rounded-full border border-emerald-200 dark:border-emerald-800">
+                📍 {locationName}
+              </span>
+            </div>
+
+            <div className="space-y-2.5">
+              {prayersList.map((prayer) => {
+                const isCurrent = prayerData?.currentKey === prayer.key;
+                const isNext = prayerData?.nextKey === prayer.key;
+
+                return (
+                  <div 
+                    key={prayer.key}
+                    className={`flex justify-between items-center p-3.5 rounded-2xl transition-all duration-300 ${
+                      isCurrent 
+                        ? 'bg-emerald-600 text-white font-extrabold shadow-md scale-[1.02] border-2 border-emerald-400' 
+                        : isNext
+                        ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border border-emerald-200 dark:border-emerald-800'
+                        : 'bg-gray-50 dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-700/50 text-gray-800 dark:text-gray-200 font-semibold'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">{prayer.name}</span>
+                      {isCurrent && (
+                        <span className="text-[10px] bg-white text-emerald-800 px-2 py-0.5 rounded-full font-extrabold uppercase">
+                          เวลาปัจจุบัน
+                        </span>
+                      )}
+                      {isNext && !isCurrent && (
+                        <span className="text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded-full font-bold">
+                          ถัดไป ({prayerData?.minutesUntilNext} นาที)
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-sm font-mono font-bold tabular-nums">{prayer.time}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Sunrise Display */}
+            {prayerData && (
+              <div className="pt-2 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-xs text-slate-500 font-bold">
+                <span>🌅 {t('prayer.sunrise', 'อาทิตย์ขึ้น (Sunrise)')}</span>
+                <span className="font-mono text-slate-700 dark:text-slate-300">{prayerData.sunrise}</span>
+              </div>
+            )}
           </div>
         </div>
       </div>

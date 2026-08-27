@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Noto_Sans_Thai, Noto_Kufi_Arabic } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/NavBar';
@@ -6,12 +6,18 @@ import NavBar from '@/components/NavBar';
 const notoSansThai = Noto_Sans_Thai({ subsets: ['thai', 'latin'], variable: '--font-noto-thai' });
 const notoArabic = Noto_Kufi_Arabic({ subsets: ['arabic'], variable: '--font-noto-arabic' });
 
+export const viewport: Viewport = {
+  themeColor: '#059669',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: 'Smart Halal Mobility & Tourism Platform',
   description: 'A comprehensive platform for halal tourism and mobility in Southern Thailand.',
-  themeColor: '#059669',
   manifest: '/manifest.json',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   openGraph: {
     title: 'Smart Halal Mobility',
     description: 'Explore Southern Thailand with confidence.',

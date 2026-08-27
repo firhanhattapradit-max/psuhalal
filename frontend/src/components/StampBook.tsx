@@ -143,11 +143,12 @@ const useBadges = (userId: string, authToken: string) => {
           description: t('gamification.badge_2_desc', 'Try 10 certified Halal restaurants.'),
           badge_image_url: '🍲',
           badge_name: t('gamification.badge_2_name', 'Gastronomy Lover'),
-          is_unlocked: false,
+          is_unlocked: true,
+          unlocked_at: new Date().toISOString(),
           reward_points: 1000,
           required_pois_count: 10,
-          completed_pois_count: 7,
-          progress_percentage: 70
+          completed_pois_count: 10,
+          progress_percentage: 100
         },
         {
           id: '3',
@@ -156,11 +157,12 @@ const useBadges = (userId: string, authToken: string) => {
           description: t('gamification.badge_3_desc', 'Attend 3 local craft workshops.'),
           badge_image_url: '🎨',
           badge_name: t('gamification.badge_3_name', 'Artisan Friend'),
-          is_unlocked: false,
+          is_unlocked: true,
+          unlocked_at: new Date().toISOString(),
           reward_points: 300,
           required_pois_count: 3,
-          completed_pois_count: 1,
-          progress_percentage: 33
+          completed_pois_count: 3,
+          progress_percentage: 100
         }
       ]);
       setLoading(false);

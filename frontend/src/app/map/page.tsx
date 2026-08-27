@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '@/lib/i18n';
+import { BUS_STATIONS, ROUTE_CONNECTIONS, PROVINCE_COLORS, BusStation, Province } from '@/lib/busStations';
 
-// Dynamically import the map to avoid SSR issues with Leaflet
 const LiveMap = dynamic(() => import('@/components/LiveMap').then(mod => mod.default || mod), {
   ssr: false,
   loading: () => (
@@ -14,88 +14,174 @@ const LiveMap = dynamic(() => import('@/components/LiveMap').then(mod => mod.def
   ),
 });
 
+const PROVINCE_NAMES: Record<Province, { th: string; en: string; emoji: string }> = {
+  pattani: { th: 'ปัตตานี', en: 'Pattani', emoji: '🟢' },
+  yala: { th: 'ยะลา', en: 'Yala', emoji: '🟡' },
+  narathiwat: { th: 'นราธิวาส', en: 'Narathiwat', emoji: '🔵' },
+};
+
 export default function MapPage() {
   const { t } = useTranslation();
   const [userLoc, setUserLoc] = useState<{lat: number, lng: number} | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [filterProvince, setFilterProvince] = useState<Province | 'all'>('all');
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => setUserLoc({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-        (err) => console.error(err)
+        () => {}
       );
     }
   }, []);
 
+  const filteredStations = BUS_STATIONS.filter(s => {
+    const matchProvince = filterProvince === 'all' || s.province === filterProvince;
+    const matchSearch = searchText === '' ||
+      s.name_th.toLowerCase().includes(searchText.toLowerCase()) ||
+      s.name_en.toLowerCase().includes(searchText.toLowerCase()) ||
+      s.district.toLowerCase().includes(searchText.toLowerCase());
+    return matchProvince && matchSearch;
+  });
+
+  const majorStations = filteredStations.filter(s => s.type === 'major');
+  const minorStations = filteredStations.filter(s => s.type === 'minor');
+
   return (
     <div className="relative w-full h-[calc(100vh-64px)] flex overflow-hidden">
-      {/* Sidebar */}
-      <aside className={`absolute md:relative z-20 w-80 h-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+      {/* ── Sidebar ── */}
+      <aside className={`absolute md:relative z-20 w-80 h-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'} flex flex-col`}>
         <div className="p-4 flex flex-col h-full">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-extrabold text-emerald-800 dark:text-emerald-400">
-              🛺 {t('map.transit_hub', 'Transit Hub')}
+          {/* Header */}
+          <div className="flex justify-between items-center mb-3">
+            <h2 className="text-lg font-extrabold text-emerald-800 dark:text-emerald-400">
+              🚌 สถานี บขส. 3 จังหวัด
             </h2>
             <button className="md:hidden p-2 rounded-lg text-gray-500 hover:bg-gray-100" onClick={() => setSidebarOpen(false)}>✕</button>
           </div>
-          
-          <div className="mb-4">
-            <label className="block text-xs font-bold text-gray-600 dark:text-gray-400 mb-1.5 uppercase tracking-wider">
-              {t('map.select_route', 'Select Route')}
-            </label>
-            <select className="w-full p-2.5 text-sm font-semibold border rounded-xl dark:bg-gray-800 dark:border-gray-700 outline-none focus:ring-2 focus:ring-emerald-500">
-              <option>Pattani Central - Yala (ปัตตานี - ยะลา)</option>
-              <option>Narathiwat City Loop (สายเมืองนราธิวาส)</option>
-              <option>Airport Shuttle (รถรับส่งสนามบิน)</option>
-            </select>
-          </div>
 
-          <div className="flex-1 overflow-y-auto space-y-4">
-            <div className="p-3.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-2xl shadow-sm">
-              <h3 className="font-bold text-emerald-900 dark:text-emerald-300 text-sm">🚌 {t('map.vehicle_num', 'Vehicle #102')}</h3>
-              <p className="text-xs text-emerald-700 dark:text-emerald-400 font-medium mt-1">
-                {t('map.eta_desc', 'ETA: 5 mins (1.2km away)')}
-              </p>
-            </div>
-            <div className="p-3.5 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-2xl shadow-sm">
-              <h3 className="font-bold text-blue-900 dark:text-blue-300 text-sm">🕌 {t('prayer.next_prayer', 'Next Prayer')}: {t('prayer.asr', 'Asr')}</h3>
-              <p className="text-xs text-blue-700 dark:text-blue-400 font-medium mt-1">
-                {t('map.starts_in', 'Starts in 45 mins')}
-              </p>
-            </div>
-          </div>
+          {/* Search */}
+          <input
+            type="text"
+            placeholder="🔍 ค้นหาสถานี..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="w-full p-2.5 text-sm font-semibold border rounded-xl dark:bg-gray-800 dark:border-gray-700 outline-none focus:ring-2 focus:ring-emerald-500 mb-3"
+          />
 
-          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-            <button className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-extrabold transition shadow-md flex items-center justify-center gap-2">
-              <span>📍</span>
-              <span>{t('map.quick_checkin', 'Quick Check-in (Scan QR)')}</span>
+          {/* Province Filter */}
+          <div className="flex gap-1.5 mb-3 flex-wrap">
+            <button
+              onClick={() => setFilterProvince('all')}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition ${filterProvince === 'all' ? 'bg-emerald-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}
+            >
+              ทั้งหมด ({BUS_STATIONS.length})
             </button>
+            {(Object.entries(PROVINCE_NAMES) as [Province, typeof PROVINCE_NAMES[Province]][]).map(([key, val]) => (
+              <button
+                key={key}
+                onClick={() => setFilterProvince(key)}
+                className={`px-3 py-1 rounded-full text-xs font-bold transition ${filterProvince === key ? 'text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}
+                style={filterProvince === key ? { backgroundColor: PROVINCE_COLORS[key] } : {}}
+              >
+                {val.emoji} {val.th}
+              </button>
+            ))}
+          </div>
+
+          {/* Station List */}
+          <div className="flex-1 overflow-y-auto space-y-2 pr-1">
+            {/* Major */}
+            {majorStations.length > 0 && (
+              <>
+                <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1">⭐ สถานีหลัก ({majorStations.length})</div>
+                {majorStations.map(station => (
+                  <StationCard key={station.id} station={station} />
+                ))}
+              </>
+            )}
+
+            {/* Minor */}
+            {minorStations.length > 0 && (
+              <>
+                <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1 mt-3">📍 จุดจอดย่อย ({minorStations.length})</div>
+                {minorStations.map(station => (
+                  <StationCard key={station.id} station={station} />
+                ))}
+              </>
+            )}
+
+            {/* Local Stops */}
+            {filteredStations.filter(s => s.type === 'local_stop').length > 0 && (
+              <>
+                <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1 mt-3">🚩 จุดจอดชุมชน / ตลาด ({filteredStations.filter(s => s.type === 'local_stop').length})</div>
+                {filteredStations.filter(s => s.type === 'local_stop').map(station => (
+                  <StationCard key={station.id} station={station} />
+                ))}
+              </>
+            )}
+
+            {filteredStations.length === 0 && (
+              <div className="text-center text-gray-400 text-sm py-8">ไม่พบสถานีที่ค้นหา</div>
+            )}
+          </div>
+
+          {/* Route summary */}
+          <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-800">
+            <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-2">🛤️ เส้นทางหลัก</div>
+            <div className="space-y-1.5">
+              {ROUTE_CONNECTIONS.map(route => (
+                <div key={route.id} className="flex items-center gap-2 text-xs">
+                  <div className="w-3 h-1 rounded-full" style={{ backgroundColor: route.color }} />
+                  <span className="font-bold text-gray-700 dark:text-gray-300">{route.name_th}</span>
+                  <span className="text-gray-400 ml-auto">{route.stationIds.length} จุด</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </aside>
 
-      {/* Map Container */}
+      {/* ── Map ── */}
       <div className="flex-1 relative z-10 h-full">
-        {/* Mobile Sidebar Toggle */}
-        <button 
+        <button
           onClick={() => setSidebarOpen(true)}
-          className="md:hidden absolute top-4 left-4 z-30 px-3.5 py-2 bg-white dark:bg-gray-800 rounded-xl shadow-md font-bold text-xs text-gray-800 dark:text-white flex items-center gap-2"
+          className="md:hidden absolute top-14 left-4 z-30 px-3.5 py-2 bg-white dark:bg-gray-800 rounded-xl shadow-md font-bold text-xs text-gray-800 dark:text-white flex items-center gap-2"
         >
-          ☰ {t('map.transit_hub', 'Transit Hub')}
+          ☰ สถานี บขส.
         </button>
-        
-        {/* Route Selector Dropdown on top of map */}
-        <div className="hidden md:flex absolute top-4 left-1/2 transform -translate-x-1/2 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-gray-200/80 dark:border-gray-700 items-center gap-2 text-xs">
-          <span className="font-bold text-gray-600 dark:text-gray-300">{t('map.quick_filter', 'Quick Filter:')}</span>
-          <select className="border-none bg-transparent outline-none cursor-pointer font-bold text-emerald-700 dark:text-emerald-400">
-            <option>{t('map.all_vehicles', 'All Vehicles')}</option>
-            <option>{t('map.mosques', 'Mosques')}</option>
-            <option>{t('map.halal_food', 'Halal Food')}</option>
-          </select>
-        </div>
 
-        <LiveMap userLocation={userLoc} />
+        <LiveMap userLocation={userLoc} initialZoom={9} />
+      </div>
+    </div>
+  );
+}
+
+function StationCard({ station }: { station: BusStation }) {
+  const isMajor = station.type === 'major';
+  const color = PROVINCE_COLORS[station.province];
+
+  return (
+    <div
+      className={`p-3 rounded-xl border cursor-pointer transition-all hover:shadow-md hover:scale-[1.01] ${
+        isMajor
+          ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800'
+          : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+      }`}
+    >
+      <div className="flex items-start gap-2">
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0 mt-0.5"
+          style={{ backgroundColor: color + '20', border: `2px solid ${color}` }}
+        >
+          {isMajor ? '🚏' : station.type === 'local_stop' ? '🚩' : '📍'}
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-xs font-bold text-gray-900 dark:text-gray-100 leading-tight truncate">{station.name_th}</h3>
+          <p className="text-[10px] text-gray-500 mt-0.5">{station.district}</p>
+          <p className="text-[10px] text-gray-400 mt-0.5 line-clamp-2">{station.description_th}</p>
+        </div>
       </div>
     </div>
   );

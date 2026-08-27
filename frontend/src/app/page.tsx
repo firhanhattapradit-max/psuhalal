@@ -23,16 +23,16 @@ export default function LandingPage() {
   }, [titles]);
 
   const provinces = [
-    { name: t('landing.pattani', 'Pattani (ปัตตานี)'), color: 'bg-emerald-500', users: '12k', poi: '150+' },
-    { name: t('landing.yala', 'Yala (ยะลา)'), color: 'bg-teal-500', users: '8k', poi: '120+' },
-    { name: t('landing.narathiwat', 'Narathiwat (นราธิวาส)'), color: 'bg-cyan-500', users: '10k', poi: '140+' }
+    { id: 'pattani', name: t('landing.pattani', 'Pattani (ปัตตานี)'), link: '/provinces/pattani', color: 'bg-emerald-500', users: '12k', poi: '150+' },
+    { id: 'yala', name: t('landing.yala', 'Yala (ยะลา)'), link: '/provinces/yala', color: 'bg-teal-500', users: '8k', poi: '120+' },
+    { id: 'narathiwat', name: t('landing.narathiwat', 'Narathiwat (นราธิวาส)'), link: '/provinces/narathiwat', color: 'bg-cyan-500', users: '10k', poi: '140+' }
   ];
 
   const features = [
-    { icon: '🗺️', title: t('map.live_map', 'Real-time Transit') },
-    { icon: '🕌', title: t('prayer.prayer_times', 'Prayer Times') },
-    { icon: '🎮', title: t('gamification.stamp_book', 'Gamification') },
-    { icon: '💳', title: t('payment.payment', 'Multi-currency') }
+    { icon: '🗺️', title: t('map.live_map', 'Real-time Transit'), link: '/map' },
+    { icon: '🕌', title: t('prayer.prayer_times', 'Prayer Times'), link: '/prayer' },
+    { icon: '🎮', title: t('gamification.stamp_book', 'Gamification'), link: '/rewards' },
+    { icon: '💳', title: t('payment.payment', 'Multi-currency'), link: '/dashboard' }
   ];
 
   return (
@@ -70,7 +70,7 @@ export default function LandingPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {provinces.map((prov) => (
-            <div key={prov.name} className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-700">
+            <Link href={prov.link} key={prov.name} className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-700 block cursor-pointer">
               <div className={`h-40 w-full ${prov.color} flex items-center justify-center`}>
                 <span className="text-white text-2xl font-bold opacity-90">🕌 {prov.name}</span>
               </div>
@@ -81,7 +81,7 @@ export default function LandingPage() {
                   <span>{prov.poi} {t('map.halal_food', 'Halal POIs')}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -94,10 +94,10 @@ export default function LandingPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {features.map((feat) => (
-              <div key={feat.title} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-700">
+              <Link href={feat.link} key={feat.title} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-700 block hover:-translate-y-1 hover:shadow-md transition duration-300">
                 <div className="text-4xl mb-4">{feat.icon}</div>
                 <h3 className="font-bold text-gray-800 dark:text-gray-200">{feat.title}</h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

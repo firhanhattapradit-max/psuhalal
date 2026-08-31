@@ -20,9 +20,9 @@ export interface VehicleMarker {
 export interface POIMarker {
   id: string;
   name_th: string;
-  name_ms: string;
+  name_ms?: string;
   name_en: string;
-  name_ar: string;
+  name_ar?: string;
   category: 'mosque' | 'halal_restaurant' | 'station' | 'tourism_spot' | 'prayer_room';
   lat: number;
   lng: number;

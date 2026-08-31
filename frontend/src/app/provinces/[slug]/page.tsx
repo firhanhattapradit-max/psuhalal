@@ -8,13 +8,13 @@ import { ArrowLeft, Star, MapPin, ExternalLink, Clock } from 'lucide-react';
 interface Place {
   id: string;
   name: string;
-  rating: number;
-  type: string;
-  status: string;
+  rating?: number;
+  type?: string;
+  status?: string;
   description: string;
-  bullets: string[];
+  bullets?: string[];
   image: string;
-  mapsUrl: string;
+  mapsUrl?: string;
 }
 
 interface ProvinceData {

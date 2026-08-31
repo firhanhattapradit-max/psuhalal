@@ -21,6 +21,7 @@ interface ProvinceData {
   id: string;
   nameTh: string;
   nameEn: string;
+  subtitle?: string;
   color: string;
   coverImage: string;
   restaurants: Place[];
@@ -28,63 +29,215 @@ interface ProvinceData {
 }
 
 const PATTANI_RESTAURANTS: Place[] = [
-  { id: 'r1', name: 'The Pattanion (เดอะ ปัตตาเนี่ยน)', rating: 4.9, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารและคาเฟ่สไตล์โฮมเมด ตกแต่งสวยงามบรรยากาศอบอุ่น', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r1', mapsUrl: 'https://maps.google.com/?q=The+Pattanion' },
-  { id: 'r2', name: 'กาลครั้งหนึ่ง คาเฟ่', rating: 4.4, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'คาเฟ่และร้านอาหารตกแต่งสไตล์วินเทจ มีโซนให้เลือกนั่งหลากหลาย', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r2', mapsUrl: 'https://maps.google.com/?q=กาลครั้งหนึ่ง+คาเฟ่' },
-  { id: 'r3', name: 'กะมา ข้าวยำราชา - Nasi Kerabu Raja', rating: 4.7, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านข้าวยำปัตตานีรสชาติต้นตำรับที่ได้รับความนิยมอย่างมาก', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r3', mapsUrl: 'https://maps.google.com/?q=กะมา+ข้าวยำราชา' },
-  { id: 'r4', name: 'ร้านซุปเจ๊ะเยาะ เจ้าเก่า', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดเวลา 10:00 ก่อนเที่ยง', description: 'ร้านซุปเนื้อและซุปวัวเจ้าเก่าแก่แห่งเมืองปัตตานี', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r4', mapsUrl: 'https://maps.google.com/?q=ร้านซุปเจ๊ะเยาะ' },
-  { id: 'r5', name: 'โรตีดีฟอเรส ปัตตานี', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 11:00 หลังเที่ยง', description: 'ร้านโรตีและชาชักชื่อดัง บรรยากาศร่มรื่น นั่งสบาย', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r5', mapsUrl: 'https://maps.google.com/?q=โรตีดีฟอเรส' },
-  { id: 'r6', name: 'สะเต๊ะ ศรีเมือง (เจ้าเก่า)', rating: 4.4, type: '📍 ภัตตาคารอาหารอินโดนีเซีย', status: 'เปิดเวลา 9:00 ก่อนเที่ยง', description: 'ร้านสะเต๊ะเจ้าดั้งเดิมประจำเมืองปัตตานี ย่างบนเตาถ่านหอมๆ', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r6', mapsUrl: 'https://maps.google.com/?q=สะเต๊ะศรีเมือง' },
-  { id: 'r7', name: 'ห้องอาหารบุหงารายา - C.S.Pattani Hotel', rating: 4.5, type: '🍽️ ภัตตาคารโรงแรม', status: 'เปิดอยู่', description: 'ห้องอาหารฮาลาลมาตรฐานระดับโรงแรม ตั้งอยู่ในโรงแรม ซี.เอส. ปัตตานี', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r7', mapsUrl: 'https://maps.google.com/?q=C.S.Pattani' },
-  { id: 'r8', name: 'DERNDIN HOUSE', rating: 4.8, type: '🍦 ร้านไอศกรีม / คาเฟ่', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารแนวสร้างสรรค์ที่นำเอาวัตถุดิบและอาหารท้องถิ่นมาแปรรูป', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r8', mapsUrl: 'https://maps.google.com/?q=DERNDIN+HOUSE' },
-  { id: 'r9', name: 'LEMU.Co - Halal Steakhouse PATTANI', rating: 4.5, type: '🥩 ร้านสเต๊กฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 8:30 หลังเที่ยง', description: 'ร้านสเต๊กฮาลาลคุณภาพเยี่ยม เอาใจคนรักสายเนื้อ', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r9', mapsUrl: 'https://maps.google.com/?q=LEMU.Co' },
-  { id: 'r10', name: 'ร้านแบมะ ซุป ข้าวต้ม', rating: 4.3, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านซุปและอาหารตามสั่งราคาย่อมเยา น้ำซุปรสชาติเข้มข้น', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r10', mapsUrl: 'https://maps.google.com/?q=ร้านแบมะซุป' },
-  { id: 'r11', name: 'BlueBird Brasserie Pattani', rating: 4.3, type: '🍽️ ภัตตาคารอาหารอเมริกัน', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารสไตล์บราสเซอรี บรรยากาศดี ตกแต่งร้านสวยงาม', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r11', mapsUrl: 'https://maps.google.com/?q=BlueBird' },
-  { id: 'r12', name: 'โรงปี๊บ', rating: 4.4, type: '🍽️ ภัตตาคารอาหารไทย', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านอาหารบรรยากาศคลาสสิกที่ดัดแปลงมาจากโรงงานทำปี๊บเก่า', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r12', mapsUrl: 'https://maps.google.com/?q=โรงปี๊บ' },
-  { id: 'r13', name: 'ซันก้ามปู Sea the Sun', rating: 4.2, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านอาหารทะเลฮาลาลยอดนิยม รสชาติจัดจ้าน', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r13', mapsUrl: 'https://maps.google.com/?q=ซันก้ามปู' },
-  { id: 'r14', name: 'LYSM café', rating: 4.9, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 10:00 หลังเที่ยง', description: 'คาเฟ่และร้านขนมหวานบรรยากาศนั่งสบาย มีเมนูของหวานให้เลือกทานอย่างจุใจ', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r14', mapsUrl: 'https://maps.google.com/?q=LYSM' },
-  { id: 'r15', name: 'SA-MI-LAE. Cafe\' & Relax Space', rating: 4.3, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'คาเฟ่บรรยากาศสบายๆ ใกล้มหาวิทยาลัย เหมาะสำหรับนักศึกษา', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r15', mapsUrl: 'https://maps.google.com/?q=Samilare' },
-  { id: 'r16', name: 'ไก่กอและ "กะเมาะ" รามโกมุท ซอย 4', rating: 4.6, type: '🥩 ร้านอาหาร', status: 'เปิดเวลา 10:00 ก่อนเที่ยง', description: 'ร้านไก่กอและเจ้าดังประจำเมืองปัตตานี ย่างเตาถ่านสดใหม่', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r16', mapsUrl: 'https://maps.google.com/?q=ไก่กอและกะเมาะ' },
-  { id: 'r17', name: 'ข้าวมันไก่ โกจิว', rating: 4.0, type: '🍽️ ร้านอาหาร', status: 'เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ร้านข้าวมันไก่ฮาลาลระดับตำนานของปัตตานี ขายมายาวนาน', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r17', mapsUrl: 'https://maps.google.com/?q=ข้าวมันไก่โกจิว' },
-  { id: 'r18', name: 'ร้านแวมะโรตี', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านโรตีและชาเช้า-เย็น รสชาติต้นตำรับแบบปัตตานีแท้ๆ', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r18', mapsUrl: 'https://maps.google.com/?q=แวมะโรตี' },
-  { id: 'r19', name: 'สะเต๊ะบังเล๊าะ เจ้าเก่า', rating: 4.2, type: '📍 ภัตตาคารอาหารอินโดนีเซีย', status: 'เปิดเวลา 9:00 ก่อนเที่ยง', description: 'อีกหนึ่งร้านสะเต๊ะเตาถ่านรสเด็ด ย่างหอมๆ ราดน้ำจิ้มรสชาติพอดี', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r19', mapsUrl: 'https://maps.google.com/?q=สะเต๊ะบังเล๊าะ' },
-  { id: 'r20', name: 'เมาะซูซุปช่อมาลี', rating: 4.2, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านซุปช่อมาลีชื่อดังที่ใครมาปัตตานีก็ต้องแวะลอง', bullets: [], image: 'https://loremflickr.com/600/400/food,thailand,restaurant?random=r20', mapsUrl: 'https://maps.google.com/?q=เมาะซูซุปช่อมาลี' }
+  { id: 'r1', name: 'The Pattanion (เดอะ ปัตตาเนี่ยน)', rating: 4.9, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารและคาเฟ่สไตล์โฮมเมด ตกแต่งสวยงามบรรยากาศอบอุ่น', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=522769479989038', mapsUrl: 'https://maps.google.com/?q=The+Pattanion' },
+  { id: 'r2', name: 'กาลครั้งหนึ่ง คาเฟ่', rating: 4.4, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'คาเฟ่และร้านอาหารตกแต่งสไตล์วินเทจ มีโซนให้เลือกนั่งหลากหลาย', bullets: [], image: 'https://trueid-slsapp-storage-prod.s3-ap-southeast-1.amazonaws.com/partner_files/trueidintrend/15097/_MG_8357_0.JPG', mapsUrl: 'https://maps.google.com/?q=กาลครั้งหนึ่ง+คาเฟ่' },
+  { id: 'r3', name: 'กะมา ข้าวยำราชา - Nasi Kerabu Raja', rating: 4.7, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านข้าวยำปัตตานีรสชาติต้นตำรับที่ได้รับความนิยมอย่างมาก', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2022/05/08/31bcf9fb64204c179a7f6f3d67e9edf7.jpg', mapsUrl: 'https://maps.google.com/?q=กะมา+ข้าวยำราชา' },
+  { id: 'r4', name: 'ร้านซุปเจ๊ะเยาะ เจ้าเก่า', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดเวลา 10:00 ก่อนเที่ยง', description: 'ร้านซุปเนื้อและซุปวัวเจ้าเก่าแก่แห่งเมืองปัตตานี', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1710446597008908', mapsUrl: 'https://maps.google.com/?q=ร้านซุปเจ๊ะเยาะ' },
+  { id: 'r5', name: 'โรตีดีฟอเรส ปัตตานี', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 11:00 หลังเที่ยง', description: 'ร้านโรตีและชาชักชื่อดัง บรรยากาศร่มรื่น นั่งสบาย', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=707910204944199', mapsUrl: 'https://maps.google.com/?q=โรตีดีฟอเรส' },
+  { id: 'r6', name: 'สะเต๊ะ ศรีเมือง (เจ้าเก่า)', rating: 4.4, type: '📍 ภัตตาคารอาหารอินโดนีเซีย', status: 'เปิดเวลา 9:00 ก่อนเที่ยง', description: 'ร้านสะเต๊ะเจ้าดั้งเดิมประจำเมืองปัตตานี ย่างบนเตาถ่านหอมๆ', bullets: [], image: 'https://mpics.mgronline.com/pics/Images/561000013369401.JPEG', mapsUrl: 'https://maps.google.com/?q=สะเต๊ะศรีเมือง' },
+  { id: 'r7', name: 'ห้องอาหารบุหงารายา - C.S.Pattani Hotel', rating: 4.5, type: '🍽️ ภัตตาคารโรงแรม', status: 'เปิดอยู่', description: 'ห้องอาหารฮาลาลมาตรฐานระดับโรงแรม ตั้งอยู่ในโรงแรม ซี.เอส. ปัตตานี', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2020/03/09/84c31b4087cf4fa4868c2a56d5f4896f.jpg', mapsUrl: 'https://maps.google.com/?q=C.S.Pattani' },
+  { id: 'r8', name: 'DERNDIN HOUSE', rating: 4.8, type: '🍦 ร้านไอศกรีม / คาเฟ่', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารแนวสร้างสรรค์ที่นำเอาวัตถุดิบและอาหารท้องถิ่นมาแปรรูป', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2024/11/02/06be3b251aa54362a5401c5c1025f229.jpg', mapsUrl: 'https://maps.google.com/?q=DERNDIN+HOUSE' },
+  { id: 'r9', name: 'LEMU.Co - Halal Steakhouse PATTANI', rating: 4.5, type: '🥩 ร้านสเต๊กฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 8:30 หลังเที่ยง', description: 'ร้านสเต๊กฮาลาลคุณภาพเยี่ยม เอาใจคนรักสายเนื้อ', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122105718002971881', mapsUrl: 'https://maps.google.com/?q=LEMU.Co' },
+  { id: 'r10', name: 'ร้านแบมะ ซุป ข้าวต้ม', rating: 4.3, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านซุปและอาหารตามสั่งราคาย่อมเยา น้ำซุปรสชาติเข้มข้น', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2019/08/23/fe0027b500914dcf8654aa60e30231cb.jpg', mapsUrl: 'https://maps.google.com/?q=ร้านแบมะซุป' },
+  { id: 'r11', name: 'BlueBird Brasserie Pattani', rating: 4.3, type: '🍽️ ภัตตาคารอาหารอเมริกัน', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารสไตล์บราสเซอรี บรรยากาศดี ตกแต่งร้านสวยงาม', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=483207333254767', mapsUrl: 'https://maps.google.com/?q=BlueBird' },
+  { id: 'r12', name: 'โรงปี๊บ', rating: 4.4, type: '🍽️ ภัตตาคารอาหารไทย', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านอาหารบรรยากาศคลาสสิกที่ดัดแปลงมาจากโรงงานทำปี๊บเก่า', bullets: [], image: 'https://img.wongnai.com/p/1600x0/2024/09/13/82d5e5a7d91b45bb9da2cc9d33ba6c2e.jpg', mapsUrl: 'https://maps.google.com/?q=โรงปี๊บ' },
+  { id: 'r13', name: 'ซันก้ามปู Sea the Sun', rating: 4.2, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านอาหารทะเลฮาลาลยอดนิยม รสชาติจัดจ้าน', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2024/05/16/1890723b2c804376b8d8a39b07f5fef2.jpg', mapsUrl: 'https://maps.google.com/?q=ซันก้ามปู' },
+  { id: 'r14', name: 'LYSM café', rating: 4.9, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 10:00 หลังเที่ยง', description: 'คาเฟ่และร้านขนมหวานบรรยากาศนั่งสบาย มีเมนูของหวานให้เลือกทานอย่างจุใจ', bullets: [], image: 'https://img.wongnai.com/p/400x0/2022/03/31/8d58b597e0ae49c7adb16b3b78bddf6b.jpg', mapsUrl: 'https://maps.google.com/?q=LYSM' },
+  { id: 'r15', name: 'SA-MI-LAE. Cafe\' & Relax Space', rating: 4.3, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'คาเฟ่บรรยากาศสบายๆ ใกล้มหาวิทยาลัย เหมาะสำหรับนักศึกษา', bullets: [], image: 'https://img.wongnai.com/p/624x0/2018/02/20/e43987d7bf3049dc9b4074eed61fa82c.jpg', mapsUrl: 'https://maps.google.com/?q=Samilare' },
+  { id: 'r16', name: 'ไก่กอและ "กะเมาะ" รามโกมุท ซอย 4', rating: 4.6, type: '🥩 ร้านอาหาร', status: 'เปิดเวลา 10:00 ก่อนเที่ยง', description: 'ร้านไก่กอและเจ้าดังประจำเมืองปัตตานี ย่างเตาถ่านสดใหม่', bullets: [], image: 'https://www.dailynews.co.th/wp-content/uploads/2026/04/IMG_3543.jpeg', mapsUrl: 'https://maps.google.com/?q=ไก่กอและกะเมาะ' },
+  { id: 'r17', name: 'ข้าวมันไก่ โกจิว', rating: 4.0, type: '🍽️ ร้านอาหาร', status: 'เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ร้านข้าวมันไก่ฮาลาลระดับตำนานของปัตตานี ขายมายาวนาน', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1557833634568211', mapsUrl: 'https://maps.google.com/?q=ข้าวมันไก่โกจิว' },
+  { id: 'r18', name: 'ร้านแวมะโรตี', rating: 4.4, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านโรตีและชาเช้า-เย็น รสชาติต้นตำรับแบบปัตตานีแท้ๆ', bullets: [], image: 'https://t1.blockdit.com/photos/2020/07/5f09ac50b82c760cc1b003f6_800x0xcover_JkE7ac-a.jpg', mapsUrl: 'https://maps.google.com/?q=แวมะโรตี' },
+  { id: 'r19', name: 'สะเต๊ะบังเล๊าะ เจ้าเก่า', rating: 4.2, type: '📍 ภัตตาคารอาหารอินโดนีเซีย', status: 'เปิดเวลา 9:00 ก่อนเที่ยง', description: 'อีกหนึ่งร้านสะเต๊ะเตาถ่านรสเด็ด ย่างหอมๆ ราดน้ำจิ้มรสชาติพอดี', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=341398357304166', mapsUrl: 'https://maps.google.com/?q=สะเต๊ะบังเล๊าะ' },
+  { id: 'r20', name: 'เมาะซูซุปช่อมาลี', rating: 4.2, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ร้านซุปช่อมาลีชื่อดังที่ใครมาปัตตานีก็ต้องแวะลอง', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2016/09/05/3512212cf61b47cc919b0f58f75a0918.jpg', mapsUrl: 'https://maps.google.com/?q=เมาะซูซุปช่อมาลี' }
 ];
 
 const PATTANI_ATTRACTIONS: Place[] = [
-  { id: 'a1', name: 'มัสยิดกลางจังหวัดปัตตานี', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'มัสยิดที่สวยงามที่สุดแห่งหนึ่งในประเทศไทย มีสถาปัตยกรรมโดดเด่น', bullets: [], image: 'https://loremflickr.com/600/400/mosque?random=a1', mapsUrl: 'https://maps.google.com/?q=มัสยิดกลางปัตตานี' },
-  { id: 'a2', name: 'ศาลเจ้าแม่ลิ้มกอเหนี่ยว', rating: 4.7, type: '📍 สถานที่ประกอบพิธีกรรมทางศาสนา', status: 'ปิดอยู่ · เปิดเวลา 6:00 ก่อนเที่ยง', description: 'ศาลเจ้าศักดิ์สิทธิ์คู่บ้านคู่เมืองปัตตานี เป็นศูนย์รวมจิตใจ', bullets: [], image: 'https://loremflickr.com/600/400/temple?random=a2', mapsUrl: 'https://maps.google.com/?q=ศาลเจ้าแม่ลิ้มกอเหนี่ยว' },
-  { id: 'a3', name: 'วัดช้างให้ราษฎร์บูรณาราม หลวงพ่อทวด', rating: 4.7, type: '📍 วัด', status: 'ปิดอยู่ · เปิดเวลา 8:00 ก่อนเที่ยง', description: 'วัดเก่าแก่ต้นกำเนิดของหลวงปู่ทวด เหยียบน้ำทะเลสด', bullets: [], image: 'https://loremflickr.com/600/400/temple?random=a3', mapsUrl: 'https://maps.google.com/?q=วัดช้างให้' },
-  { id: 'a4', name: 'มัสยิดกรือเซะ', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'มัสยิดโบราณอายุกว่า 200 ปี สร้างด้วยอิฐถือปูนที่มีเอกลักษณ์', bullets: [], image: 'https://loremflickr.com/600/400/mosque?random=a4', mapsUrl: 'https://maps.google.com/?q=มัสยิดกรือเซะ' },
-  { id: 'a5', name: 'มัสยิดรายอฟาฏอนี مسجد راج فطاني', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่', description: 'มัสยิดประจำย่านจะบังติกอ มีความงดงามตามแบบสถาปัตยกรรมอิสลามดั้งเดิม', bullets: [], image: 'https://loremflickr.com/600/400/mosque?random=a5', mapsUrl: 'https://maps.google.com/?q=มัสยิดรายอฟาฏอนี' },
-  { id: 'a6', name: 'วัดมุจลินทวาปีวิหาร, พระอารามหลวง', rating: 4.7, type: '📍 วัด', status: 'เปิดอยู่', description: 'พระอารามหลวงเก่าแก่ในอำเภอหนองจิก ภายในมีพระอุโบสถและวิหารที่เงียบสงบ', bullets: [], image: 'https://loremflickr.com/600/400/temple?random=a6', mapsUrl: 'https://maps.google.com/?q=วัดมุจลินทวาปีวิหาร' },
-  { id: 'a7', name: 'สวนสมเด็จพระศรีนครินทร์ ปัตตานี', rating: 4.4, type: '🏞️ สวนสาธารณะ', status: 'เปิดอยู่ · ปิดเวลา 11:00 หลังเที่ยง', description: 'สวนสาธารณะริมทะเลขนาดใหญ่ เป็นที่ตั้งของ Skywalk ปัตตานี', bullets: [], image: 'https://loremflickr.com/600/400/park,nature?random=a7', mapsUrl: 'https://maps.google.com/?q=สวนสมเด็จพระศรีนครินทร์' },
-  { id: 'a8', name: 'วังเจ้าเมืองปัตตานี', rating: 4.5, type: '🎓 สถาบันการศึกษา', status: 'ปิดอยู่ · เปิดเวลา 8:00 ก่อนเที่ยง', description: 'อาคารเรือนไม้โบราณในย่านจะบังติกอ สะท้อนประวัติศาสตร์การปกครอง', bullets: [], image: 'https://loremflickr.com/600/400/house,old?random=a8', mapsUrl: 'https://maps.google.com/?q=วังเจ้าเมืองปัตตานี' },
-  { id: 'a9', name: 'วังยะหริ่ง', rating: 4.5, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 9:00 ก่อนเที่ยง', description: 'วังเก่าแก่ทรงคลาสสิกที่ผสมผสานสถาปัตยกรรมไทย ยุโรป และมลายู', bullets: [], image: 'https://loremflickr.com/600/400/house,old?random=a9', mapsUrl: 'https://maps.google.com/?q=วังยะหริ่ง' },
-  { id: 'a10', name: 'บ้านเลขที่ 5 กือดาจีนอ', rating: 4.7, type: '🏢 ชุมชนย่านเก่า', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ย่านชุมชนชาวจีนโบราณริมแม่น้ำปัตตานี เต็มไปด้วยอาคารไม้เก่าแก่', bullets: [], image: 'https://loremflickr.com/600/400/street,old?random=a10', mapsUrl: 'https://maps.google.com/?q=กือดาจีนอ' },
-  { id: 'a11', name: 'บ้านขุนพิทักษ์รายา', rating: 4.6, type: '📜 พิพิธภัณฑ์', status: 'เปิดอยู่', description: 'เรือนโบราณทรงคุณค่าในย่านกือดาจีนอ ที่ได้รับการบูรณะเป็นแหล่งเรียนรู้', bullets: [], image: 'https://loremflickr.com/600/400/museum,thailand?random=a11', mapsUrl: 'https://maps.google.com/?q=บ้านขุนพิทักษ์รายา' },
-  { id: 'a12', name: 'เมืองโบราณยะรัง', rating: 4.4, type: '🏺 พิพิธภัณฑ์', status: 'ปิดอยู่ · เปิดเวลา 8:30 ก่อนเที่ยง', description: 'แหล่งโบราณคดีสำคัญที่มีร่องรอยอาณาจักรลังกาสุกะโบราณ', bullets: [], image: 'https://loremflickr.com/600/400/ruins,thailand?random=a12', mapsUrl: 'https://maps.google.com/?q=เมืองโบราณยะรัง' },
-  { id: 'a13', name: 'สะพานไม้บานา ปัตตานี', rating: 4.3, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 6:00 ก่อนเที่ยง', description: 'สะพานไม้ทอดยาวลงสู่ป่าชายเลนและอ่าวปัตตานี', bullets: [], image: 'https://loremflickr.com/600/400/bridge,nature?random=a13', mapsUrl: 'https://maps.google.com/?q=สะพานไม้บานา' },
-  { id: 'a14', name: 'หาดตะโละกาโปร์', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ชายหาดยอดนิยมที่มีทิวมะพร้าวและทิวสนร่มรื่น', bullets: [], image: 'https://loremflickr.com/600/400/beach?random=a14', mapsUrl: 'https://maps.google.com/?q=หาดตะโละกาโปร์' },
-  { id: 'a15', name: 'ปลายสุดแหลมตาชี', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 10:00 ก่อนเที่ยง', description: 'แหลมทรายที่ยื่นออกไปในอ่าวไทย บรรยากาศเงียบสงบ ลมพัดเย็นสบาย', bullets: [], image: 'https://loremflickr.com/600/400/beach?random=a15', mapsUrl: 'https://maps.google.com/?q=แหลมตาชี' },
-  { id: 'a16', name: 'อุทยานแห่งชาติน้ำตกทรายขาว', rating: 4.3, type: '🏞️ อุทยานแห่งชาติ', status: 'ปิดอยู่ · เปิดเวลา 8:30 ก่อนเที่ยง', description: 'น้ำตกธรรมชาติสายน้ำใสเย็น ไหลผ่านผาหิน ท่ามกลางป่าอุดมสมบูรณ์', bullets: [], image: 'https://loremflickr.com/600/400/waterfall?random=a16', mapsUrl: 'https://maps.google.com/?q=น้ำตกทรายขาว' },
-  { id: 'a17', name: 'น้ำตกโผงโผง', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'น้ำตกขนาดใหญ่ในเขตอำเภอโคกโพธิ์ มีแอ่งน้ำกว้างและกระแสน้ำไหลตลอดปี', bullets: [], image: 'https://loremflickr.com/600/400/waterfall?random=a17', mapsUrl: 'https://maps.google.com/?q=น้ำตกโผงโผง' },
-  { id: 'a18', name: 'หาดแฆแฆ', rating: 4.3, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ชายหาดที่มีเอกลักษณ์โดดเด่นด้วยโขดหินแกรนิตขนาดใหญ่ตั้งเรียงราย', bullets: [], image: 'https://loremflickr.com/600/400/beach,rocks?random=a18', mapsUrl: 'https://maps.google.com/?q=หาดแฆแฆ' },
-  { id: 'a19', name: 'หาดปะนาเระ', rating: 4.4, type: '📍 สถานที่ท่องเที่ยว', status: 'เปิดอยู่', description: 'ชายหาดยาวพร้อมหมู่บ้านประมงพื้นบ้าน สามารถสัมผัสวิถีชีวิตชาวเล', bullets: [], image: 'https://loremflickr.com/600/400/beach,village?random=a19', mapsUrl: 'https://maps.google.com/?q=หาดปะนาเระ' },
-  { id: 'a20', name: 'Patani Artspace', rating: 4.5, type: '🏛️ พิพิธภัณฑ์', status: 'ปิดอยู่ · เปิดเวลา 10:00 ก่อนเที่ยง', description: 'หอศิลป์ร่วมสมัยที่เป็นศูนย์กลางจัดแสดงผลงานศิลปะของศิลปิน', bullets: [], image: 'https://loremflickr.com/600/400/art,gallery?random=a20', mapsUrl: 'https://maps.google.com/?q=Patani+Artspace' }
+  { id: 'a1', name: 'มัสยิดกลางจังหวัดปัตตานี', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'มัสยิดที่สวยงามที่สุดแห่งหนึ่งในประเทศไทย มีสถาปัตยกรรมโดดเด่น', bullets: [], image: 'https://f.tpkcdn.com/images-source/a8a2c0d32335790796da242195fc2f46.JPG', mapsUrl: 'https://maps.google.com/?q=มัสยิดกลางปัตตานี' },
+  { id: 'a2', name: 'ศาลเจ้าแม่ลิ้มกอเหนี่ยว', rating: 4.7, type: '📍 สถานที่ประกอบพิธีกรรมทางศาสนา', status: 'ปิดอยู่ · เปิดเวลา 6:00 ก่อนเที่ยง', description: 'ศาลเจ้าศักดิ์สิทธิ์คู่บ้านคู่เมืองปัตตานี เป็นศูนย์รวมจิตใจ', bullets: [], image: 'https://sayhithailand.com/img/travel/1755931300Sayhithailand01.jpg', mapsUrl: 'https://maps.google.com/?q=ศาลเจ้าแม่ลิ้มกอเหนี่ยว' },
+  { id: 'a3', name: 'วัดช้างให้ราษฎร์บูรณาราม หลวงพ่อทวด', rating: 4.7, type: '📍 วัด', status: 'ปิดอยู่ · เปิดเวลา 8:00 ก่อนเที่ยง', description: 'วัดเก่าแก่ต้นกำเนิดของหลวงปู่ทวด เหยียบน้ำทะเลสด', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100298308247671', mapsUrl: 'https://maps.google.com/?q=วัดช้างให้' },
+  { id: 'a4', name: 'มัสยิดกรือเซะ', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'มัสยิดโบราณอายุกว่า 200 ปี สร้างด้วยอิฐถือปูนที่มีเอกลักษณ์', bullets: [], image: 'https://mpics.mgronline.com/pics/Images/567000001803403.JPEG', mapsUrl: 'https://maps.google.com/?q=มัสยิดกรือเซะ' },
+  { id: 'a5', name: 'มัสยิดรายอฟาฏอนี مسجد راج فطاني', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่', description: 'มัสยิดประจำย่านจะบังติกอ มีความงดงามตามแบบสถาปัตยกรรมอิสลามดั้งเดิม', bullets: [], image: 'https://i.ytimg.com/vi/1Wg4-ZxAXYc/maxresdefault.jpg', mapsUrl: 'https://maps.google.com/?q=มัสยิดรายอฟาฏอนี' },
+  { id: 'a6', name: 'วัดมุจลินทวาปีวิหาร, พระอารามหลวง', rating: 4.7, type: '📍 วัด', status: 'เปิดอยู่', description: 'พระอารามหลวงเก่าแก่ในอำเภอหนองจิก ภายในมีพระอุโบสถและวิหารที่เงียบสงบ', bullets: [], image: 'https://files.thailandtourismdirectory.go.th/assets/upload/2017/11/14/20171114e404427e764c649f38d0c7540767223a094627.jpg', mapsUrl: 'https://maps.google.com/?q=วัดมุจลินทวาปีวิหาร' },
+  { id: 'a7', name: 'สวนสมเด็จพระศรีนครินทร์ ปัตตานี', rating: 4.4, type: '🏞️ สวนสาธารณะ', status: 'เปิดอยู่ · ปิดเวลา 11:00 หลังเที่ยง', description: 'สวนสาธารณะริมทะเลขนาดใหญ่ เป็นที่ตั้งของ Skywalk ปัตตานี', bullets: [], image: 'https://novotelbangkokimpact.com/wp-content/uploads/sites/59/2016/11/17-Suan-Somdet-Ya-Srinagarindra-Park.jpg', mapsUrl: 'https://maps.google.com/?q=สวนสมเด็จพระศรีนครินทร์' },
+  { id: 'a8', name: 'วังเจ้าเมืองปัตตานี', rating: 4.5, type: '🎓 สถาบันการศึกษา', status: 'ปิดอยู่ · เปิดเวลา 8:00 ก่อนเที่ยง', description: 'อาคารเรือนไม้โบราณในย่านจะบังติกอ สะท้อนประวัติศาสตร์การปกครอง', bullets: [], image: 'https://1.bp.blogspot.com/-4NbeZFsHNfc/WH8UyFS33jI/AAAAAAAADD8/4mzEcDubiAgwYl_qBVqzhLhwT5KVWiPBwCLcB/s1600/%25E0%25B8%259C%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%2587.jpg', mapsUrl: 'https://maps.google.com/?q=วังเจ้าเมืองปัตตานี' },
+  { id: 'a9', name: 'วังยะหริ่ง', rating: 4.5, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 9:00 ก่อนเที่ยง', description: 'วังเก่าแก่ทรงคลาสสิกที่ผสมผสานสถาปัตยกรรมไทย ยุโรป และมลายู', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100069337658552', mapsUrl: 'https://maps.google.com/?q=วังยะหริ่ง' },
+  { id: 'a10', name: 'บ้านเลขที่ 5 กือดาจีนอ', rating: 4.7, type: '🏢 ชุมชนย่านเก่า', status: 'เปิดอยู่ · ปิดเวลา 9:00 หลังเที่ยง', description: 'ย่านชุมชนชาวจีนโบราณริมแม่น้ำปัตตานี เต็มไปด้วยอาคารไม้เก่าแก่', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=632313772650461', mapsUrl: 'https://maps.google.com/?q=กือดาจีนอ' },
+  { id: 'a11', name: 'บ้านขุนพิทักษ์รายา', rating: 4.6, type: '📜 พิพิธภัณฑ์', status: 'เปิดอยู่', description: 'เรือนโบราณทรงคุณค่าในย่านกือดาจีนอ ที่ได้รับการบูรณะเป็นแหล่งเรียนรู้', bullets: [], image: 'https://lh6.googleusercontent.com/B21GK6KSueAB6IfoQyA2fHtrymxnGctWoLhD2P8muo0vk-4HIZ8NhCgW2h5_Cts6nLRUF21dIlso3FSowWsigTBBvXFrbr9u840FvmU9gX9reUA6muNpQF5XUQqTo10W1dQXSvfoR0BpyVIOqQ_BZAeYElGJMPqiR3nc4UYffZdYD-3dqqULEw=w1280', mapsUrl: 'https://maps.google.com/?q=บ้านขุนพิทักษ์รายา' },
+  { id: 'a12', name: 'เมืองโบราณยะรัง', rating: 4.4, type: '🏺 พิพิธภัณฑ์', status: 'ปิดอยู่ · เปิดเวลา 8:30 ก่อนเที่ยง', description: 'แหล่งโบราณคดีสำคัญที่มีร่องรอยอาณาจักรลังกาสุกะโบราณ', bullets: [], image: 'https://f.ptcdn.info/765/090/000/mmoriixchA6xMyCKjzZ-o.jpg', mapsUrl: 'https://maps.google.com/?q=เมืองโบราณยะรัง' },
+  { id: 'a13', name: 'สะพานไม้บานา ปัตตานี', rating: 4.3, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 6:00 ก่อนเที่ยง', description: 'สะพานไม้ทอดยาวลงสู่ป่าชายเลนและอ่าวปัตตานี', bullets: [], image: 'https://cdn.spsmartvan.com/wp-content/uploads/2025/03/9.-สะพานไม้บานา.webp', mapsUrl: 'https://maps.google.com/?q=สะพานไม้บานา' },
+  { id: 'a14', name: 'หาดตะโละกาโปร์', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ชายหาดยอดนิยมที่มีทิวมะพร้าวและทิวสนร่มรื่น', bullets: [], image: 'https://mpics.mgronline.com/pics/Images/560000003646201.JPEG', mapsUrl: 'https://maps.google.com/?q=หาดตะโละกาโปร์' },
+  { id: 'a15', name: 'ปลายสุดแหลมตาชี', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 10:00 ก่อนเที่ยง', description: 'แหลมทรายที่ยื่นออกไปในอ่าวไทย บรรยากาศเงียบสงบ ลมพัดเย็นสบาย', bullets: [], image: 'https://cms.dmpcdn.com/travel/2021/05/09/a223e0f0-b098-11eb-a753-ed580dade28e_original.jpg', mapsUrl: 'https://maps.google.com/?q=แหลมตาชี' },
+  { id: 'a16', name: 'อุทยานแห่งชาติน้ำตกทรายขาว', rating: 4.3, type: '🏞️ อุทยานแห่งชาติ', status: 'ปิดอยู่ · เปิดเวลา 8:30 ก่อนเที่ยง', description: 'น้ำตกธรรมชาติสายน้ำใสเย็น ไหลผ่านผาหิน ท่ามกลางป่าอุดมสมบูรณ์', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=723378459982528', mapsUrl: 'https://maps.google.com/?q=น้ำตกทรายขาว' },
+  { id: 'a17', name: 'น้ำตกโผงโผง', rating: 4.2, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'น้ำตกขนาดใหญ่ในเขตอำเภอโคกโพธิ์ มีแอ่งน้ำกว้างและกระแสน้ำไหลตลอดปี', bullets: [], image: 'https://i.ytimg.com/vi/psYSqL2gJos/maxresdefault.jpg', mapsUrl: 'https://maps.google.com/?q=น้ำตกโผงโผง' },
+  { id: 'a18', name: 'หาดแฆแฆ', rating: 4.3, type: '📍 สถานที่ท่องเที่ยว', status: 'ปิดอยู่ · เปิดเวลา 7:00 ก่อนเที่ยง', description: 'ชายหาดที่มีเอกลักษณ์โดดเด่นด้วยโขดหินแกรนิตขนาดใหญ่ตั้งเรียงราย', bullets: [], image: 'https://f.ptcdn.info/545/036/000/nwgmh9l6fPLhtKt2EMC-o.jpg', mapsUrl: 'https://maps.google.com/?q=หาดแฆแฆ' },
+  { id: 'a19', name: 'หาดปะนาเระ', rating: 4.4, type: '📍 สถานที่ท่องเที่ยว', status: 'เปิดอยู่', description: 'ชายหาดยาวพร้อมหมู่บ้านประมงพื้นบ้าน สามารถสัมผัสวิถีชีวิตชาวเล', bullets: [], image: 'https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_600,h_450/https://beachlover.net/wp-content/uploads/2022/04/277575165_343194264508883_370018288536954868_n.jpg', mapsUrl: 'https://maps.google.com/?q=หาดปะนาเระ' },
+  { id: 'a20', name: 'Patani Artspace', rating: 4.5, type: '🏛️ พิพิธภัณฑ์', status: 'ปิดอยู่ · เปิดเวลา 10:00 ก่อนเที่ยง', description: 'หอศิลป์ร่วมสมัยที่เป็นศูนย์กลางจัดแสดงผลงานศิลปะของศิลปิน', bullets: [], image: 'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024,h_678/https://www.thaiartnews.com/wp-content/uploads/2022/01/2-1024x678.jpg.webp', mapsUrl: 'https://maps.google.com/?q=Patani+Artspace' }
+];
+
+const NARATHIWAT_RESTAURANTS: Place[] = [
+  {
+    "id": "nr1",
+    "name": "มังกรทอง ฮาลาล นราธิวาส",
+    "description": "ร้านอาหารฮาลาลชื่อดังในนราธิวาส เสิร์ฟเมนูอาหารไทยและซีฟู้ดสดใหม่ รสชาติจัดจ้าน\n\nจุดเด่น: อาหารทะเลสด, ต้มยำกุ้ง, ปลากะพงทอดน้ำปลา\nพิกัดนำทาง: [เส้นทางไปยัง มังกรทอง](https://maps.google.com/?q=ร้านอาหารมังกรทอง+นราธิวาส)",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=522769479989038"
+  },
+  {
+    "id": "nr2",
+    "name": "ร้านอาหารริมน้ำ นราธิวาส (Rim Nam)",
+    "description": "ร้านอาหารฮาลาลบรรยากาศดีริมแม่น้ำบางนรา ให้บริการอาหารไทย-มุสลิมรสชาติดั้งเดิม\n\nจุดเด่น: บรรยากาศริมน้ำ, อาหารพื้นบ้านมุสลิม\nพิกัดนำทาง: [เส้นทางไปยัง ร้านอาหารริมน้ำ](https://maps.google.com/?q=ร้านอาหารริมน้ำ+นราธิวาส)",
+    "image": "http://www.chillpainai.com/src/wewakeup/scoop/images/e3019b56e0b79f7fa49a2687f9c2247fe88e3e0d.jpg"
+  },
+  {
+    "id": "nr3",
+    "name": "โรตี ปาเซยะวอ",
+    "description": "ร้านโรตีน้ำชาชื่อดังในนราธิวาส ที่มีโรตีหลากหลายรูปแบบ แป้งกรอบนุ่ม ทานคู่กับชาชักเข้มข้น\n\nจุดเด่น: โรตีแกง, โรตีกล้วย, ชาชัก\nพิกัดนำทาง: [เส้นทางไปยัง โรตี ปาเซยะวอ](https://maps.google.com/?q=โรตีปาเซยะวอ+นราธิวาส)",
+    "image": "https://img.wongnai.com/p/1920x0/2022/04/21/2c7ee5bf9f2a41f0907659df22fa0b73.jpg"
+  },
+  {
+    "id": "nr4",
+    "name": "ร้านอาหาร นราซีฟู้ด",
+    "description": "ร้านอาหารทะเลฮาลาลยอดนิยม วัตถุดิบส่งตรงจากชาวประมงพื้นบ้าน สดใหม่ทุกวัน\n\nจุดเด่น: ซีฟู้ดปิ้งย่าง, ยำทะเล\nพิกัดนำทาง: [เส้นทางไปยัง นราซีฟู้ด](https://maps.google.com/?q=นราซีฟู้ด+นราธิวาส)",
+    "image": "https://img.wongnai.com/p/1920x0/2025/11/08/7c122924d2614a6d8c4a76e51552d45b.jpg"
+  },
+  {
+    "id": "nr5",
+    "name": "ร้านก๋วยเตี๋ยวเรือ บังเซ็ง",
+    "description": "ร้านก๋วยเตี๋ยวเรือเนื้อเปื่อยฮาลาลรสเด็ด น้ำซุปเข้มข้น หอมเครื่องเทศ เนื้อตุ๋นเปื่อยกำลังดี\n\nจุดเด่น: ก๋วยเตี๋ยวเรือเนื้อเปื่อย, ลูกชิ้นเนื้อ\nพิกัดนำทาง: [เส้นทางไปยัง ก๋วยเตี๋ยวเรือบังเซ็ง](https://maps.google.com/?q=ก๋วยเตี๋ยวเรือบังเซ็ง+นราธิวาส)",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1466372368648502"
+  },
+  {
+    "id": "nr6",
+    "name": "ร้านข้าวหมกไก่ ยะกัง",
+    "description": "ร้านข้าวหมกไก่สูตรโบราณในย่านยะกัง ข้าวเรียงเม็ดสวย หอมเครื่องเทศ ไก่นุ่มทานคู่กับน้ำจิ้มรสเด็ด\n\nจุดเด่น: ข้าวหมกไก่, ซุปหางวัว\nพิกัดนำทาง: [เส้นทางไปยัง ข้าวหมกไก่ ยะกัง](https://maps.google.com/?q=ข้าวหมกไก่ยะกัง+นราธิวาส)",
+    "image": "https://p16-va.lemon8cdn.com/tos-alisg-v-a3e477-sg/ocisEkiyAiQLP1ExBABEISf721ygECDeAEiwPd~tplv-tej9nj120t-origin.webp"
+  },
+  {
+    "id": "nr7",
+    "name": "Babu Kitchen",
+    "description": "ร้านอาหารฮาลาลสไตล์ฟิวชั่นและอาหารตะวันตก มีเมนูสเต็ก พาสต้า และอาหารจานเดียว\n\nจุดเด่น: สเต็กเนื้อ, สปาเก็ตตี้, บรรยากาศคาเฟ่\nพิกัดนำทาง: [เส้นทางไปยัง Babu Kitchen](https://maps.google.com/?q=Babu+Kitchen+นราธิวาส)",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=919490389535238"
+  },
+  {
+    "id": "nr8",
+    "name": "โรตีสิรินธร",
+    "description": "ร้านโรตีเก่าแก่ของนราธิวาส เปิดมานาน มีเมนูมะตะบะและโรตีหลากหลาย รสชาติถูกปากคนในพื้นที่\n\nจุดเด่น: มะตะบะเนื้อ, โรตีแกงไก่\nพิกัดนำทาง: [เส้นทางไปยัง โรตีสิรินธร](https://maps.google.com/?q=โรตีสิรินธร+นราธิวาส)",
+    "image": "https://thaipbs-media-fuzzylop.thaipbs.or.th/imgpx1/unsafe/resizing_type:fit/size:960:540/format:jpg/quality:90/aHR0cHM6Ly90aGFpcGJzLXByb2dyYW0tcHJvZHVjdGlvbi5zMy5hbWF6b25hd3MuY29tL2ltYWdlcy84N2U4VDRCeTQuanBn"
+  },
+  {
+    "id": "nr9",
+    "name": "ร้านอาหาร มุสลิม นราธิวาส",
+    "description": "ร้านอาหารมุสลิมท้องถิ่น ให้บริการอาหารเช้า ข้าวยำน้ำบูดู และอาหารตามสั่ง\n\nจุดเด่น: ข้าวยำน้ำบูดู, นาซิดาแฆ\nพิกัดนำทาง: [เส้นทางไปยัง ร้านอาหาร มุสลิม](https://maps.google.com/?q=ร้านอาหารมุสลิม+นราธิวาส)",
+    "image": "https://img.wongnai.com/p/1920x0/2025/09/01/176df8fd18304e80a8b16ac233699c13.jpg"
+  },
+  {
+    "id": "nr10",
+    "name": "ซัมซัม ก๋วยเตี๋ยวต้มยำ",
+    "description": "ร้านก๋วยเตี๋ยวฮาลาล เครื่องแน่น น้ำต้มยำรสแซ่บ จัดจ้าน อร่อยแบบไม่ต้องปรุงเพิ่ม\n\nจุดเด่น: ก๋วยเตี๋ยวต้มยำทะเล, เย็นตาโฟต้มยำ\nพิกัดนำทาง: [เส้นทางไปยัง ซัมซัม ก๋วยเตี๋ยว](https://maps.google.com/?q=ซัมซัมก๋วยเตี๋ยว+นราธิวาส)",
+    "image": "https://www.ryoiireview.com/upload/article/202209/1664179705_8df7b73a7820f4aef47864f2a6c5fccf.jpg"
+  }
+];
+const NARATHIWAT_ATTRACTIONS: Place[] = [
+  {
+    "id": "na1",
+    "name": "หาดนราทัศน์",
+    "description": "ชายหาดที่สวยงามและมีชื่อเสียงที่สุดของนราธิวาส ร่มรื่นด้วยทิวสนยาวหลายกิโลเมตร เหมาะแก่การพักผ่อน\n\nจุดเด่น: เดินเล่นริมหาด, ปิกนิกใต้ต้นสน\nพิกัดนำทาง: [เส้นทางไปยัง หาดนราทัศน์](https://maps.google.com/?q=หาดนราทัศน์)",
+    "image": "https://cdn.spsmartvan.com/wp-content/uploads/2025/03/2.-หาดนราทัศน์.webp"
+  },
+  {
+    "id": "na2",
+    "name": "มัสยิด 300 ปี (มัสยิดวาดีอัลฮูเซ็น)",
+    "description": "มัสยิดเก่าแก่ที่สร้างด้วยไม้ตะเคียนทั้งหลัง ผสมผสานสถาปัตยกรรมไทย จีน และมลายูอย่างลงตัว\n\nจุดเด่น: สถาปัตยกรรมไม้โบราณ, ประวัติศาสตร์อิสลาม\nพิกัดนำทาง: [เส้นทางไปยัง มัสยิด 300 ปี](https://maps.google.com/?q=มัสยิด+300+ปี+ตะโละมาเนาะ)",
+    "image": "https://masjidthai.com/yla/masjid/photo/YLA9500017-M-02.jpg"
+  },
+  {
+    "id": "na3",
+    "name": "ป่าพรุโต๊ะแดง",
+    "description": "ป่าพรุผืนสุดท้ายของประเทศไทยที่มีความอุดมสมบูรณ์มาก มีเส้นทางศึกษาธรรมชาติให้เดินชมพันธุ์ไม้และสัตว์ป่า\n\nจุดเด่น: เส้นทางเดินศึกษาธรรมชาติ, ความหลากหลายทางชีวภาพ\nพิกัดนำทาง: [เส้นทางไปยัง ป่าพรุโต๊ะแดง](https://maps.google.com/?q=ป่าพรุโต๊ะแดง)",
+    "image": "https://www.puyok.go.th/images/CHATCHAI/TT/pu4.JPEG"
+  },
+  {
+    "id": "na4",
+    "name": "น้ำตกปาโจ",
+    "description": "น้ำตกขนาดใหญ่ที่สวยงามในอุทยานแห่งชาติบูโด-สุไหงปาดี มีน้ำไหลตลอดปีและสภาพป่าที่อุดมสมบูรณ์\n\nจุดเด่น: เล่นน้ำตก, พักผ่อนท่ามกลางธรรมชาติ\nพิกัดนำทาง: [เส้นทางไปยัง น้ำตกปาโจ](https://maps.google.com/?q=น้ำตกปาโจ)",
+    "image": "https://1.bp.blogspot.com/-0wqbC63U1yI/WJrD_MAB7iI/AAAAAAAADhM/FUFN-A6fFOgSCi0hbvKMLBdLqayFea62QCEw/s1600/id_45415_14.jpg"
+  },
+  {
+    "id": "na5",
+    "name": "พระตำหนักทักษิณราชนิเวศน์",
+    "description": "พระตำหนักที่ประทับแรมของพระบรมวงศานุวงศ์ มีสถาปัตยกรรมที่งดงามตั้งอยู่ริมชายทะเล แวดล้อมด้วยสวนดอกไม้\n\nจุดเด่น: สถาปัตยกรรม, สวนดอกไม้, วิวทะเล\nพิกัดนำทาง: [เส้นทางไปยัง พระตำหนักทักษิณราชนิเวศน์](https://maps.google.com/?q=พระตำหนักทักษิณราชนิเวศน์)",
+    "image": "https://sandbox.narapeo.go.th/wp-content/uploads/2024/03/image-1-2048x1360.png"
+  },
+  {
+    "id": "na6",
+    "name": "ตลาดน้ำยะกัง",
+    "description": "ตลาดน้ำเชิงวัฒนธรรมที่สะท้อนวิถีชีวิตชาวมุสลิมริมน้ำ มีอาหารพื้นเมือง ขนมหวาน และสินค้าท้องถิ่นจำหน่าย\n\nจุดเด่น: อาหารพื้นเมืองฮาลาล, วิถีชีวิตริมน้ำ\nพิกัดนำทาง: [เส้นทางไปยัง ตลาดน้ำยะกัง](https://maps.google.com/?q=ตลาดน้ำยะกัง)",
+    "image": "https://mpics.mgronline.com/pics/Images/565000006899403.JPEG"
+  },
+  {
+    "id": "na7",
+    "name": "วัดชลธาราสิงเห",
+    "description": "วัดเก่าแก่ที่ได้ฉายาว่า \"วัดพิทักษ์แผ่นดินไทย\" มีศิลปกรรมที่งดงามและมีความสำคัญทางประวัติศาสตร์การแบ่งเขตแดน\n\nจุดเด่น: จิตรกรรมฝาผนัง, ประวัติศาสตร์การเมือง\nพิกัดนำทาง: [เส้นทางไปยัง วัดชลธาราสิงเห](https://maps.google.com/?q=วัดชลธาราสิงเห)",
+    "image": "https://www.spsmartvan.com/wp-content/uploads/2025/03/10.-วัดชลธาราสิงเห.webp"
+  },
+  {
+    "id": "na8",
+    "name": "อ่าวมะนาว (อุทยานแห่งชาติอ่าวมะนาว-เขาตันหยง)",
+    "description": "ชายหาดที่สวยงามและเงียบสงบ มีโขดหินสลับซับซ้อนและทิวสนร่มรื่น เหมาะสำหรับการพักผ่อนหย่อนใจ\n\nจุดเด่น: ชายหาดเงียบสงบ, โขดหินริมทะเล\nพิกัดนำทาง: [เส้นทางไปยัง อ่าวมะนาว นราธิวาส](https://maps.google.com/?q=อ่าวมะนาว+นราธิวาส)",
+    "image": "https://s359.kapook.com/r/1200/630/pagebuilder/0ef8d9b7-f2dd-4e9d-9b8a-d31d69f52e92.jpg"
+  },
+  {
+    "id": "na9",
+    "name": "ศาลเจ้าแม่กวนอิม นราธิวาส",
+    "description": "ศูนย์รวมจิตใจของชาวไทยเชื้อสายจีนในนราธิวาส เป็นศาลเจ้าเก่าแก่ที่มีสถาปัตยกรรมแบบจีนดั้งเดิม\n\nจุดเด่น: สักการะขอพร, สถาปัตยกรรมจีน\nพิกัดนำทาง: [เส้นทางไปยัง ศาลเจ้าแม่กวนอิม นราธิวาส](https://maps.google.com/?q=ศาลเจ้าแม่กวนอิม+นราธิวาส)",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=209323465199153"
+  },
+  {
+    "id": "na10",
+    "name": "พิพิธภัณฑ์เมืองนราธิวาส",
+    "description": "สถานที่รวบรวมเรื่องราวประวัติศาสตร์ ศิลปวัฒนธรรม และวิถีชีวิตของชาวนราธิวาสตั้งแต่อดีตจนถึงปัจจุบัน\n\nจุดเด่น: นิทรรศการประวัติศาสตร์, โบราณวัตถุ\nพิกัดนำทาง: [เส้นทางไปยัง พิพิธภัณฑ์เมืองนราธิวาส](https://maps.google.com/?q=พิพิธภัณฑ์เมืองนราธิวาส)",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1147451604162471"
+  }
+];
+
+
+const YALA_RESTAURANTS: Place[] = [
+  { id: 'yr_r1', name: 'ไทยอิสลามโภชนา', rating: 4.5, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 1:00 หลังเที่ยง', description: 'ร้านอาหารเช้าและมะตะบะฮาลาลในตำนานที่อยู่คู่เมืองยะลามานาน เสิร์ฟอาหารมุสลิมรสชาติดั้งเดิม\n\nเมนูเด็ด: มะตะบะเนื้อ-ไก่, ข้าวหมกไก่, ชาร้อน', bullets: [], image: 'https://mpics-cdn.mgronline.com/pics/Images/566000008321801.JPEG', mapsUrl: 'https://maps.google.com/?cid=10361382364133478660&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r2', name: 'เรือนเตี๋ยวเรือสาขาหลักโกตาบารู', rating: 4.7, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่', description: 'ร้านก๋วยเตี๋ยวเรือฮาลาลเจ้าดังในอำเภอรามัน น้ำซุปเข้มข้นกลมกล่อมและเครื่องแน่นจัดเต็ม\n\nเมนูเด็ด: ก๋วยเตี๋ยวเรือเนื้อเปื่อย, ก๋วยเตี๋ยวเนื้อต้มยำ', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=791640752952015', mapsUrl: 'https://maps.google.com/?cid=11785855735914728724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r3', name: 'บ้านก๋วยเตี๋ยว หมู่ 3 ลิมุด', rating: 4.3, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่ · ปิดเวลา 6:00 หลังเที่ยง', description: 'ร้านก๋วยเตี๋ยวฮาลาลบรรยากาศอบอุ่น ให้บรรยากาศรับประทานอาหารสบายๆ สไตล์บ้านสวน\n\nเมนูเด็ด: ก๋วยเตี๋ยวต้มยำโบราณ, เมนูเส้นต่างๆ', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=591625693415866', mapsUrl: 'https://maps.google.com/?cid=9085640759465655630&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r4', name: 'มากิชิ', rating: 4.3, type: '🍽️ ร้านอาหารฮาลาล', status: 'ปิดอยู่ · เปิดเวลา 11:30 ก่อนเที่ยง', description: 'ร้านอาหารสไตล์บุฟเฟต์ชาบูและอาหารญี่ปุ่นสายพานฮาลาล ยอดฮิตของวัยรุ่นและครอบครัวในเมืองยะลา\n\nจุดเด่น: ชาบูสายพาน, วัตถุดิบสดใหม่, น้ำซุปหลากหลาย', bullets: [], image: 'https://us-fbcloud.net/wb/data/1455/1455877-img.vyftn5.45j6o.jpg', mapsUrl: 'https://maps.google.com/?cid=1718838243057484157&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r5', name: 'Anna’s Garden', rating: 4.7, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่ · ปิดเวลา 10:00 หลังเที่ยง', description: 'ร้านอาหารและคาเฟ่ฮาลาลบรรยากาศดี ให้บริการทั้งอาหารเช้า อาหารจานหลัก และเครื่องดื่มสไตล์คาเฟ่\n\nจุดเด่น: เซตอาหารเช้า, เบเกอรี่, ชากาแฟรสเข้มข้น', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2022/04/13/f562a0debbe24089abe367e7756f372a.jpg', mapsUrl: 'https://maps.google.com/?cid=16679618103819669203&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r6', name: 'ซุกรอนฮาลาฟู๊ด', rating: 5, type: '🍽️ ร้านอาหาร', status: 'เปิดอยู่ · ปิดเวลา 6:00 หลังเที่ยง', description: 'ร้านอาหารฮาลาลริมทางในอำเภอบันนังสตา เหมาะสำหรับแวะเติมพลังระหว่างเดินทางไปเบตง\n\nเมนูเด็ด: อาหารตามสั่ง, ก๋วยเตี๋ยว', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2023/08/10/a46d3264bc0f4d8ab849d837a1ecf11c.jpg', mapsUrl: 'https://maps.google.com/?cid=15798300900016715759&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r7', name: 'อัยยาชิ ชาบูบุฟเฟ่ต์', rating: 4.3, type: '🍽️ ร้านอาหาร', status: 'ปิดอยู่ · เปิดเวลา 11:30 ก่อนเที่ยง', description: 'ร้านบุฟเฟต์ชาบูฮาลาลในเมืองยะลาที่มีเนื้อสัตว์และอาหารทานเล่นให้เลือกหลากหลาย\n\nจุดเด่น: บุฟเฟต์ชาบูเติมได้ไม่อั้น, น้ำจิ้มรสเด็ด', bullets: [], image: 'https://ak-d.tripcdn.com/images/1mi5p224x94sjry4s776E_R_600_400_R5_Q90.jpg?proc=source/trip', mapsUrl: 'https://maps.google.com/?cid=8694035179768709388&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r8', name: 'ร้านอาหารอาบูคอลี', rating: 4.1, type: '🍽️ ร้านอาหารฮาลาล', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารฮาลาลสไตล์มุสลิมท้องถิ่นรสชาติดั้งเดิม ใกล้สวนสาธารณะในตัวเมืองยะลา\n\nเมนูเด็ด: อาหารตามสั่งพื้นบ้าน, ข้าวหมก', bullets: [], image: 'https://fastly.4sqi.net/img/general/600x600/3999587_OlekE0ONoFoOo6dQCfuZctuVysACi2TbwnLrhH9IO3A.jpg', mapsUrl: 'https://maps.google.com/?cid=9205823316130748629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r9', name: 'Laotie HotPot Halal Yala : เหลาเถี่ยะหม่าล่าหม้อไฟฮาลาล สาขายะลา', rating: 4, type: '🍽️ ร้านอาหาร', status: 'ปิดอยู่ · เปิดเวลา 12:00 หลังเที่ยง', description: 'ร้านหม่าล่าหม้อไฟฮาลาลสไตล์จีน ให้รสชาติเผ็ดซ่าถึงใจพร้อมวัตถุดิบคุณภาพ\n\nจุดเด่น: น้ำซุปหม่าล่ารสเข้มข้น, ซุปกระดูกเนื้อ', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122110153970400720', mapsUrl: 'https://maps.google.com/?cid=16953532314926537482&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'yr_r10', name: 'ร้านอาหารต้าเหยิน (กิตติ)', rating: 4.2, type: '📍 ภัตตาคารอาหารจีน', status: 'เปิดอยู่ · ปิดเวลา 9:30 หลังเที่ยง', description: 'ร้านอาหารจีนระดับตำนานในอำเภอเบตง แม้เป็นร้านอาหารจีนดั้งเดิม แต่มีเมนูชูโรงท้องถิ่นหลากหลายที่ใช้วัตถุดิบฮาลาล\n\nเมนูเด็ด: ไก่เบตงสับ, ผักน้ำผัดน้ำมันหอย, เคานุก', bullets: [], image: 'https://static7-th.orstatic.com/userphoto/doorphoto/0/F7/00304631A6FD72BCFB0D78px.jpg', mapsUrl: 'https://maps.google.com/?cid=703096314617113589&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+];
+
+const YALA_ATTRACTIONS: Place[] = [
+  { id: 'ya_a1', name: 'สกายวอล์คทะเลหมอกอัยเยอร์เวง', rating: 4.6, type: '📍 จุดชมวิว', status: 'เปิดอยู่ · ปิดเวลา 4:30 หลังเที่ยง', description: 'จุดชมวิวทะเลหมอกยอดนิยมระดับประเทศ มีพื้นกระจกใสให้เดินชมวิวพาโนรามาได้ตลอดทั้งปี\n\nจุดเด่น: ชมทะเลหมอก 360 องศา, พระอาทิตย์ขึ้นยามเช้า', bullets: [], image: 'https://mpics.mgronline.com/pics/Images/563000010161303.JPEG', mapsUrl: 'https://maps.google.com/?cid=12689912305095899502&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a2', name: 'อุโมงค์เบตงมงคลฤทธิ์', rating: 4.6, type: '📍 บริการการขนส่ง', status: 'เปิดอยู่', description: 'อุโมงค์รถยนต์ลอดภูเขาแห่งแรกของประเทศไทย ตั้งอยู่ใจกลางเมืองเบตง ตกแต่งประดับไฟสวยงามในยามค่ำคืน\n\nจุดเด่น: ไฟประดับอุโมงค์, ถ่ายรูปเช็กอินกลางเมืองเบตง', bullets: [], image: 'https://www.gplace.com/include/img_gal/6/94/gp5d89acf3a4b50.jpg', mapsUrl: 'https://maps.google.com/?cid=13813764875897225860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a3', name: 'อุโมงค์ปิยะมิตร', rating: 4.4, type: '🏛️ พิพิธภัณฑ์', status: 'เปิดอยู่ · ปิดเวลา 5:00 หลังเที่ยง', description: 'อุโมงค์ประวัติศาสตร์อดีตค่ายคอมมิวนิสต์มาลายา ขุดเข้าไปในภูเขา อากาศเย็นสบายและมีพิพิธภัณฑ์เรียนรู้ประวัติศาสตร์\n\nจุดเด่น: เส้นทางเดินธรรมชาติ, ต้นไม้พันปี, ประวัติศาสตร์ค่ายปิยะมิตร', bullets: [], image: 'https://www.gplace.com/include/img_gal/2/69/gp5d85f5cb4dc58.jpg', mapsUrl: 'https://maps.google.com/?cid=14209419586377049517&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a4', name: 'เขื่อนบางลาง', rating: 4.5, type: '📍 สถานที่ท่องเที่ยว', status: 'เปิดอยู่', description: 'เขื่อนเอนกประสงค์แห่งแรกของภาคใต้ ล้อมรอบด้วยภูเขาสูงและผืนป่าอันสมบูรณ์ เหมาะสำหรับการล่องเรือชมธรรมชาติ\n\nจุดเด่น: วิวทิวทัศน์ทะเลสาบ, จุดชมวิวสันเขื่อน', bullets: [], image: 'https://www.tvpoolonline.com/wp-content/uploads/2021/10/270961-sp2-1-768x512.jpg', mapsUrl: 'https://maps.google.com/?cid=10048012102003552553&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a5', name: 'มัสยิดกลางประจำจังหวัดยะลา', rating: 4.7, type: '🕌 มัสยิด', status: 'เปิดอยู่ · ปิดเวลา 10:00 หลังเที่ยง', description: 'ศาสนสถานศูนย์รวมจิตใจของชาวมุสลิมในยะลา สถาปัตยกรรมสวยงามโดดเด่นด้วยยอดโดมขนาดใหญ่\n\nจุดเด่น: สถาปัตยกรรมอิสลามที่งดงาม, บรรยากาศเงียบสงบ', bullets: [], image: 'https://img.wongnai.com/p/1920x0/2022/06/01/c06752dd529a4b8dbd286c0008fae5ec.jpg', mapsUrl: 'https://maps.google.com/?cid=5601836956837092542&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a6', name: 'วัดคูหาภิมุข (วัดหน้าถ้ำ)', rating: 4.6, type: '📍 วัด', status: 'เปิดอยู่', description: 'วัดเก่าแก่คู่บ้านคู่เมืองยะลา ภายในถ้ำประดิษฐานพระพุทธไสยาสน์สมัยศรีวิชัยขนาดใหญ่\n\nจุดเด่น: ถ้ำธรรมชาติ, พระนอนโบราณ, โบราณวัตถุประวัติศาสตร์', bullets: [], image: 'http://3.bp.blogspot.com/-bko8Mnd4dUU/UXPtIuQjt6I/AAAAAAAAANE/-5PUwGZGhx8/s1600/IMG_6619.JPG', mapsUrl: 'https://maps.google.com/?cid=430359212593870832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a7', name: 'ศาลเจ้าพ่อหลักเมืองจังหวัดยะลา', rating: 4.7, type: '📍 สถานที่ประกอบพิธีกรรมทางศาสนา', status: 'เปิดอยู่', description: 'สิ่งศักดิ์สิทธิ์คู่เมืองยะลา ตั้งอยู่ใจกลางวงเวียนสวนสาธารณะ มีสถาปัตยกรรมแบบไทยประยุกต์สวยงาม\n\nจุดเด่น: สักการะขอพรเพื่อความเป็นสิริมงคล, สวนสาธารณะโดยรอบ', bullets: [], image: 'https://cbtthailand.dasta.or.th/upload-file-api/Resources/RelateAttraction/Images/RAT950004/1.jpeg', mapsUrl: 'https://maps.google.com/?cid=12119254134236258048&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a8', name: 'หอนาฬิกาเบตง', rating: 4.5, type: '📍 สถานที่ท่องเที่ยว', status: 'เปิดอยู่', description: 'สัญลักษณ์ประจำเมืองเบตง ตั้งอยู่บริเวณวงเวียนกลางเมือง ใกล้ตู้ไปรษณีย์โบราณขนาดใหญ่\n\nจุดเด่น: นกแอ่นลมเกาะสายไฟยามเย็น, จุดถ่ายรูปสัญลักษณ์เบตง', bullets: [], image: 'https://cbtthailand.dasta.or.th/upload-file-api/Resources/RelateAttraction/Images/RAT950007/1.jpeg', mapsUrl: 'https://maps.google.com/?cid=12047033595512200672&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a9', name: 'สวนขวัญเมือง', rating: 4.6, type: '📍 พื้นที่ธรรมชาติ', status: 'เปิดอยู่', description: 'สวนสาธารณะขนาดใหญ่ใจกลางเมืองยะลา มีพรุและบึงน้ำขนาดใหญ่ เหมาะสำหรับพักผ่อนและออกกำลังกาย\n\nจุดเด่น: บึงน้ำกว้างใหญ่, ลานกิจกรรมและสวนเขียวขจี', bullets: [], image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEjhHIItOoRcvaAhUsXuXKk6DclVdBt9Lqfo6cxXFc36CnkUiN_Ak8VCAjZG5d6jh90yrWk3yEDgFEpv62KkfKBNw4crtPsIJSSPsgcdpB36sGVk3iffUrsw_Ga7-pK1Vbf2bEMEeD3N8/s1600/1VsRrsD.jpg', mapsUrl: 'https://maps.google.com/?cid=14634911270705628758&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
+  { id: 'ya_a10', name: 'เขตรักษาพันธุ์สัตว์ป่าฮาลา-บาลา', rating: 5, type: '📍 ป่าดิบชื้น', status: 'เปิดอยู่', description: "ผืนป่าดิบชื้นที่สมบูรณ์ที่สุดแห่งหนึ่งของภาคใต้ ได้รับขนานนามว่า 'แอมะซอนแห่งอาเซียน'\\n\\nจุดเด่น: ส่องนกเงือก, เดินป่าศึกษาธรรมชาติ, ความอุดมสมบูรณ์ของป่าไม้", bullets: [], image: 'https://www.travel2guide.com/Narathiwat/image/เขตรักษาพันธุ์สัตว์ป่า-ฮาลา-บาลา.jpg', mapsUrl: 'https://maps.google.com/?cid=7576738665185581870&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ' },
 ];
 
 const PROVINCES: Record<string, ProvinceData> = {
   pattani: {
     id: 'pattani',
     nameTh: 'ปัตตานี',
-    nameEn: 'Pattani',
+    nameEn: 'Pattani', subtitle: 'สำรวจปัตตานี เมืองงามสามวัฒนธรรม',
     color: 'emerald',
-    coverImage: 'https://loremflickr.com/1600/400/mosque,architecture?random=cover',
+    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Pattani_Central_Mosque.jpg',
     restaurants: PATTANI_RESTAURANTS,
     attractions: PATTANI_ATTRACTIONS
   },
-  yala: { id: 'yala', nameTh: 'ยะลา', nameEn: 'Yala', color: 'teal', coverImage: '', restaurants: [], attractions: [] },
-  narathiwat: { id: 'narathiwat', nameTh: 'นราธิวาส', nameEn: 'Narathiwat', color: 'cyan', coverImage: '', restaurants: [], attractions: [] }
+  yala: { id: 'yala', nameTh: 'ยะลา', nameEn: 'Yala', subtitle: 'ใต้สุดสยาม เมืองงามชายแดน', color: 'teal', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg/960px-The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg', restaurants: YALA_RESTAURANTS, attractions: YALA_ATTRACTIONS },
+  narathiwat: { id: 'narathiwat', nameTh: 'นราธิวาส', nameEn: 'Narathiwat', subtitle: 'มหัศจรรย์นราธิวาส ธรรมชาติและวัฒนธรรม', color: 'cyan', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg/960px-%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg', restaurants: NARATHIWAT_RESTAURANTS, attractions: NARATHIWAT_ATTRACTIONS }
 };
 
 const PlaceCard = ({ place }: { place: Place }) => (
@@ -113,7 +266,7 @@ const PlaceCard = ({ place }: { place: Place }) => (
         <Clock className="w-3.5 h-3.5 mr-1" />
         {place.status}
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2 leading-relaxed">{place.description}</p>
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 leading-relaxed whitespace-pre-line">{place.description}</p>
       <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
         <a href={place.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-white py-2.5 rounded-xl font-bold transition text-sm group-hover:bg-emerald-50 group-hover:text-emerald-700 dark:group-hover:bg-emerald-900/30 dark:group-hover:text-emerald-300">
           <MapPin className="w-4 h-4 mr-2" />
@@ -137,7 +290,7 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
         </Link>
         <div className="text-center text-white z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">🕌 {province.nameTh}</h1>
-          <p className="text-xl md:text-2xl opacity-90 drop-shadow-md">สำรวจปัตตานี เมืองงามสามวัฒนธรรม</p>
+          <p className="text-xl md:text-2xl opacity-90 drop-shadow-md">{province.subtitle}</p>
         </div>
       </div>
 
@@ -146,7 +299,7 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-slate-800 dark:text-white flex items-center">
             <span className="text-4xl mr-3">🍽️</span> 
-            แนะนำร้านอาหารฮาลาล
+            ร้านอาหารฮาลาล
           </h2>
         </div>
         {province.restaurants.length === 0 ? (

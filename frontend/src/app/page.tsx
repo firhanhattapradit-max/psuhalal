@@ -23,9 +23,9 @@ export default function LandingPage() {
   }, [titles]);
 
   const provinces = [
-    { id: 'pattani', name: t('landing.pattani', 'Pattani (ปัตตานี)'), link: '/provinces/pattani', color: 'bg-emerald-500', users: '12k', poi: '150+' },
-    { id: 'yala', name: t('landing.yala', 'Yala (ยะลา)'), link: '/provinces/yala', color: 'bg-teal-500', users: '8k', poi: '120+' },
-    { id: 'narathiwat', name: t('landing.narathiwat', 'Narathiwat (นราธิวาส)'), link: '/provinces/narathiwat', color: 'bg-cyan-500', users: '10k', poi: '140+' }
+    { id: 'pattani', name: t('landing.pattani', 'Pattani (ปัตตานี)'), thName: 'ปัตตานี', link: '/provinces/pattani', color: 'bg-emerald-500', users: '12k', poi: '150+', image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Pattani_Central_Mosque.jpg' },
+    { id: 'yala', name: t('landing.yala', 'Yala (ยะลา)'), thName: 'ยะลา', link: '/provinces/yala', color: 'bg-teal-500', users: '8k', poi: '120+', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg/960px-The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg' },
+    { id: 'narathiwat', name: t('landing.narathiwat', 'Narathiwat (นราธิวาส)'), thName: 'นราธิวาส', link: '/provinces/narathiwat', color: 'bg-cyan-500', users: '10k', poi: '140+', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg/960px-%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg' }
   ];
 
   const features = [
@@ -71,8 +71,12 @@ export default function LandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {provinces.map((prov) => (
             <Link href={prov.link} key={prov.name} className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-700 block cursor-pointer">
-              <div className={`h-40 w-full ${prov.color} flex items-center justify-center`}>
-                <span className="text-white text-2xl font-bold opacity-90">🕌 {prov.name}</span>
+              <div 
+                className={`h-40 w-full ${prov.color} flex items-center justify-center relative overflow-hidden`}
+                style={{ backgroundImage: `url(${prov.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              >
+                <div className="absolute inset-0 bg-black/40"></div>
+                <span className="relative z-10 text-white text-3xl font-bold opacity-100 drop-shadow-lg">{prov.thName}</span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{prov.name}</h3>

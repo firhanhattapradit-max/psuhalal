@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '@/lib/i18n';
 import { BUS_STATIONS, ROUTE_CONNECTIONS, PROVINCE_COLORS, BusStation, Province } from '@/lib/busStations';
@@ -21,10 +22,28 @@ const PROVINCE_NAMES: Record<Province, { th: string; en: string; emoji: string }
 };
 
 export default function MapPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MapContent />
+    </Suspense>
+  );
+}
+
+function MapContent() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
+  const provParam = searchParams.get('prov');
+  
+  let initialCenter: [number, number] = [6.5, 101.3]; // default middle
+  let defaultZoom = 9;
+  
+  if (provParam === 'pattani') { initialCenter = [6.8691, 101.2503]; defaultZoom = 11; }
+  else if (provParam === 'yala') { initialCenter = [6.3, 101.1]; defaultZoom = 10; }
+  else if (provParam === 'narathiwat') { initialCenter = [6.1, 101.8]; defaultZoom = 10; }
+
   const [userLoc, setUserLoc] = useState<{lat: number, lng: number} | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [filterProvince, setFilterProvince] = useState<Province | 'all'>('all');
+  const [filterProvince, setFilterProvince] = useState<Province | 'all'>((provParam as Province) || 'all');
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
@@ -152,7 +171,7 @@ export default function MapPage() {
           ☰ สถานี บขส.
         </button>
 
-        <LiveMap userLocation={userLoc} initialZoom={9} />
+        <LiveMap userLocation={userLoc} initialZoom={defaultZoom} initialCenter={initialCenter} />
       </div>
     </div>
   );

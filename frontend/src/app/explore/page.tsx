@@ -22,12 +22,12 @@ export default function ExplorePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {provinces.map((prov) => (
-            <Link href={prov.link} key={prov.name} className="bg-white dark:bg-gray-800 rounded-3xl shadow-sm hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition duration-500 border border-gray-100 dark:border-gray-700 block cursor-pointer group">
-              <div className="p-6 pb-4">
+            <div key={prov.name} className="bg-white dark:bg-gray-800 rounded-3xl shadow-sm hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition duration-500 border border-gray-100 dark:border-gray-700 flex flex-col group">
+              <div className="p-6 pb-4 cursor-pointer" onClick={() => window.location.href = prov.link}>
                 <h3 className="text-3xl font-serif text-emerald-900 dark:text-emerald-400 tracking-wider mb-1">{prov.enName}</h3>
                 <p className="text-sm font-medium text-emerald-600 dark:text-emerald-500">{prov.thName}</p>
               </div>
-              <div className="px-6 pb-6">
+              <div className="px-6 pb-4 flex-grow cursor-pointer" onClick={() => window.location.href = prov.link}>
                 <div className="h-48 w-full rounded-2xl overflow-hidden relative mb-6 shadow-inner">
                   <div style={{ backgroundImage: `url(${prov.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="absolute inset-0 group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
                 </div>
@@ -37,16 +37,25 @@ export default function ExplorePage() {
                     <span className="font-bold text-gray-700 dark:text-gray-200">{prov.users}</span>
                   </div>
                   <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 px-3 py-2 rounded-lg">
-                    <span className="text-gray-500">🍽️ {t('map.halal_food', 'Halal POIs')}</span>
+                    <span className="text-gray-500">📍 {t('map.halal_food', 'Halal POIs')}</span>
                     <span className="font-bold text-gray-700 dark:text-gray-200">{prov.poi}</span>
                   </div>
                   <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 px-3 py-2 rounded-lg">
-                    <span className="text-gray-500">🎁 ร้านของฝาก</span>
+                    <span className="text-gray-500">🛍️ ของฝากแนะนำ</span>
                     <span className="font-bold text-gray-700 dark:text-gray-200">{prov.souvenirs}</span>
                   </div>
                 </div>
               </div>
-            </Link>
+              <div className="px-6 pb-6 grid grid-cols-2 gap-3 mt-auto">
+                <Link href={prov.link} className="flex justify-center items-center py-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-xl font-medium transition-colors">
+                  รายละเอียด
+                </Link>
+                <a href={`https://www.google.com/maps/dir/?api=1&destination=${prov.enName},Thailand`} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors shadow-sm gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clipRule="evenodd" /></svg>
+                  นำทาง
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </section>

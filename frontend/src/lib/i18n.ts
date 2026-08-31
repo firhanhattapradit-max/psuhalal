@@ -5,8 +5,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const rawResources = {
   en: {
     common: {
+      welcome: 'Welcome',
       app_name: 'Smart Halal Mobility',
-      welcome: 'Welcome back',
+      
       loading: 'Loading...',
       error: 'Error',
       success: 'Success',
@@ -103,6 +104,10 @@ const rawResources = {
       recipient_3_desc: 'Help students in need pursue higher education'
     },
     landing: {
+      hero_word_1: 'Welcome',
+      hero_word_2: 'to',
+      hero_word_3: '3 Provinces',
+      hero_word_4: 'Southern Border',
       hero_subtitle: 'Your trusted companion for tourism and transport in Southern Thailand.',
       start_journey: 'Start Journey',
       explore_regions: 'Explore 3 Southern Border Provinces',
@@ -144,8 +149,9 @@ const rawResources = {
   },
   th: {
     common: {
+      welcome: 'ยินดีต้อนรับ',
       app_name: 'สมาร์ทฮาลาลโมบิลิตี้',
-      welcome: 'ยินดีต้อนรับกลับ',
+      
       loading: 'กำลังโหลด...',
       error: 'ข้อผิดพลาด',
       success: 'สำเร็จ',
@@ -242,6 +248,10 @@ const rawResources = {
       recipient_3_desc: 'สนับสนุนทุนเรียนต่อแก่เยาวชนขาดแคลนทุนทรัพย์'
     },
     landing: {
+      hero_word_1: 'ยินดีต้อนรับ',
+      hero_word_2: 'สู่',
+      hero_word_3: '3 จังหวัด',
+      hero_word_4: 'ชายแดนใต้',
       hero_subtitle: 'แพลตฟอร์มบริหารจัดการเดินทางและท่องเที่ยวฮาลาลอัจฉริยะ 3 จังหวัดชายแดนภาคใต้',
       start_journey: 'เริ่มออกเดินทาง',
       explore_regions: 'สำรวจพื้นที่ 3 จังหวัดชายแดนภาคใต้',
@@ -283,8 +293,9 @@ const rawResources = {
   },
   ms: {
     common: {
+      welcome: 'Selamat Datang',
       app_name: 'Mobiliti Halal Pintar',
-      welcome: 'Selamat Kembali',
+      
       loading: 'Memuatkan...',
       error: 'Ralat',
       success: 'Berjaya',
@@ -381,6 +392,10 @@ const rawResources = {
       recipient_3_desc: 'Membantu pelajar yang memerlukan'
     },
     landing: {
+      hero_word_1: 'Selamat Datang',
+      hero_word_2: 'ke',
+      hero_word_3: '3 Wilayah',
+      hero_word_4: 'Sempadan Selatan',
       hero_subtitle: 'Rakan kongsi dipercayai untuk pelancongan dan pengangkutan di Selatan Thailand.',
       start_journey: 'Mulakan Perjalanan',
       explore_regions: 'Terokai 3 Wilayah Sempadan Selatan',
@@ -422,8 +437,9 @@ const rawResources = {
   },
   ar: {
     common: {
+      welcome: 'مرحباً',
       app_name: 'التنقل الحلال الذكي',
-      welcome: 'مرحباً بك مجدداً',
+      
       loading: 'جاري التحميل...',
       error: 'خطأ',
       success: 'نجاح',
@@ -520,6 +536,10 @@ const rawResources = {
       recipient_3_desc: 'مساعدة الطلاب لمتابعة تعليمهم العالي'
     },
     landing: {
+      hero_word_1: 'مرحباً بكم',
+      hero_word_2: 'في',
+      hero_word_3: '3 محافظات',
+      hero_word_4: 'الحدود الجنوبية',
       hero_subtitle: 'رفيقك الموثوق للسياحة والنقل في جنوب تايلاند.',
       start_journey: 'ابدأ الرحلة',
       explore_regions: 'استكشف المحافظات الحدودية الثلاث',

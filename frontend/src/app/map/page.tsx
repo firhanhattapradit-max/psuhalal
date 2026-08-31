@@ -45,6 +45,7 @@ function MapContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [filterProvince, setFilterProvince] = useState<Province | 'all'>((provParam as Province) || 'all');
   const [searchText, setSearchText] = useState('');
+  const [activeStationId, setActiveStationId] = useState<string | null>(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -116,7 +117,7 @@ function MapContent() {
               <>
                 <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1">⭐ สถานีหลัก ({majorStations.length})</div>
                 {majorStations.map(station => (
-                  <StationCard key={station.id} station={station} />
+                  <StationCard key={station.id} station={station} onClick={() => setActiveStationId(station.id)} />
                 ))}
               </>
             )}
@@ -126,7 +127,7 @@ function MapContent() {
               <>
                 <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1 mt-3">📍 จุดจอดย่อย ({minorStations.length})</div>
                 {minorStations.map(station => (
-                  <StationCard key={station.id} station={station} />
+                  <StationCard key={station.id} station={station} onClick={() => setActiveStationId(station.id)} />
                 ))}
               </>
             )}
@@ -136,7 +137,7 @@ function MapContent() {
               <>
                 <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider px-1 mt-3">🚩 จุดจอดชุมชน / ตลาด ({filteredStations.filter(s => s.type === 'local_stop').length})</div>
                 {filteredStations.filter(s => s.type === 'local_stop').map(station => (
-                  <StationCard key={station.id} station={station} />
+                  <StationCard key={station.id} station={station} onClick={() => setActiveStationId(station.id)} />
                 ))}
               </>
             )}
@@ -171,19 +172,19 @@ function MapContent() {
           ☰ สถานี บขส.
         </button>
 
-        <LiveMap userLocation={userLoc} initialZoom={defaultZoom} initialCenter={initialCenter} />
+        <LiveMap userLocation={userLoc} initialZoom={defaultZoom} initialCenter={initialCenter} activeStationId={activeStationId} />
       </div>
     </div>
   );
 }
 
-function StationCard({ station }: { station: BusStation }) {
+function StationCard({ station, onClick }: { station: BusStation, onClick?: () => void }) {
   const isMajor = station.type === 'major';
   const color = PROVINCE_COLORS[station.province];
 
   return (
     <div
-      className={`p-3 rounded-xl border cursor-pointer transition-all hover:shadow-md hover:scale-[1.01] ${
+      onClick={onClick} className={`p-3 rounded-xl border cursor-pointer transition-all hover:shadow-md hover:scale-[1.01] ${
         isMajor
           ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800'
           : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'

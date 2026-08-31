@@ -50,6 +50,7 @@ export interface LiveMapProps {
   userId?: string;
   authToken?: string;
   userLocation?: { lat: number; lng: number } | null;
+  activeStationId?: string | null;
 }
 
 const MapComponent = ({
@@ -57,7 +58,8 @@ const MapComponent = ({
   initialZoom = 9,
   onVehicleClick,
   showCheckinButton = true,
-  userLocation: propUserLoc
+  userLocation: propUserLoc,
+  activeStationId
 }: LiveMapProps) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || 'th';
@@ -96,6 +98,7 @@ const MapComponent = ({
   });
 
   const [mapType, setMapType] = useState<'street' | 'satellite'>('street');
+  const [isLayersOpen, setIsLayersOpen] = useState(true);
   const mapRef = useRef<any>(null);
   const cacheRef = useRef<Set<string>>(new Set());
 
@@ -177,6 +180,17 @@ const MapComponent = ({
       { id: 'r19', name_th: 'ร้านนาซิดาแฆ กะต๊ะ', name_en: 'Nasi Dagang Ka Ta', category: 'halal_restaurant', lat: 6.4300, lng: 101.8250 },
     ]);
   }, []);
+
+  
+  useEffect(() => {
+    if (activeStationId && mapRef.current) {
+      const station = BUS_STATIONS.find(s => s.id === activeStationId);
+      if (station) {
+        mapRef.current.flyTo([station.lat, station.lng], 15, { duration: 1.5 });
+        setSelectedStation(station);
+      }
+    }
+  }, [activeStationId]);
 
   const MapEventHandler = () => {
     const map = useMapEvents({
@@ -270,56 +284,65 @@ const MapComponent = ({
       </div>
 
       {/* ── Layer Controls ── */}
-      <div className="absolute top-14 right-4 z-[1000] bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 p-2.5 flex flex-col space-y-1 max-h-[60vh] overflow-y-auto">
-        <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-1 px-2">LAYERS</div>
-        {[
-          { key: 'busStations', icon: '🚏', label: 'สถานี บขส.' },
-          { key: 'routes', icon: '🛤️', label: 'เส้นทาง' },
-          { key: 'vehicles', icon: '🚌', label: 'รถโดยสาร' },
-          { key: 'mosques', icon: '🕌', label: 'มัสยิด' },
-          { key: 'halal_restaurants', icon: '🍽️', label: 'ร้านอาหารฮาลาล' },
-          { key: 'tourism_spots', icon: '🏞️', label: 'สถานที่ท่องเที่ยว' },
-        ].map(({ key, icon, label }) => (
-          <button
-            key={key}
-            onClick={() => setLayers(prev => ({ ...prev, [key]: !prev[key as keyof LayerState] }))}
-            className={`flex items-center space-x-2 px-3 py-1.5 rounded-xl transition-all text-xs font-bold ${
-              layers[key as keyof LayerState]
-                ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
-                : 'bg-gray-50 dark:bg-gray-800 text-gray-500 hover:bg-gray-100'
-            }`}
-          >
-            <span>{icon}</span>
-            <span>{label}</span>
-          </button>
-        ))}
-
-        <div className="h-px bg-gray-200 dark:bg-gray-800 my-1" />
-
-        {/* Route filter */}
-        <div className="px-2">
-          <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-1">เส้นทาง</div>
-          <select
-            value={selectedRoute || ''}
-            onChange={(e) => setSelectedRoute(e.target.value || null)}
-            className="w-full text-[11px] font-bold p-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 outline-none"
-          >
-            <option value="">ทุกเส้นทาง</option>
-            {ROUTE_CONNECTIONS.map(r => (
-              <option key={r.id} value={r.id}>{r.name_th}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="h-px bg-gray-200 dark:bg-gray-800 my-1" />
-
-        <button
-          onClick={() => setMapType(prev => prev === 'street' ? 'satellite' : 'street')}
-          className="flex items-center space-x-2 px-3 py-2 rounded-xl bg-gray-900 text-white text-xs font-bold hover:bg-gray-800 transition"
+      <div className="absolute top-14 right-4 z-[1000] bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 p-2.5 flex flex-col transition-all duration-300 w-48">
+        <button 
+          onClick={() => setIsLayersOpen(!isLayersOpen)} 
+          className="flex justify-between items-center w-full px-2 py-1"
         >
-          <span>🗺️</span>
-          <span>{mapType === 'street' ? 'ดาวเทียม' : 'ถนน'}</span>
+          <span className="text-[10px] font-extrabold text-gray-500 uppercase tracking-wider">LAYERS</span>
+          <span className="text-gray-400 text-xs">{isLayersOpen ? '▼' : '▶'}</span>
         </button>
+        
+        <div className={`flex flex-col space-y-1 transition-all duration-300 overflow-hidden ${isLayersOpen ? 'opacity-100 max-h-[500px] mt-2' : 'opacity-0 max-h-0 mt-0'}`}>
+          {[
+            { key: 'busStations', icon: '🚏', label: 'สถานี บขส.' },
+            { key: 'routes', icon: '🛤️', label: 'เส้นทาง' },
+            { key: 'vehicles', icon: '🚌', label: 'รถโดยสาร' },
+            { key: 'mosques', icon: '🕌', label: 'มัสยิด' },
+            { key: 'halal_restaurants', icon: '🍽️', label: 'ร้านอาหารฮาลาล' },
+            { key: 'tourism_spots', icon: '🏞️', label: 'สถานที่ท่องเที่ยว' },
+          ].map(({ key, icon, label }) => (
+            <button
+              key={key}
+              onClick={() => setLayers(prev => ({ ...prev, [key]: !prev[key as keyof LayerState] }))}
+              className={`flex items-center space-x-2 px-3 py-1.5 rounded-xl transition-all text-xs font-bold ${
+                layers[key as keyof LayerState]
+                  ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                  : 'bg-gray-50 dark:bg-gray-800 text-gray-500 hover:bg-gray-100'
+              }`}
+            >
+              <span>{icon}</span>
+              <span>{label}</span>
+            </button>
+          ))}
+
+          <div className="h-px bg-gray-200 dark:bg-gray-800 my-1" />
+
+          {/* Route filter */}
+          <div className="px-2">
+            <div className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-1">เส้นทาง</div>
+            <select
+              value={selectedRoute || ''}
+              onChange={(e) => setSelectedRoute(e.target.value || null)}
+              className="w-full text-[11px] font-bold p-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 outline-none"
+            >
+              <option value="">ทุกเส้นทาง</option>
+              {ROUTE_CONNECTIONS.map(r => (
+                <option key={r.id} value={r.id}>{r.name_th}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="h-px bg-gray-200 dark:bg-gray-800 my-1" />
+
+          <button
+            onClick={() => setMapType(prev => prev === 'street' ? 'satellite' : 'street')}
+            className="flex items-center space-x-2 px-3 py-2 rounded-xl bg-gray-900 text-white text-xs font-bold hover:bg-gray-800 transition"
+          >
+            <span>🗺️</span>
+            <span>{mapType === 'street' ? 'ดาวเทียม' : 'ถนน'}</span>
+          </button>
+        </div>
       </div>
 
       {/* ── Map ── */}
@@ -411,9 +434,14 @@ const MapComponent = ({
                   )}
                 </div>
                 {showCheckinButton && (
-                  <button className="mt-2 w-full bg-emerald-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold hover:bg-emerald-700 transition shadow-sm">
-                    📍 Check In ที่นี่
-                  </button>
+                  <div className="flex gap-2 mt-3">
+                    <button className="flex-1 bg-emerald-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold hover:bg-emerald-700 transition shadow-sm flex items-center justify-center gap-1">
+                      📍 Check In
+                    </button>
+                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${station.lat},${station.lng}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-blue-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-sm flex items-center justify-center gap-1">
+                      🗺️ นำทาง
+                    </a>
+                  </div>
                 )}
               </div>
             </Popup>
@@ -471,8 +499,11 @@ const MapComponent = ({
           return (
             <Marker key={poi.id} position={[poi.lat, poi.lng]} icon={poiIcon}>
               <Popup>
-                <div className="p-2 text-center font-sans">
-                  <h3 className="font-bold text-sm text-gray-900">{getPoiName(poi)}</h3>
+                <div className="p-2 text-center font-sans min-w-[150px]">
+                  <h3 className="font-bold text-sm text-gray-900 mb-2">{getPoiName(poi)}</h3>
+                  <a href={`https://www.google.com/maps/dir/?api=1&destination=${poi.lat},${poi.lng}`} target="_blank" rel="noopener noreferrer" className="block w-full bg-blue-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-sm">
+                    🗺️ นำทาง
+                  </a>
                 </div>
               </Popup>
             </Marker>

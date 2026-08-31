@@ -26,7 +26,150 @@ interface ProvinceData {
   coverImage: string;
   restaurants: Place[];
   attractions: Place[];
+  souvenirs?: Place[];
 }
+
+const PATTANI_SOUVENIRS: Place[] = [
+  {
+    "id": "ps1",
+    "name": "ร้านยีโอ๊ะ",
+    "description": "ร้านของฝากท้องถิ่นในเมืองปัตตานีที่มีสินค้าและขนมพื้นเมืองจำหน่าย\n\nจุดเด่น: ปลาแห้ง, อาหารทะเลแปรรูป, ขนมพื้นบ้าน\nพิกัดนำทาง: ถนนสามัคคีสาย ก",
+    "image": "https://p16-va.lemon8cdn.com/tos-alisg-v-a3e477-sg/ocqVa1gO7iAgwAFyEHAdIXE1PdeDPCBQ4Bz2fi~tplv-tej9nj120t-origin.webp",
+    "rating": 4.2,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A2%E0%B8%B5%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%B0%20%E0%B8%9B%E0%B8%B1%E0%B8%95%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5"
+  },
+  {
+    "id": "ps2",
+    "name": "ร้านตานีของฝาก",
+    "description": "แหล่งรวมของฝากประจำจังหวัดที่มีความหลากหลาย เดินทางสะดวก\n\nจุดเด่น: อาหารแห้ง, อาหารทะเลแปรรูป, ขนมท้องถิ่น\nพิกัดนำทาง: ถนนหนองจิก ตำบลรูสะมิแล",
+    "image": "https://img.wongnai.com/p/1920x0/2023/01/25/3bb0b3e6170743d381fa609cdf98f6f1.jpg",
+    "rating": 4.7,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%9B%E0%B8%B1%E0%B8%95%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5"
+  },
+  {
+    "id": "ps3",
+    "name": "ร้านบุหงาตานี",
+    "description": "ร้านของฝากอีกแห่งในปัตตานีที่มีสินค้าท้องถิ่นให้เลือกซื้อ\n\nจุดเด่น: ผลิตภัณฑ์อาหารแปรรูป, ของกินเล่น\nพิกัดนำทาง: ตำบลรูสะมิแล",
+    "image": "https://explorelocalcharm.com/wp-content/uploads/2025/08/unnamed.webp",
+    "rating": 4.7,
+    "type": "🛒 ร้านขายของชำ",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%AB%E0%B8%87%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5%20%E0%B8%9B%E0%B8%B1%E0%B8%95%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5"
+  },
+  {
+    "id": "ps4",
+    "name": "Farm Outlet Pattani Cafe & Souvenir",
+    "description": "ศูนย์จำหน่ายสินค้าเกษตรและของฝากที่ควบคู่กับบรรยากาศร้านกาแฟ\n\nจุดเด่น: สินค้าเกษตรแปรรูป, เครื่องดื่ม\nพิกัดนำทาง: ถนนหนองจิก",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=61561401759588",
+    "rating": 4.7,
+    "type": "🛍️ ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=Farm%20Outlet%20Pattani%20Cafe%20%26%20Souvenir%20%E0%B8%9B%E0%B8%B1%E0%B8%95%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5"
+  },
+  {
+    "id": "ps5",
+    "name": "ร้านอาซัน ของฝาก",
+    "description": "ร้านของฝากในย่านจะบังติกอ\n\nจุดเด่น: ขนมและของฝากพื้นบ้าน\nพิกัดนำทาง: ถนนยะรัง",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=766011841045999",
+    "rating": 4.6,
+    "type": "🛒 ร้านขายของชำ",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%8B%E0%B8%B1%E0%B8%99%20%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%9B%E0%B8%B1%E0%B8%95%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B5"
+  }
+];
+const YALA_SOUVENIRS: Place[] = [
+  {
+    "id": "ys1",
+    "name": "ร้านเฮน เบเกอรี่",
+    "description": "ร้านขนมและเบเกอรี่เก่าแก่ในเมืองยะลา\n\nจุดเด่น: เบเกอรี่, ขนมของฝาก\nพิกัดนำทาง: ถนน ณ นคร",
+    "image": "https://p16-va.lemon8cdn.com/tos-alisg-v-a3e477-sg/7ed69a3eb5894c87916a58b40488113f~tplv-tej9nj120t-origin.webp",
+    "rating": 3.9,
+    "type": "🛍️ ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AE%E0%B8%99%20%E0%B9%80%E0%B8%9A%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2"
+  },
+  {
+    "id": "ys2",
+    "name": "ร้านหยกสวย",
+    "description": "ร้านจำหน่ายขนมและของฝากประจำเมืองยะลา\n\nจุดเด่น: ขนมท้องถิ่น, ของกินเล่น\nพิกัดนำทาง: ถนนผังเมือง 4",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1219766956929897",
+    "rating": 4.6,
+    "type": "🛒 ร้านขายของชำ",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%A7%E0%B8%A2%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2"
+  },
+  {
+    "id": "ys3",
+    "name": "ร้านแวนด้า บ้านขนมของฝาก",
+    "description": "ร้านของฝากที่มีขนมหลากหลายรูปแบบ เหมาะสำหรับเลือกซื้อของขวัญและขนมของฝาก\n\nจุดเด่น: ของขวัญ, ขนมของฝาก\nพิกัดนำทาง: ถนนสิโรรส",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=459459484410532",
+    "rating": 4.1,
+    "type": "🍞 ร้านเบเกอรี่",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%A7%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2%20%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2"
+  },
+  {
+    "id": "ys4",
+    "name": "วุ้นคุณเชียร์ ยะลา WoonKhunCheer",
+    "description": "ร้านขนมหวานและวุ้นเป็ดที่มีชื่อเสียง\n\nจุดเด่น: วุ้นเป็ดดีไซน์ต่างๆ\nพิกัดนำทาง: ถนนผังเมือง 1",
+    "image": "https://files.thailandtourismdirectory.go.th/assets/upload/2018/12/13/20181213d4edc67143bd9837fcb2819fe44dbb66163411.jpg",
+    "rating": 4.2,
+    "type": "🍰 ร้านขนมหวาน",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A7%E0%B8%B8%E0%B9%89%E0%B8%99%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2%20WoonKhunCheer%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2"
+  },
+  {
+    "id": "ys5",
+    "name": "ส้มโชกุนนวเกษตร",
+    "description": "ร้านจำหน่ายผลไม้และส้มโชกุน สินค้าขึ้นชื่อของยะลา\n\nจุดเด่น: ส้มโชกุนสดใหม่จากสวน\nพิกัดนำทาง: ถนนพุทธภูมิวิถี",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=577000211918096",
+    "rating": 4.6,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B9%82%E0%B8%8A%E0%B8%81%E0%B8%B8%E0%B8%99%E0%B8%99%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%20%E0%B8%A2%E0%B8%B0%E0%B8%A5%E0%B8%B2"
+  }
+];
+const NARATHIWAT_SOUVENIRS: Place[] = [
+  {
+    "id": "ns1",
+    "name": "กรอบรูปคุณดีนราของฝาก ของขวัญ ของที่ระลึก",
+    "description": "ร้านจำหน่ายของขวัญและของที่ระลึก\n\nจุดเด่น: กรอบรูป, งานของที่ระลึกประจำท้องถิ่น\nพิกัดนำทาง: ถนนสถิตย์รายา ตำบลบางนาค",
+    "image": "http://yourphotocute.com/wp-content/uploads/2023/01/กรอบลอย-เกษียณ-ย้ายงาน091.webp",
+    "rating": 4.2,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%94%E0%B8%B5%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B8%A7%E0%B8%B1%E0%B8%8D%20%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%A5%E0%B8%B6%E0%B8%81%20%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA"
+  },
+  {
+    "id": "ns2",
+    "name": "Befish cracker กือโป๊ะ ข้าวเกรียบเมืองนรา",
+    "description": "ร้านจำหน่ายกือโป๊ะหรือข้าวเกรียบปลา สินค้าขึ้นชื่อของนราธิวาส\n\nจุดเด่น: กือโป๊ะปรุงรสพร้อมทานและแบบทอดเอง\nพิกัดนำทาง: ถนนนิมิตมงคล",
+    "image": "https://down-th.img.susercontent.com/file/th-11134207-23010-n8hxa08yuqmv93",
+    "rating": 4.4,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=Befish%20cracker%20%E0%B8%81%E0%B8%B7%E0%B8%AD%E0%B9%82%E0%B8%9B%E0%B9%8A%E0%B8%B0%20%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%A3%E0%B8%B2%20%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA"
+  },
+  {
+    "id": "ns3",
+    "name": "Befish & Becafe สาขา ตลาดพิธาน",
+    "description": "สาขาจำหน่ายข้าวเกรียบปลาและคาเฟ่\n\nจุดเด่น: กือโป๊ะแปรรูป, เครื่องดื่ม\nพิกัดนำทาง: ถนนสุริยะประดิษฐ์ ตลาดพิธาน",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=841203941545461",
+    "rating": 3.7,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=Befish%20%26%20Becafe%20%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%20%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B2%E0%B8%99%20%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA"
+  },
+  {
+    "id": "ns4",
+    "name": "ศูนย์รวมของฝาก ใบไม้สีทอง อ.สมมาตร์",
+    "description": "ศูนย์รวมของที่ระลึกประจำจังหวัดนราธิวาส\n\nจุดเด่น: หัตถกรรมจากใบไม้สีทอง\nพิกัดนำทาง: ถนนพิชิตบำรุง",
+    "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100054643981580",
+    "rating": 3.5,
+    "type": "🎁 ร้านค้า",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%B5%E0%B8%97%E0%B8%AD%E0%B8%87%20%E0%B8%AD.%E0%B8%AA%E0%B8%A1%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B9%8C%20%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA"
+  },
+  {
+    "id": "ns5",
+    "name": "สวนอาหารริมน้ำ",
+    "description": "ร้านอาหารติดริมน้ำที่ให้บริการอาหารท้องถิ่น มีบริการอาหารพื้นเมือง\n\nจุดเด่น: อาหารพื้นเมือง\nพิกัดนำทาง: อำเภอเมืองนราธิวาส",
+    "image": "http://www.chillpainai.com/src/wewakeup/scoop/images/e3019b56e0b79f7fa49a2687f9c2247fe88e3e0d.jpg",
+    "rating": 4.5,
+    "type": "🍽️ ร้านอาหาร",
+    "mapsUrl": "https://maps.google.com/?q=%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%99%E0%B9%89%E0%B8%B3%20%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA"
+  }
+];
 
 const PATTANI_RESTAURANTS: Place[] = [
   { id: 'r1', name: 'The Pattanion (เดอะ ปัตตาเนี่ยน)', rating: 4.9, type: '☕ ร้านกาแฟ', status: 'เปิดอยู่ · ปิดเวลา 8:00 หลังเที่ยง', description: 'ร้านอาหารและคาเฟ่สไตล์โฮมเมด ตกแต่งสวยงามบรรยากาศอบอุ่น', bullets: [], image: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=522769479989038', mapsUrl: 'https://maps.google.com/?q=The+Pattanion' },
@@ -234,10 +377,11 @@ const PROVINCES: Record<string, ProvinceData> = {
     color: 'emerald',
     coverImage: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Pattani_Central_Mosque.jpg',
     restaurants: PATTANI_RESTAURANTS,
-    attractions: PATTANI_ATTRACTIONS
+    attractions: PATTANI_ATTRACTIONS,
+    souvenirs: PATTANI_SOUVENIRS
   },
-  yala: { id: 'yala', nameTh: 'ยะลา', nameEn: 'Yala', subtitle: 'ใต้สุดสยาม เมืองงามชายแดน', color: 'teal', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg/960px-The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg', restaurants: YALA_RESTAURANTS, attractions: YALA_ATTRACTIONS },
-  narathiwat: { id: 'narathiwat', nameTh: 'นราธิวาส', nameEn: 'Narathiwat', subtitle: 'มหัศจรรย์นราธิวาส ธรรมชาติและวัฒนธรรม', color: 'cyan', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg/960px-%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg', restaurants: NARATHIWAT_RESTAURANTS, attractions: NARATHIWAT_ATTRACTIONS }
+  yala: { id: 'yala', nameTh: 'ยะลา', nameEn: 'Yala', subtitle: 'ใต้สุดสยาม เมืองงามชายแดน', color: 'teal', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg/960px-The_Sea_of_Mist_Ai_Yerweng%2C_Betong.jpg', restaurants: YALA_RESTAURANTS, attractions: YALA_ATTRACTIONS, souvenirs: YALA_SOUVENIRS },
+  narathiwat: { id: 'narathiwat', nameTh: 'นราธิวาส', nameEn: 'Narathiwat', subtitle: 'มหัศจรรย์นราธิวาส ธรรมชาติและวัฒนธรรม', color: 'cyan', coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg/960px-%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%B0_%28%E0%B8%A1%E0%B8%B1%E0%B8%AA%E0%B8%A2%E0%B8%B4%E0%B8%94_300_%E0%B8%9B%E0%B8%B5%29.jpg', restaurants: NARATHIWAT_RESTAURANTS, attractions: NARATHIWAT_ATTRACTIONS, souvenirs: NARATHIWAT_SOUVENIRS }
 };
 
 const PlaceCard = ({ place }: { place: Place }) => (
@@ -285,8 +429,8 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pb-16">
       <div className={`w-full h-[400px] relative flex items-center justify-center bg-${province.color}-800`} style={province.coverImage ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(${province.coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}>
-        <Link href="/" className="absolute top-6 left-6 flex items-center text-white/90 hover:text-white bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm transition">
-          <ArrowLeft className="w-5 h-5 mr-2" /> กลับหน้าหลัก
+        <Link href="/explore" className="absolute top-6 left-6 flex items-center text-white/90 hover:text-white bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm transition">
+          <ArrowLeft className="w-5 h-5 mr-2" /> กลับหน้าสำรวจ
         </Link>
         <div className="text-center text-white z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">🕌 {province.nameTh}</h1>
@@ -323,6 +467,21 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {province.attractions.map(place => <PlaceCard key={place.id} place={place} />)}
           </div>
+        )}
+
+        {/* Souvenirs */}
+        {province.souvenirs && province.souvenirs.length > 0 && (
+          <>
+            <div className="flex items-center justify-between mb-8 mt-16">
+              <h2 className="text-3xl font-bold text-slate-800 dark:text-white flex items-center">
+                <span className="text-4xl mr-3">🎁</span> 
+                ร้านของฝาก
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+              {province.souvenirs.map(place => <PlaceCard key={place.id} place={place} />)}
+            </div>
+          </>
         )}
       </div>
     </div>

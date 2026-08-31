@@ -412,9 +412,9 @@ const PlaceCard = ({ place }: { place: Place }) => (
       </div>
       <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 leading-relaxed whitespace-pre-line">{place.description}</p>
       <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
-        <a href={place.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-white py-2.5 rounded-xl font-bold transition text-sm group-hover:bg-emerald-50 group-hover:text-emerald-700 dark:group-hover:bg-emerald-900/30 dark:group-hover:text-emerald-300">
+        <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.name + ' ประเทศไทย')}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-white py-2.5 rounded-xl font-bold transition text-sm group-hover:bg-emerald-50 group-hover:text-emerald-700 dark:group-hover:bg-emerald-900/30 dark:group-hover:text-emerald-300">
           <MapPin className="w-4 h-4 mr-2" />
-          เปิดใน Google Maps
+          นำทางด้วย Google Maps
           <ExternalLink className="w-3.5 h-3.5 ml-1.5 opacity-50" />
         </a>
       </div>

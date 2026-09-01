@@ -130,8 +130,6 @@ const MapComponent = ({
     setPois([
       // ปัตตานี
       { id: 'p1', name_th: 'มัสยิดกลางจังหวัดปัตตานี', name_ms: 'Masjid Agung Pattani', name_en: 'Pattani Central Mosque', name_ar: 'مسجد باتاني المركزي', category: 'mosque', lat: 6.862139, lng: 101.255075 },
-      { id: 't1', name_th: 'ศาลเจ้าแม่ลิ้มกอเหนี่ยว', name_ms: 'Kuil Lim Ko Niao', name_en: 'Lim Ko Niao Shrine', name_ar: 'ضريح ليم كو نياو', category: 'tourism_spot', lat: 6.8719, lng: 101.2505 },
-      { id: 't2', name_th: 'วัดช้างให้ (วัดราษฎร์บูรณะ)', name_ms: 'Wat Chang Hai', name_en: 'Wat Chang Hai', name_ar: 'وات تشانغ هاي', category: 'tourism_spot', lat: 6.7454, lng: 101.2675 },
       { id: 't3', name_th: 'สวนสมเด็จพระศรีนครินทร์ ปัตตานี', name_ms: 'Taman Somdet Phra Srinagarindra Pattani', name_en: 'Somdet Phra Srinagarindra Park Pattani', name_ar: 'حديقة سريناجاريندرا', category: 'tourism_spot', lat: 6.8789, lng: 101.2384 },
       { id: 't4', name_th: 'หาดตะโละกาโปร์', name_ms: 'Pantai Taloh Kapo', name_en: 'Taloh Kapo Beach', name_ar: 'شاطئ تالوه كابو', category: 'tourism_spot', lat: 6.8961, lng: 101.3740 },
       { id: 't5', name_th: 'มัสยิดกรือเซะ', name_ms: 'Masjid Kerisik', name_en: 'Krue Se Mosque', name_ar: 'مسجد كريسي', category: 'mosque', lat: 6.8731, lng: 101.3021 },
@@ -150,9 +148,7 @@ const MapComponent = ({
       // นราธิวาส
       { id: 'p3', name_th: 'มัสยิดกลางจังหวัดนราธิวาส', name_ms: 'Masjid Agung Narathiwat', name_en: 'Narathiwat Central Mosque', name_ar: 'مسجد ناراثيوات المركزي', category: 'mosque', lat: 6.4250, lng: 101.8200 },
       { id: 'm5', name_th: 'มัสยิดวาดีอัลฮูเซ็น (ตะโละมาเนาะ)', name_ms: 'Masjid Wadi al-Husein (Telok Manok)', name_en: 'Wadi al-Husein Mosque (300 Years)', name_ar: 'مسجد وادي الحسين', category: 'mosque', lat: 6.4842, lng: 101.6561 },
-      { id: 't10', name_th: 'วัดเขากง (พระพุทธทักษิณมิ่งมงคล)', name_ms: 'Wat Khao Kong', name_en: 'Wat Khao Kong', name_ar: 'وات خاو كونج', category: 'tourism_spot', lat: 6.3702, lng: 101.7902 },
       { id: 't11', name_th: 'หาดนราทัศน์', name_ms: 'Pantai Narathat', name_en: 'Narathat Beach', name_ar: 'شاطئ ناراثات', category: 'tourism_spot', lat: 6.4447, lng: 101.8315 },
-      { id: 't12', name_th: 'วัดชลธาราสิงเห', name_ms: 'Wat Chonthara Singhe', name_en: 'Wat Chonthara Singhe', name_ar: 'وات تشونثارا سينغه', category: 'tourism_spot', lat: 6.2624, lng: 102.0503 },
 
       // ร้านอาหารฮาลาล - ปัตตานี
       { id: 'r1', name_th: 'The Pattanion (เดอะ ปัตตาเนี่ยน)', name_en: 'The Pattanion', category: 'halal_restaurant', lat: 6.8661, lng: 101.2612 },

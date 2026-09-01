@@ -31,20 +31,7 @@ export default function ExplorePage() {
                 <div className="h-48 w-full rounded-2xl overflow-hidden relative mb-6 shadow-inner">
                   <div style={{ backgroundImage: `url(${prov.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="absolute inset-0 group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
                 </div>
-                <div className="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 px-3 py-2 rounded-lg">
-                    <span className="text-gray-500">👥 {t('landing.users', 'Active Users')}</span>
-                    <span className="font-bold text-gray-700 dark:text-gray-200">{prov.users}</span>
-                  </div>
-                  <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 px-3 py-2 rounded-lg">
-                    <span className="text-gray-500">📍 {t('map.halal_food', 'Halal POIs')}</span>
-                    <span className="font-bold text-gray-700 dark:text-gray-200">{prov.poi}</span>
-                  </div>
-                  <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 px-3 py-2 rounded-lg">
-                    <span className="text-gray-500">🛍️ ของฝากแนะนำ</span>
-                    <span className="font-bold text-gray-700 dark:text-gray-200">{prov.souvenirs}</span>
-                  </div>
-                </div>
+
               </div>
               <div className="px-6 pb-6 grid grid-cols-2 gap-3 mt-auto">
                 <Link href={prov.link} className="flex justify-center items-center py-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-xl font-medium transition-colors">

@@ -33,7 +33,7 @@ const PATTANI_SOUVENIRS: Place[] = [
   {
     "id": "ps1",
     "name": "ร้านยีโอ๊ะ",
-    "description": "ร้านของฝากท้องถิ่นในเมืองปัตตานีที่มีสินค้าและขนมพื้นเมืองจำหน่าย\n\nจุดเด่น: ปลาแห้ง, อาหารทะเลแปรรูป, ขนมพื้นบ้าน\n
+    "description": "ร้านของฝากท้องถิ่นในเมืองปัตตานีที่มีสินค้าและขนมพื้นเมืองจำหน่าย\n\nจุดเด่น: ปลาแห้ง, อาหารทะเลแปรรูป, ขนมพื้นบ้าน\n",
     "image": "https://p16-va.lemon8cdn.com/tos-alisg-v-a3e477-sg/ocqVa1gO7iAgwAFyEHAdIXE1PdeDPCBQ4Bz2fi~tplv-tej9nj120t-origin.webp",
     "rating": 4.2,
     "type": "🎁 ร้านค้า",
@@ -42,7 +42,7 @@ const PATTANI_SOUVENIRS: Place[] = [
   {
     "id": "ps2",
     "name": "ร้านตานีของฝาก",
-    "description": "แหล่งรวมของฝากประจำจังหวัดที่มีความหลากหลาย เดินทางสะดวก\n\nจุดเด่น: อาหารแห้ง, อาหารทะเลแปรรูป, ขนมท้องถิ่น\n
+    "description": "แหล่งรวมของฝากประจำจังหวัดที่มีความหลากหลาย เดินทางสะดวก\n\nจุดเด่น: อาหารแห้ง, อาหารทะเลแปรรูป, ขนมท้องถิ่น\n",
     "image": "https://img.wongnai.com/p/1920x0/2023/01/25/3bb0b3e6170743d381fa609cdf98f6f1.jpg",
     "rating": 4.7,
     "type": "🎁 ร้านค้า",
@@ -51,7 +51,7 @@ const PATTANI_SOUVENIRS: Place[] = [
   {
     "id": "ps3",
     "name": "ร้านบุหงาตานี",
-    "description": "ร้านของฝากอีกแห่งในปัตตานีที่มีสินค้าท้องถิ่นให้เลือกซื้อ\n\nจุดเด่น: ผลิตภัณฑ์อาหารแปรรูป, ของกินเล่น\n
+    "description": "ร้านของฝากอีกแห่งในปัตตานีที่มีสินค้าท้องถิ่นให้เลือกซื้อ\n\nจุดเด่น: ผลิตภัณฑ์อาหารแปรรูป, ของกินเล่น\n",
     "image": "https://explorelocalcharm.com/wp-content/uploads/2025/08/unnamed.webp",
     "rating": 4.7,
     "type": "🛒 ร้านขายของชำ",
@@ -60,7 +60,7 @@ const PATTANI_SOUVENIRS: Place[] = [
   {
     "id": "ps4",
     "name": "Farm Outlet Pattani Cafe & Souvenir",
-    "description": "ศูนย์จำหน่ายสินค้าเกษตรและของฝากที่ควบคู่กับบรรยากาศร้านกาแฟ\n\nจุดเด่น: สินค้าเกษตรแปรรูป, เครื่องดื่ม\n
+    "description": "ศูนย์จำหน่ายสินค้าเกษตรและของฝากที่ควบคู่กับบรรยากาศร้านกาแฟ\n\nจุดเด่น: สินค้าเกษตรแปรรูป, เครื่องดื่ม\n",
     "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=61561401759588",
     "rating": 4.7,
     "type": "🛍️ ร้านค้า",
@@ -69,7 +69,7 @@ const PATTANI_SOUVENIRS: Place[] = [
   {
     "id": "ps5",
     "name": "ร้านอาซัน ของฝาก",
-    "description": "ร้านของฝากในย่านจะบังติกอ\n\nจุดเด่น: ขนมและของฝากพื้นบ้าน\n
+    "description": "ร้านของฝากในย่านจะบังติกอ\n\nจุดเด่น: ขนมและของฝากพื้นบ้าน\n",
     "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=766011841045999",
     "rating": 4.6,
     "type": "🛒 ร้านขายของชำ",
@@ -80,7 +80,7 @@ const YALA_SOUVENIRS: Place[] = [
   {
     "id": "ys1",
     "name": "ร้านเฮน เบเกอรี่",
-    "description": "ร้านขนมและเบเกอรี่เก่าแก่ในเมืองยะลา\n\nจุดเด่น: เบเกอรี่, ขนมของฝาก\n
+    "description": "ร้านขนมและเบเกอรี่เก่าแก่ในเมืองยะลา\n\nจุดเด่น: เบเกอรี่, ขนมของฝาก\n",
     "image": "https://p16-va.lemon8cdn.com/tos-alisg-v-a3e477-sg/7ed69a3eb5894c87916a58b40488113f~tplv-tej9nj120t-origin.webp",
     "rating": 3.9,
     "type": "🛍️ ร้านค้า",
@@ -89,7 +89,7 @@ const YALA_SOUVENIRS: Place[] = [
   {
     "id": "ys2",
     "name": "ร้านหยกสวย",
-    "description": "ร้านจำหน่ายขนมและของฝากประจำเมืองยะลา\n\nจุดเด่น: ขนมท้องถิ่น, ของกินเล่น\n
+    "description": "ร้านจำหน่ายขนมและของฝากประจำเมืองยะลา\n\nจุดเด่น: ขนมท้องถิ่น, ของกินเล่น\n",
     "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1219766956929897",
     "rating": 4.6,
     "type": "🛒 ร้านขายของชำ",
@@ -98,7 +98,7 @@ const YALA_SOUVENIRS: Place[] = [
   {
     "id": "ys3",
     "name": "ร้านแวนด้า บ้านขนมของฝาก",
-    "description": "ร้านของฝากที่มีขนมหลากหลายรูปแบบ เหมาะสำหรับเลือกซื้อของขวัญและขนมของฝาก\n\nจุดเด่น: ของขวัญ, ขนมของฝาก\n
+    "description": "ร้านของฝากที่มีขนมหลากหลายรูปแบบ เหมาะสำหรับเลือกซื้อของขวัญและขนมของฝาก\n\nจุดเด่น: ของขวัญ, ขนมของฝาก\n",
     "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=459459484410532",
     "rating": 4.1,
     "type": "🍞 ร้านเบเกอรี่",
@@ -107,7 +107,7 @@ const YALA_SOUVENIRS: Place[] = [
   {
     "id": "ys4",
     "name": "วุ้นคุณเชียร์ ยะลา WoonKhunCheer",
-    "description": "ร้านขนมหวานและวุ้นเป็ดที่มีชื่อเสียง\n\nจุดเด่น: วุ้นเป็ดดีไซน์ต่างๆ\n
+    "description": "ร้านขนมหวานและวุ้นเป็ดที่มีชื่อเสียง\n\nจุดเด่น: วุ้นเป็ดดีไซน์ต่างๆ\n",
     "image": "https://files.thailandtourismdirectory.go.th/assets/upload/2018/12/13/20181213d4edc67143bd9837fcb2819fe44dbb66163411.jpg",
     "rating": 4.2,
     "type": "🍰 ร้านขนมหวาน",
@@ -116,7 +116,7 @@ const YALA_SOUVENIRS: Place[] = [
   {
     "id": "ys5",
     "name": "ส้มโชกุนนวเกษตร",
-    "description": "ร้านจำหน่ายผลไม้และส้มโชกุน สินค้าขึ้นชื่อของยะลา\n\nจุดเด่น: ส้มโชกุนสดใหม่จากสวน\n
+    "description": "ร้านจำหน่ายผลไม้และส้มโชกุน สินค้าขึ้นชื่อของยะลา\n\nจุดเด่น: ส้มโชกุนสดใหม่จากสวน\n",
     "image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=577000211918096",
     "rating": 4.6,
     "type": "🎁 ร้านค้า",

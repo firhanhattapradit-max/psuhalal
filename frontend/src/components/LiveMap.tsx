@@ -141,8 +141,6 @@ const MapComponent = ({
       { id: 'm3', name_th: 'มัสยิดนูรุลยากีนเบตง', name_ms: 'Masjid Nurul Yaqin Betong', name_en: 'Nurul Yaqin Mosque Betong', name_ar: 'مسجد نور اليقين', category: 'mosque', lat: 5.7750, lng: 101.0720 },
       { id: 'm4', name_th: 'มัสยิดซอลาฮูดีน - บูเก็ตตักโกร', name_ms: 'Masjid Salahuddin Bukit Takru', name_en: 'Salahuddin Mosque Bukit Takru', name_ar: 'مسجد صلاح الدين', category: 'mosque', lat: 5.7680, lng: 101.0650 },
       { id: 't6', name_th: 'สกายวอล์คทะเลหมอกอัยเยอร์เวง', name_ms: 'Skywalk Aiyerweng', name_en: 'Aiyerweng Skywalk', name_ar: 'ممشى أيرونج', category: 'tourism_spot', lat: 5.9782, lng: 101.1820 },
-      { id: 't7', name_th: 'อุโมงค์เบตงมงคลฤทธิ์', name_ms: 'Terowong Betong Mongkolrit', name_en: 'Betong Mongkolrit Tunnel', name_ar: 'نفق بيتونج', category: 'tourism_spot', lat: 5.7692, lng: 101.0717 },
-      { id: 't8', name_th: 'อุโมงค์ปิยะมิตร', name_ms: 'Terowong Piyamit', name_en: 'Piyamit Tunnel', name_ar: 'نفق بياميت', category: 'tourism_spot', lat: 5.8943, lng: 101.0374 },
       { id: 't9', name_th: 'บ่อน้ำร้อนเบตง', name_ms: 'Kolam Air Panas Betong', name_en: 'Betong Hot Spring', name_ar: 'ينابيع بيتونج الحارة', category: 'tourism_spot', lat: 5.8851, lng: 101.0337 },
 
       // นราธิวาส

@@ -97,15 +97,6 @@ export default function LandingPage() {
             </AnimatePresence>
           </div>
           
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-lg md:text-2xl text-slate-200 mb-12 max-w-2xl font-light drop-shadow-md"
-          >
-            สัมผัสประสบการณ์การท่องเที่ยวรูปแบบใหม่ใน 3 จังหวัดชายแดนภาคใต้ ด้วยนวัตกรรมฮาลาลที่ล้ำสมัย
-          </motion.p>
-          
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

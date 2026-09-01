@@ -1,9 +1,13 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Sans_Thai, Noto_Kufi_Arabic } from 'next/font/google';
+import { Prompt, Noto_Kufi_Arabic } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/NavBar';
 
-const notoSansThai = Noto_Sans_Thai({ subsets: ['thai', 'latin'], variable: '--font-noto-thai' });
+const prompt = Prompt({ 
+  weight: ['300', '400', '500', '600', '700', '800'],
+  subsets: ['thai', 'latin'], 
+  variable: '--font-prompt' 
+});
 const notoArabic = Noto_Kufi_Arabic({ subsets: ['arabic'], variable: '--font-noto-arabic' });
 
 export const viewport: Viewport = {
@@ -50,8 +54,8 @@ export default function RootLayout({
   const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={lang} dir={dir} className={`${notoSansThai.variable} ${notoArabic.variable}`}>
-      <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col font-sans">
+    <html lang={lang} dir={dir} className={`${prompt.variable} ${notoArabic.variable}`}>
+      <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col font-sans transition-colors duration-500">
         <I18nProvider>
           <ThemeProvider>
             <NavBar />

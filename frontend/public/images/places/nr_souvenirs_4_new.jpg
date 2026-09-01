@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="csrf-token" content="">
+
+  
+  
+  <title>404 - ไม่พบหน้าเว็บ — Museum Thailand</title>
+  <meta name="description" content="ไม่พบหน้าเว็บที่คุณต้องการค้นหา">
+  <meta name="robots" content="index,follow">
+  
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="404 - ไม่พบหน้าเว็บ — Museum Thailand">
+  <meta property="og:description" content="ไม่พบหน้าเว็บที่คุณต้องการค้นหา">
+  <meta property="og:url" content="https://www.museumthailand.com/upload/evidence/1531206122_60100.jpg">
+    <meta property="og:site_name" content="Museum Thailand">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 - ไม่พบหน้าเว็บ — Museum Thailand">
+  <meta name="twitter:description" content="ไม่พบหน้าเว็บที่คุณต้องการค้นหา">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C9960A'%3E%3Cpath d='M12 3L3 7h18L12 3zM3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2z'/%3E%3C/svg%3E">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <script>
+    (function(){
+      var d = localStorage.getItem('museum-dark-mode');
+      if (d === 'true' || (!d && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+        document.documentElement.setAttribute('data-theme','dark');
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  
+  <link rel="preload" as="style" href="https://www.museumthailand.com/build/assets/app-C63OBH8Q.css" /><link rel="modulepreload" as="script" href="https://www.museumthailand.com/build/assets/app-BuG9aa18.js" /><link rel="stylesheet" href="https://www.museumthailand.com/build/assets/app-C63OBH8Q.css" data-navigate-track="reload" /><script type="module" src="https://www.museumthailand.com/build/assets/app-BuG9aa18.js" data-navigate-track="reload"></script>
+  <style>
+    .logo-fallback-light { display: block !important; }
+    .logo-fallback-dark { display: none !important; }
+    [data-theme="dark"] .logo-fallback-light { display: none !important; }
+    [data-theme="dark"] .logo-fallback-dark { display: block !important; }
+  </style>
+
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75438369-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-75438369-1');
+    </script>
+  
+  
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.museumthailand.com//#organization",
+            "name": "Museum Thailand",
+            "url": "https://www.museumthailand.com/",
+            "description": "ไม่พบหน้าเว็บที่คุณต้องการค้นหา",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.museumthailand.com//#website",
+            "url": "https://www.museumthailand.com/",
+            "name": "Museum Thailand",
+            "description": "ไม่พบหน้าเว็บที่คุณต้องการค้นหา",
+            "publisher": {
+                "@id": "https://www.museumthailand.com//#organization"
+            },
+            "inLanguage": [
+                "th",
+                "en"
+            ],
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://www.museumthailand.com//search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.museumthailand.com/upload/evidence/1531206122_60100.jpg/#webpage",
+            "url": "https://www.museumthailand.com/upload/evidence/1531206122_60100.jpg",
+            "name": "404 - ไม่พบหน้าเว็บ — Museum Thailand",
+            "isPartOf": {
+                "@id": "https://www.museumthailand.com//#website"
+            },
+            "inLanguage": "th"
+        }
+    ]
+}</script>
+
+</head>
+<body style="background-color: var(--page-bg); color: var(--text-primary); transition: background-color 0.3s ease, color 0.3s ease;">
+  <script>
+  (function(){
+    var ls = document.createElement('div');
+    ls.id = 'loadingScreen';
+    var isDark = localStorage.getItem('museum-dark-mode') === 'true' ||
+      (!localStorage.getItem('museum-dark-mode') && window.matchMedia('(prefers-color-scheme:dark)').matches);
+    ls.style.cssText = 'position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;background:'+(isDark?'#121212':'#F7F7F5')+';transition:opacity 0.5s ease,visibility 0.5s ease;';
+    
+    // Delay loading the animation to avoid flashing on fast loads and prevent AbortError
+    window.loadingAnimationTimeout = setTimeout(function() {
+      var screen = document.getElementById('loadingScreen');
+      if (screen) {
+        screen.innerHTML = '<dotlottie-wc src="https://www.museumthailand.com/images/004.svg.lottie" autoplay loop speed="1.8" style="width:180px;height:180px;"></dotlottie-wc>';
+      }
+    }, 150);
+
+    document.currentScript.parentNode.insertBefore(ls, document.currentScript);
+  })();
+</script>
+
+
+
+<script>
+  (function() {
+    var hidden = false;
+
+    function hideLoadingScreen() {
+      if (hidden) return;
+      if (window.loadingAnimationTimeout) {
+        clearTimeout(window.loadingAnimationTimeout);
+      }
+      var screen = document.getElementById('loadingScreen');
+      if (!screen) return;
+      hidden = true;
+      screen.style.opacity = '0';
+      screen.style.visibility = 'hidden';
+      setTimeout(function () { screen.remove(); }, 500);
+    }
+
+    // Use DOMContentLoaded instead of window.load
+    // DOMContentLoaded fires after HTML parsing — does NOT wait for
+    // images, stylesheets, or module scripts from CDN
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(hideLoadingScreen, 300);
+      });
+    } else {
+      // DOM already parsed (e.g. script ran late)
+      setTimeout(hideLoadingScreen, 300);
+    }
+
+    // Livewire SPA navigation (wire:navigate) — DOMContentLoaded won't fire
+    document.addEventListener('livewire:navigated', function () {
+      setTimeout(hideLoadingScreen, 100);
+    });
+
+    // Safety net: never let loading screen stay more than 3s
+    setTimeout(hideLoadingScreen, 3000);
+  })();
+</script>
+
+
+<script async type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
+  <canvas
+  id="bgPatternCanvas"
+  class="fixed inset-0 pointer-events-none"
+  style="z-index: 0;"
+  aria-hidden="true"
+></canvas>
+
+
+<div
+  class="fixed z-50 flex items-center gap-1 p-1 rounded-xl shadow-lg hidden"
+  style="bottom: 20px; left: 20px; background: var(--pattern-sw-bg); backdrop-filter: blur(8px); border: 1px solid var(--pattern-sw-border); transition: background 0.3s ease, border-color 0.3s ease;"
+  id="patternSwitcher"
+>
+  <button
+    onclick="setBgPattern('shapes')"
+    title="รูปทรงลอย"
+    class="flex items-center justify-center w-8 h-8 rounded-lg border-0 cursor-pointer transition-all duration-200"
+    id="patternBtnShapes"
+    style="background: var(--primary-blue); color: #fff;"
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" />
+    </svg>
+  </button>
+  <button
+    onclick="setBgPattern('mesh')"
+    title="โครงข่าย Polygon"
+    class="flex items-center justify-center w-8 h-8 rounded-lg border-0 cursor-pointer transition-all duration-200"
+    id="patternBtnMesh"
+    style="background: transparent; color: #94a3b8;"
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" />
+      <line x1="12" y1="2" x2="12" y2="22" />
+      <line x1="2" y1="8" x2="22" y2="16" />
+      <line x1="22" y1="8" x2="2" y2="16" />
+    </svg>
+  </button>
+</div>
+
+  <header
+  class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-out"
+  id="mainNav"
+  data-nav-transparent="false"
+  style="border-bottom: 1px solid transparent;"
+>
+  <div class="flex items-center justify-between px-4 sm:px-6 lg:px-6 xl:px-10 py-3 max-w-[1440px] mx-auto nav-safe-area">
+    
+    <div class="flex items-center gap-6 lg:gap-4 xl:gap-8">
+      
+      <a href="https://www.museumthailand.com" class="flex-shrink-0">
+        <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+          alt="Museum Thailand"
+          class="h-10 sm:h-12 w-auto object-contain nav-logo nav-logo--light" loading="lazy">
+        <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+          alt="Museum Thailand"
+          class="h-10 sm:h-12 w-auto object-contain nav-logo nav-logo--dark"
+          style="display: none;" loading="lazy">
+      </a>
+
+      
+      <nav class="hidden lg:inline-flex items-center gap-2 lg:gap-3 xl:gap-6">
+        
+                                          <a
+              href="/"
+              class="nav-link nav-link--hero relative inline-flex items-center gap-1.5 pb-1 no-underline "
+            >
+              
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text  ">
+                Home
+              </span>
+            </a>
+                                                    <a
+              href="/thaiarch100yrs"
+              class="nav-link nav-link--hero relative inline-flex items-center gap-1.5 pb-1 no-underline "
+            >
+              
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text  nav-link__text--highlight">
+                100 Years
+              </span>
+            </a>
+                                                    <a
+              href="/explore"
+              class="nav-link nav-link--hero relative inline-flex items-center gap-1.5 pb-1 no-underline "
+            >
+              
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text  ">
+                Museums
+              </span>
+            </a>
+                                        <a
+              href="https://www.museumthailand.com/museumstar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link nav-link--hero relative inline-flex flex-col items-start pb-1 no-underline"
+            >
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text">
+                Museum Stars
+              </span>
+            </a>
+                                        <a
+              href="https://www.museshop.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link nav-link--hero relative inline-flex flex-col items-start pb-1 no-underline"
+            >
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text">
+                E-Shopping
+              </span>
+            </a>
+                                                    <a
+              href="/page/cgm48-mv"
+              class="nav-link nav-link--hero relative inline-flex items-center gap-1.5 pb-1 no-underline "
+            >
+              
+              <span class="font-display font-bold text-[13px] lg:text-sm xl:text-base tracking-tight leading-6 whitespace-nowrap nav-link__text  ">
+                News
+              </span>
+            </a>
+                        </nav>
+    </div>
+
+    
+    <div class="flex items-center gap-1 lg:gap-2 xl:gap-4">
+      
+      <button
+        onclick="document.getElementById('a11yPanel').classList.add('a11y-panel--open'); document.getElementById('a11yOverlay').classList.add('a11y-panel__overlay--visible');"
+        class="flex items-center justify-center w-9 h-9 rounded-none cursor-pointer border-0 nav-util-btn"
+        aria-label="Accessibility"
+        title="Accessibility"
+      >
+        <i class="fa-solid fa-universal-access text-base nav-util-icon"></i>
+      </button>
+
+      
+      <div class="inline-flex items-center p-1 rounded-none relative nav-lang-switcher">
+        <form method="POST" action="https://www.museumthailand.com/lang/th" class="inline">
+          <input type="hidden" name="_token" value="" autocomplete="off">          <button
+            type="submit"
+            class="relative z-10 px-2.5 lg:px-3 xl:px-4 py-1.5 rounded-none cursor-pointer border-0 transition-all duration-200"
+            style="background-color: var(--primary-blue); color: #ffffff; font-family: 'Google Sans', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; line-height: 18px;"
+          >
+            TH
+          </button>
+        </form>
+        <form method="POST" action="https://www.museumthailand.com/lang/en" class="inline">
+          <input type="hidden" name="_token" value="" autocomplete="off">          <button
+            type="submit"
+            class="relative z-10 px-2.5 lg:px-3 xl:px-4 py-1.5 rounded-none cursor-pointer border-0 transition-all duration-200 nav-lang-btn"
+            style="background-color: transparent; color: var(--lang-inactive); font-family: 'Google Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.5px; line-height: 18px;"
+          >
+            EN
+          </button>
+        </form>
+      </div>
+
+      
+      <a href="https://www.museumthailand.com/search" class="hidden lg:flex items-center justify-center w-9 h-9 rounded-none no-underline nav-search-btn">
+        <i class="fa-solid fa-magnifying-glass text-sm nav-search-icon"></i>
+      </a>
+
+      
+              <a href="https://www.museumthailand.com/login" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-none text-white text-sm font-semibold no-underline shadow-[0px_1px_3px_#0284C740] transition-colors" style="background-color: var(--primary-blue);">
+          <i class="fa-regular fa-circle-user"></i>
+          ระบบสมาชิก
+        </a>
+      
+      
+      <button
+        class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 bg-transparent cursor-pointer"
+        onclick="toggleMobileMenu()"
+        aria-label="Toggle menu"
+        id="mobileMenuBtn"
+      >
+        <span class="block w-6 h-0.5 transition-all nav-hamburger-line"></span>
+        <span class="block w-6 h-0.5 transition-all nav-hamburger-line"></span>
+        <span class="block w-6 h-0.5 transition-all nav-hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  
+  <div
+    id="mobileMenuBackdrop"
+    class="fixed inset-0 z-40 bg-stone-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 ease-out"
+    style="transition-property: opacity;"
+    onclick="toggleMobileMenu()"
+  ></div>
+
+  
+  <div
+    id="mobileMenuDrawer"
+    class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-[360px] shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out"
+    style="background-color: var(--page-bg); border-left: 1px solid var(--card-border); transition-property: transform;"
+  >
+    
+    <div class="flex items-center justify-between px-6 py-5 border-b" style="border-color: var(--card-border);">
+      <a href="https://www.museumthailand.com" class="flex-shrink-0" onclick="toggleMobileMenu()">
+        <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+          alt="Museum Thailand"
+          class="h-8 w-auto object-contain nav-logo nav-logo--light" loading="lazy">
+        <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+          alt="Museum Thailand"
+          class="h-8 w-auto object-contain nav-logo nav-logo--dark"
+          style="display: none;" loading="lazy">
+      </a>
+
+      <div class="flex items-center gap-3">
+        
+        <div class="inline-flex items-center p-0.5 rounded-none nav-lang-switcher border" style="border-color: var(--card-border); background-color: var(--warm-tint);">
+          <form method="POST" action="https://www.museumthailand.com/lang/th" class="inline">
+            <input type="hidden" name="_token" value="" autocomplete="off">            <button
+              type="submit"
+              class="px-2.5 py-1.5 cursor-pointer border-0 text-xs font-bold font-sans transition-colors duration-200"
+              style="background-color: var(--primary-blue); color: #ffffff;"
+            >
+              TH
+            </button>
+          </form>
+          <form method="POST" action="https://www.museumthailand.com/lang/en" class="inline">
+            <input type="hidden" name="_token" value="" autocomplete="off">            <button
+              type="submit"
+              class="px-2.5 py-1.5 cursor-pointer border-0 text-xs font-bold font-sans transition-colors duration-200"
+              style="background-color: transparent; color: var(--lang-inactive);"
+            >
+              EN
+            </button>
+          </form>
+        </div>
+
+        
+        <button
+          class="flex flex-col justify-center items-center w-9 h-9 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors cursor-pointer border-0 bg-transparent"
+          onclick="toggleMobileMenu()"
+          aria-label="Close menu"
+        >
+          <i class="fa-solid fa-xmark text-lg text-stone-600 dark:text-stone-300"></i>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-6">
+      
+      
+      <div class="flex flex-col gap-2">
+        <span class="text-[11px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase mb-1">
+          Navigation
+        </span>
+
+        
+                <a
+          href="https://www.museumthailand.com"
+          class="flex items-center justify-between px-4 py-3 rounded-xl no-underline transition-all duration-200 mobile-menu-item"
+          style="
+            background-color: transparent;
+            border-left: 4px solid transparent;
+            animation-delay: 40ms;
+          "
+          onclick="toggleMobileMenu()"
+        >
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-house text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+            <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+              Home
+            </span>
+          </div>
+        </a>
+
+        
+                <div class="flex flex-col">
+          <button
+            onclick="toggleAccordion('accMuseums', this)"
+            class="flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer border-0 bg-transparent w-full text-left transition-all duration-200 mobile-menu-item"
+            style="animation-delay: 80ms;"
+          >
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-building-columns text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+              <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+                Museums
+              </span>
+            </div>
+            <i class="fa-solid fa-chevron-down text-xs accordion-chevron transition-transform duration-300" style="color: var(--text-faint);"></i>
+          </button>
+
+          <div id="accMuseums" class="accordion-content">
+            <div class="accordion-content-inner pl-4 pr-1">
+              <div class="drawer-submenu-card">
+                <div>
+                  <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase flex items-center gap-1.5 mb-2">
+                    <i class="fa-solid fa-compass text-[11px]"></i>
+                    Explore
+                  </span>
+                  <div class="flex flex-col gap-2 pl-1">
+                    <a href="https://www.museumthailand.com/explore" class="no-underline text-sm font-sans font-medium hover:text-[var(--primary-blue)] transition-colors" style="color: var(--text-secondary);" onclick="toggleMobileMenu()">
+                      Search Museums
+                    </a>
+                  </div>
+                </div>
+
+                <div class="border-t pt-2" style="border-color: var(--card-border);">
+                  <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase flex items-center gap-1.5 mb-2">
+                    <i class="fa-solid fa-map-pin text-[11px]"></i>
+                    Regions
+                  </span>
+                  <div class="flex flex-col gap-2.5 pl-1">
+                    <a href="/explore?province=กรุงเทพมหานคร" class="no-underline text-sm font-sans font-medium hover:text-[var(--primary-blue)] transition-colors" style="color: var(--text-secondary);" onclick="toggleMobileMenu()">
+                      Bangkok
+                    </a>
+                    <a href="/explore?province=เชียงใหม่" class="no-underline text-sm font-sans font-medium hover:text-[var(--primary-blue)] transition-colors" style="color: var(--text-secondary);" onclick="toggleMobileMenu()">
+                      Chiang Mai
+                    </a>
+                    <a href="/explore?province=ภูเก็ต" class="no-underline text-sm font-sans font-medium hover:text-[var(--primary-blue)] transition-colors" style="color: var(--text-secondary);" onclick="toggleMobileMenu()">
+                      Phuket
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+                <div class="flex flex-col">
+          <button
+            onclick="toggleAccordion('acc100Years', this)"
+            class="flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer border-0 bg-transparent w-full text-left transition-all duration-200 mobile-menu-item"
+            style="animation-delay: 120ms;"
+          >
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-landmark text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+              <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+                100 Years
+              </span>
+            </div>
+            <i class="fa-solid fa-chevron-down text-xs accordion-chevron transition-transform duration-300" style="color: var(--text-faint);"></i>
+          </button>
+
+          <div id="acc100Years" class="accordion-content">
+            <div class="accordion-content-inner pl-4 pr-1">
+              <div class="drawer-submenu-card">
+                <div>
+                  <span class="text-[10px] font-bold tracking-widest text-stone-400 dark:text-stone-500 uppercase flex items-center gap-1.5 mb-2">
+                    <i class="fa-solid fa-timeline text-[11px]"></i>
+                    Chronology
+                  </span>
+                  <div class="flex flex-col gap-2 pl-1">
+                    <a href="https://www.museumthailand.com/thaiarch100yrs" class="no-underline text-sm font-sans font-medium hover:text-[var(--primary-blue)] transition-colors" style="color: var(--text-secondary);" onclick="toggleMobileMenu()">
+                      Century Architecture Timeline
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        
+        <a
+          href="https://www.museumthailand.com/museumstar/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between px-4 py-3 rounded-xl no-underline transition-all duration-200 mobile-menu-item"
+          style="animation-delay: 180ms;"
+          onclick="toggleMobileMenu()"
+        >
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-star text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+            <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+              Museum Stars
+            </span>
+          </div>
+        </a>
+
+        
+        <a
+          href="https://www.museshop.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between px-4 py-3 rounded-xl no-underline transition-all duration-200 mobile-menu-item"
+          style="animation-delay: 220ms;"
+          onclick="toggleMobileMenu()"
+        >
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-cart-shopping text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+            <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+              E-Shopping
+            </span>
+          </div>
+        </a>
+
+        
+                <a
+          href="/page/cgm48-mv"
+          class="flex items-center justify-between px-4 py-3 rounded-xl no-underline transition-all duration-200 mobile-menu-item"
+          style="
+            background-color: transparent;
+            border-left: 4px solid transparent;
+            animation-delay: 260ms;
+          "
+          onclick="toggleMobileMenu()"
+        >
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-newspaper text-base" style="color: var(--text-muted); width: 20px; text-align: center;"></i>
+            <span class="font-display font-bold text-base tracking-tight" style="color: var(--text-primary);">
+              News
+            </span>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="flex flex-col gap-5 mt-auto">
+        
+        <div class="p-4 rounded-2xl border flex flex-col gap-3 mobile-menu-item" style="background-color: var(--warm-tint); border-color: var(--card-border); animation-delay: 280ms;">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-universal-access text-base" style="color: var(--primary-blue);"></i>
+            <span class="font-display font-bold text-sm tracking-tight" style="color: var(--text-primary);">
+              การเข้าถึงและการปรับแต่ง
+            </span>
+          </div>
+          <p class="text-xs font-sans leading-relaxed m-0" style="color: var(--text-secondary);">
+            ปรับขนาดตัวอักษรและโหมดสีเพื่อความสะดวกในการอ่าน
+          </p>
+          <button
+            onclick="document.getElementById('a11yPanel').classList.add('a11y-panel--open'); document.getElementById('a11yOverlay').classList.add('a11y-panel__overlay--visible'); toggleMobileMenu();"
+            class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl cursor-pointer border border-solid font-sans font-bold text-sm transition-all"
+            style="background-color: var(--section-bg); border-color: var(--primary-blue); color: var(--primary-blue);"
+          >
+            <i class="fa-solid fa-eye"></i>
+            <span>ตั้งค่าการเข้าถึง</span>
+          </button>
+        </div>
+
+        
+                  <a
+            href="https://www.museumthailand.com/login"
+            class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl text-white text-base font-bold no-underline transition-all duration-250 active:scale-[0.98] shadow-md hover:shadow-lg mobile-menu-item"
+            style="background-color: var(--primary-blue); animation-delay: 320ms;"
+            onclick="toggleMobileMenu()"
+          >
+            <i class="fa-regular fa-circle-user text-lg"></i>
+            <span>ระบบสมาชิก</span>
+          </a>
+              </div>
+    </div>
+  </div>
+</header>
+
+
+<div id="navSpacer" class="h-16"></div>
+
+<script>
+  function toggleMobileMenu() {
+    const backdrop = document.getElementById('mobileMenuBackdrop');
+    const drawer = document.getElementById('mobileMenuDrawer');
+    const btn = document.getElementById('mobileMenuBtn');
+
+    if (!backdrop || !drawer || !btn) return;
+
+    const isOpen = !drawer.classList.contains('translate-x-full');
+
+    if (isOpen) {
+      // Close
+      drawer.classList.add('translate-x-full');
+      drawer.classList.remove('drawer-open');
+      backdrop.classList.add('opacity-0');
+      btn.classList.remove('nav-hamburger--open');
+      document.body.classList.remove('overflow-hidden');
+      setTimeout(() => {
+        if (drawer.classList.contains('translate-x-full')) {
+          backdrop.classList.add('hidden');
+        }
+      }, 300);
+    } else {
+      // Open
+      backdrop.classList.remove('hidden');
+      // Force reflow
+      backdrop.offsetHeight;
+      drawer.classList.remove('translate-x-full');
+      drawer.classList.add('drawer-open');
+      backdrop.classList.remove('opacity-0');
+      btn.classList.add('nav-hamburger--open');
+      document.body.classList.add('overflow-hidden');
+    }
+  }
+
+  function toggleAccordion(id, headerEl) {
+    const content = document.getElementById(id);
+    if (!content) return;
+
+    const isExpanded = content.classList.contains('expanded');
+    const chevron = headerEl.querySelector('.accordion-chevron');
+
+    if (isExpanded) {
+      content.classList.remove('expanded');
+      if (chevron) {
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    } else {
+      content.classList.add('expanded');
+      if (chevron) {
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    }
+  }
+</script>
+
+  <div
+  class="fixed inset-0 z-[999] opacity-0 invisible transition-all duration-[450ms] a11y-panel__overlay"
+  style="background: rgba(0,0,0,0.4);"
+  id="a11yOverlay"
+  onclick="closeA11yPanel()"
+></div>
+
+
+<aside
+  class="fixed top-0 right-0 z-[1000] w-[min(400px,92vw)] h-screen overflow-y-auto overscroll-contain transform translate-x-full transition-transform duration-[450ms]"
+  style="background: #1a2332; color: #ffffff;"
+  id="a11yPanel"
+>
+  
+  <div class="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/10">
+    <h2 class="text-lg font-bold flex items-center gap-3">
+      <i class="fa-solid fa-universal-access text-cyan-400 text-xl"></i>
+      คำแนะนำการใช้งาน
+    </h2>
+    <button
+      class="w-9 h-9 flex items-center justify-center rounded-full transition-colors hover:bg-white/10 cursor-pointer bg-transparent border-0 text-white/60"
+      onclick="closeA11yPanel()"
+    >
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+  </div>
+
+  
+  <div class="px-6 py-3 text-xs text-cyan-300/80 flex items-center gap-2 border-b border-white/5">
+    <i class="fa-solid fa-circle-info text-sm"></i>
+    กดเลือกแล้วดูผลลัพธ์ได้ทันทีจากหน้าเว็บด้านซ้าย
+  </div>
+
+  
+  <div class="px-6 py-6 flex flex-col gap-6">
+    
+    <div class="grid grid-cols-2 gap-4">
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="cycleA11yLevel('fontScale')"
+           id="a11yFontScaleCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <span class="font-bold text-2xl text-white a11y-icon-fixed" id="a11yFontScaleIcon">ก ก</span>
+        </div>
+        <span class="text-sm font-medium text-white/90">ขยายขนาดตัวอักษร</span>
+        <div class="flex items-center gap-1 mt-2" id="a11yFontScaleLevels">
+          <span class="a11y-level-dot" data-idx="0"></span>
+          <span class="a11y-level-num" data-idx="0">0</span>
+          <span class="a11y-level-num" data-idx="1">1</span>
+          <span class="a11y-level-num" data-idx="2">2</span>
+        </div>
+      </div>
+
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="cycleA11yLevel('letterSpacing')"
+           id="a11yLetterSpacingCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <span class="font-bold text-lg text-white a11y-icon-fixed">ก &nbsp; ข</span>
+        </div>
+        <span class="text-sm font-medium text-white/90">เพิ่มระยะห่างตัวอักษร</span>
+        <div class="flex items-center gap-1 mt-2" id="a11yLetterSpacingLevels">
+          <span class="a11y-level-dot" data-idx="0"></span>
+          <span class="a11y-level-num" data-idx="0">0</span>
+          <span class="a11y-level-num" data-idx="1">1</span>
+          <span class="a11y-level-num" data-idx="2">2</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="grid grid-cols-2 gap-4">
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="toggleA11yFeature('largeCursor')"
+           id="a11yLargeCursorCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <i class="fa-solid fa-arrow-pointer text-2xl text-white"></i>
+        </div>
+        <span class="text-sm font-medium text-white/90">เพิ่มขนาดลูกศรชี้ตำแหน่ง</span>
+        <div class="mt-2" id="a11yLargeCursorCheck">
+          <i class="fa-solid fa-circle-check text-white/20 text-lg"></i>
+        </div>
+      </div>
+
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="toggleA11yFeature('readingGuide')"
+           id="a11yReadingGuideCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <i class="fa-solid fa-bars-staggered text-2xl text-white"></i>
+        </div>
+        <span class="text-sm font-medium text-white/90">เส้นช่วยในการอ่าน</span>
+        <div class="mt-2" id="a11yReadingGuideCheck">
+          <i class="fa-solid fa-circle-check text-white/20 text-lg"></i>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="grid grid-cols-2 gap-4">
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="toggleA11yFeature('highlightLinks')"
+           id="a11yHighlightLinksCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <i class="fa-solid fa-link text-2xl text-white"></i>
+        </div>
+        <span class="text-sm font-medium text-white/90">เน้นการเชื่อมโยง</span>
+        <div class="mt-2" id="a11yHighlightLinksCheck">
+          <i class="fa-solid fa-circle-check text-white/20 text-lg"></i>
+        </div>
+      </div>
+
+      
+      <div class="a11y-feature-card flex flex-col items-center text-center p-4 rounded-2xl transition-all cursor-pointer"
+           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"
+           onclick="toggleA11yFeature('colorAdjust')"
+           id="a11yColorAdjustCard">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center mb-3"
+             style="background: linear-gradient(135deg, #2a7d7b, #3ba3a1);">
+          <i class="fa-solid fa-palette text-2xl text-white"></i>
+        </div>
+        <span class="text-sm font-medium text-white/90">ปรับชุดสี</span>
+        <div class="mt-2" id="a11yColorAdjustCheck">
+          <i class="fa-solid fa-circle-check text-white/20 text-lg"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="px-6 pb-6 flex items-center justify-center gap-6">
+    <button
+      class="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer border-0"
+      style="background: #14918B; color: white;"
+      onclick="enableAllA11y()"
+    >
+      <i class="fa-solid fa-circle-check"></i>
+      เปิดการใช้งาน
+    </button>
+    <button
+      class="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer border-0"
+      style="background: #dc2626; color: white;"
+      onclick="disableAllA11y()"
+    >
+      <i class="fa-solid fa-circle-xmark"></i>
+      ปิดการใช้งาน
+    </button>
+  </div>
+</aside>
+
+
+<div id="readingGuide" class="reading-guide" style="display:none;"></div>
+
+<style>
+  /* Panel open/close */
+  .a11y-panel--open { transform: translateX(0) !important; }
+  .a11y-panel__overlay--visible { opacity: 1 !important; visibility: visible !important; }
+
+  /* Feature card active glow */
+  .a11y-feature-card--active {
+    background: rgba(20,145,139,0.2) !important;
+    border-color: #14918B !important;
+    box-shadow: 0 0 20px rgba(20,145,139,0.15);
+  }
+  .a11y-feature-card:hover {
+    background: rgba(255,255,255,0.1) !important;
+    transform: translateY(-1px);
+  }
+
+  /* Level dots */
+  .a11y-level-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.4);
+    transition: all 0.2s;
+  }
+  .a11y-level-num--active {
+    background: #14918B !important;
+    color: white !important;
+  }
+  .a11y-level-dot { display: none; }
+
+  /* Reading guide stripe */
+  .reading-guide {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #14918B, transparent);
+    box-shadow: 0 0 15px rgba(20,145,139,0.5);
+    z-index: 9998;
+    pointer-events: none;
+    transition: top 0.05s linear;
+  }
+</style>
+
+  <div class="fixed z-50 flex flex-col items-end gap-2 toggle-safe-area" id="themeSwitcherGroup">
+
+  
+
+  
+  <button
+    onclick="toggleDarkMode()"
+    class="group w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 cursor-pointer border-0"
+    id="darkModeToggleBtn"
+    style="background: var(--card-bg); border: 1px solid var(--card-border); backdrop-filter: blur(12px);"
+    title="Toggle dark mode"
+    aria-label="Toggle dark mode"
+  >
+    
+    <svg id="darkModeIconSun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         style="color: #fbbf24; position: absolute; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0; transform: rotate(-90deg) scale(0.5);">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    
+    <svg id="darkModeIconMoon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         style="color: var(--primary-blue); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); opacity: 1; transform: rotate(0deg) scale(1);">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</div>
+
+    <div
+  id="popupDialog"
+  class="popup-dialog-overlay"
+  style="display: none;"
+  data-frequency="once_per_day"
+>
+  
+  <div class="popup-dialog-backdrop" onclick="closePopupDialog()"></div>
+
+  
+  <div class="popup-dialog-container popup-size-lg">
+    
+    <button
+      class="popup-dialog-close"
+      onclick="closePopupDialog()"
+      aria-label="ปิด Popup"
+      title="ปิด"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    
+        <div class="popup-dialog-image-wrap">
+            <a href="https://forms.gle/qWrAMs3LK1HbPhSj7" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://www.museumthailand.com/storage/popup/fx3ckKQ8hmj4HEIvoK2b0iL4arUoHuOOKRqOH2CS.webp"
+          alt="                                                                      "
+          class="popup-dialog-image"
+          loading="eager"
+        >
+      </a>
+          </div>
+    
+    
+        <div class="popup-dialog-content">
+            <h2 class="popup-dialog-title">
+        <span data-lang="th">                                                                      </span>
+        <span data-lang="en" style="display:none;">                                                                      </span>
+      </h2>
+      
+      
+            <a
+        href="https://forms.gle/qWrAMs3LK1HbPhSj7"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="popup-dialog-cta"
+      >
+        คลิกเพื่อทำแบบสอบถามการประเมิน
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+          </div>
+      </div>
+</div>
+
+<style>
+  /* ═══ Popup Dialog Styles ═══ */
+  .popup-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .popup-dialog-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .popup-dialog-overlay.popup-active .popup-dialog-backdrop {
+    opacity: 1;
+  }
+
+  .popup-dialog-container {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--card-border, #e5e5e5);
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* ═══ Size Variants ═══ */
+  .popup-dialog-container.popup-size-sm { max-width: 420px; }
+  .popup-dialog-container.popup-size-md { max-width: 520px; }
+  .popup-dialog-container.popup-size-lg { max-width: 680px; }
+  .popup-dialog-container.popup-size-xl { max-width: 860px; }
+  .popup-dialog-container.popup-size-full { max-width: 95vw; }
+
+  .popup-dialog-overlay.popup-active .popup-dialog-container {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  .popup-dialog-overlay.popup-closing .popup-dialog-backdrop {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .popup-dialog-overlay.popup-closing .popup-dialog-container {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    transition: opacity 0.25s ease,
+                transform 0.25s ease;
+  }
+
+  /* Close button */
+  .popup-dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--card-border, #e5e5e5);
+    background: var(--card-bg, #ffffff);
+    color: var(--text-secondary, #525252);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .popup-dialog-close:hover {
+    background: var(--warm-tint-strong, #e8e8e5);
+    transform: scale(1.1);
+  }
+
+  .popup-dialog-close:active {
+    transform: scale(0.95);
+  }
+
+  /* Image */
+  .popup-dialog-image-wrap {
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .popup-dialog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .popup-dialog-image-wrap a:hover .popup-dialog-image {
+    transform: scale(1.02);
+  }
+
+  /* Content */
+  .popup-dialog-content {
+    padding: 1.5rem 1.75rem 1.75rem;
+    text-align: center;
+  }
+
+  .popup-dialog-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary, #262626);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .popup-dialog-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary, #525252);
+    margin: 0 0 1.25rem;
+    line-height: 1.6;
+  }
+
+  /* CTA button */
+  .popup-dialog-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    background: var(--primary-blue, #0284C7);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px -4px rgba(2, 132, 199, 0.4);
+  }
+
+  .popup-dialog-cta:hover {
+    background: var(--accent-blue, #0EA5E9);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px -4px rgba(2, 132, 199, 0.5);
+  }
+
+  .popup-dialog-cta:active {
+    transform: translateY(0);
+  }
+
+  /* Image-only mode (no title/desc) — rounded fully */
+  .popup-dialog-container:not(:has(.popup-dialog-content)) .popup-dialog-image-wrap {
+    border-radius: 1.25rem;
+  }
+
+  /* Body scroll lock when popup is open */
+  body.popup-open {
+    overflow: hidden;
+  }
+
+  /* ═══ Responsive ═══ */
+  @media (max-width: 640px) {
+    .popup-dialog-container {
+      max-width: 92vw;
+      border-radius: 1rem;
+    }
+
+    .popup-dialog-image-wrap {
+      border-radius: 1rem 1rem 0 0;
+    }
+
+
+
+    .popup-dialog-content {
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+
+    .popup-dialog-title {
+      font-size: 1.15rem;
+    }
+
+    .popup-dialog-desc {
+      font-size: 0.875rem;
+    }
+
+    .popup-dialog-close {
+      width: 32px;
+      height: 32px;
+    }
+
+    .popup-dialog-close svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .popup-dialog-container:not(:has(.popup-dialog-content)) .popup-dialog-image-wrap {
+      border-radius: 1rem;
+    }
+  }
+</style>
+
+  <div
+  id="cookieConsentBanner"
+  class="hidden"
+  role="dialog"
+  aria-labelledby="cookieTitle"
+  aria-describedby="cookieDesc"
+>
+  <div
+    class="p-5 md:p-6 rounded-2xl shadow-2xl flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 border"
+    style="background: var(--card-bg); border-color: var(--card-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
+  >
+    
+    <div class="flex-1 flex flex-col text-left">
+      <h3 id="cookieTitle" class="text-base md:text-lg font-bold tracking-tight mb-1" style="color: var(--text-primary);">
+        การใช้งานคุกกี้
+      </h3>
+      <p id="cookieDesc" class="text-xs md:text-sm leading-relaxed" style="color: var(--text-secondary);">
+        เราใช้คุกกี้เพื่อเพิ่มประสิทธิภาพ ประสบการณ์การใช้งาน และเพื่อการปรับปรุงการเข้าถึงข้อมูลให้ดียิ่งขึ้น คุณสามารถเลือกยอมรับการเก็บคุกกี้ทั้งหมด หรือเลือกยอมรับเฉพาะคุกกี้ที่จำเป็นได้
+                  <a href="https://www.museumthailand.com/page/privacy-policy" class="underline transition-colors duration-200 hover:opacity-85 font-medium" style="color: var(--primary-blue);">
+            นโยบายคุกกี้
+          </a>
+              </p>
+    </div>
+
+    
+    <div class="flex flex-row items-center gap-3 self-end md:self-auto shrink-0">
+      <button
+        onclick="acceptNecessaryCookies()"
+        class="px-5 py-2 rounded-full text-xs font-semibold cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border"
+        style="background: var(--warm-tint); border-color: var(--card-border); color: var(--text-secondary);"
+      >
+        เฉพาะที่จำเป็น
+      </button>
+      <button
+        onclick="acceptAllCookies()"
+        class="px-5 py-2 rounded-full text-xs font-semibold cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border-0 text-white shadow-md shadow-sky-500/10 hover:shadow-lg hover:shadow-sky-500/20"
+        style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);"
+      >
+        ยอมรับทั้งหมด
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #cookieConsentBanner {
+    position: fixed;
+    z-index: 50;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  }
+
+  /* Adjust position for mobile views to prevent overlapping floating elements */
+  @media (max-width: 480px) {
+    #cookieConsentBanner {
+      bottom: 5.5rem; /* Raised slightly higher on mobile */
+      width: calc(100% - 1.5rem);
+    }
+  }
+
+  #cookieConsentBanner.cookie-active {
+    display: block !important;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  #cookieConsentBanner.cookie-closing {
+    transform: translateX(-50%) translateY(100px) scale(0.95);
+    opacity: 0;
+  }
+</style>
+
+
+  <div class="relative" style="z-index: 1;">
+    <div class="min-h-[80vh] flex items-center justify-center pt-32 pb-20 px-6 relative overflow-hidden">
+  
+  <div class="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full blur-[100px] opacity-10 pointer-events-none transition-colors duration-500"
+       style="background: radial-gradient(circle, var(--primary-blue) 0%, transparent 70%);"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] rounded-full blur-[100px] opacity-10 pointer-events-none transition-colors duration-500"
+       style="background: radial-gradient(circle, var(--accent-orange) 0%, transparent 70%);"></div>
+
+  <div class="w-full max-w-2xl text-center relative z-10">
+    
+    <div class="relative w-full max-w-[280px] h-[240px] mx-auto mb-10 flex items-center justify-center group">
+      
+      <div class="absolute bottom-[48px] left-1/2 -translate-x-1/2 w-[120px] h-[60px] bg-sky-400/20 dark:bg-sky-400/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+
+      <svg class="w-full h-full text-slate-400/40 dark:text-slate-600/40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        <g class="animate-bounce" style="animation-duration: 4s;">
+          <path d="M100 50C92.8 50 87 55.8 87 63H94C94 59.7 96.7 57 100 57C103.3 57 106 59.7 106 63C106 69 97 68.3 97 78H103C103 71.3 112 70.5 112 63C112 55.8 106.2 50 100 50Z" fill="currentColor" class="text-sky-500 dark:text-sky-400" />
+          <circle cx="100" cy="85" r="3.5" fill="currentColor" class="text-sky-500 dark:text-sky-400" />
+        </g>
+
+        
+        <circle cx="75" cy="80" r="1.5" fill="currentColor" class="text-amber-500/60 dark:text-amber-400/40 animate-pulse" style="animation-delay: 0.5s;" />
+        <circle cx="125" cy="70" r="2" fill="currentColor" class="text-sky-500/60 dark:text-sky-400/40 animate-pulse" style="animation-delay: 1.2s;" />
+        <circle cx="90" cy="100" r="1" fill="currentColor" class="text-sky-500/60 dark:text-sky-400/40 animate-pulse" style="animation-delay: 0.8s;" />
+
+        
+        <path d="M60 120 V85 C60 62.9 77.9 45 100 45 C122.1 45 140 62.9 140 85 V120" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4" class="text-slate-300 dark:text-slate-700" />
+        
+        
+        <path d="M50 120 H150 V130 H50 Z" fill="currentColor" class="text-slate-400 dark:text-slate-600" />
+        <path d="M54 130 L64 165 H136 L146 130 Z" fill="currentColor" class="text-slate-300 dark:text-slate-700" />
+        <path d="M40 165 H160 V172 H40 Z" fill="currentColor" class="text-slate-400 dark:text-slate-600" />
+
+        
+        <line x1="68" y1="140" x2="132" y2="140" stroke="currentColor" stroke-width="1.5" class="text-slate-200/50 dark:text-slate-800/50" />
+      </svg>
+      
+      
+      <!-- <div class="absolute top-[28px] right-[24px] px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm select-none border"
+           style="background-color: var(--warm-tint); border-color: var(--card-border); color: var(--accent-orange);">
+        404 Not Found
+      </div> -->
+    </div>
+
+    
+    <h1 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-4" style="color: var(--text-primary);">
+              โบราณวัตถุชิ้นนี้สูญหายไปตามกาลเวลา
+          </h1>
+
+    
+    <p class="font-sans text-lg max-w-xl mx-auto mb-10 leading-relaxed" style="color: var(--text-secondary);">
+              ไม่พบข้อมูลหรือหน้าเว็บที่คุณกำลังตามหา นิทรรศการนี้อาจถูกเคลื่อนย้ายไปแล้ว อยู่ระหว่างการบูรณะ หรือข้อมูลในคลังประวัติศาสตร์มีการอัปเดตใหม่
+          </p>
+
+    
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://www.museumthailand.com"
+         class="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm text-center border no-underline"
+         style="background-color: var(--primary-blue); border-color: var(--primary-blue); color: #fff;"
+         onmouseover="this.style.opacity='0.9'"
+         onmouseout="this.style.opacity='1'">
+        <i class="fa-solid fa-house-chimney mr-2"></i>
+                  กลับสู่ห้องโถงหลัก
+              </a>
+
+      <a href="https://www.museumthailand.com/explore"
+         class="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm text-center border no-underline"
+         style="background-color: var(--warm-tint); border-color: var(--card-border); color: var(--text-primary);"
+         onmouseover="this.style.backgroundColor='var(--warm-tint-strong)'"
+         onmouseout="this.style.backgroundColor='var(--warm-tint)'">
+        <i class="fa-solid fa-magnifying-glass mr-2"></i>
+                  ค้นหาพิพิธภัณฑ์อื่น
+              </a>
+    </div>
+  </div>
+</div>
+    
+
+    <footer class="v2-footer" style="background:var(--warm-tint-footer);border-top:1px solid var(--card-border);transition:background-color .3s ease;">
+  <div class="v2-footer__inner">
+
+    
+    <a href="https://www.museumthailand.com" class="v2-footer__logo">
+      <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+        alt="Museum Thailand"
+        class="v2-footer__logo-img nav-logo nav-logo--light" loading="lazy">
+      <img src="https://www.museumthailand.com/storage/settings/01KWRNC74BDZJ3SRECTP06PQMP.svg"
+        alt="Museum Thailand"
+        class="v2-footer__logo-img nav-logo nav-logo--dark"
+        style="display: none;" loading="lazy">
+    </a>
+
+    
+    <div class="v2-footer__social">
+      
+      <a href="https://www.facebook.com/museumthailand/" target="_blank" rel="noopener noreferrer" class="v2-footer__social-link" data-brand="facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      
+      <a href="https://x.com/museumthailand/" target="_blank" rel="noopener noreferrer" class="v2-footer__social-link" data-brand="x" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      
+      <a href="https://page.line.me/museumthailand" target="_blank" rel="noopener noreferrer" class="v2-footer__social-link" data-brand="line" aria-label="LINE">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      </a>
+      
+      <a href="https://www.instagram.com/museumthailand/" target="_blank" rel="noopener noreferrer" class="v2-footer__social-link" data-brand="instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
+
+    
+    <p class="v2-footer__copy">
+      © 2026 Museum Thailand. All heritage preserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFDC80"/>
+      <stop offset="25%" stop-color="#F56040"/>
+      <stop offset="50%" stop-color="#E4405F"/>
+      <stop offset="75%" stop-color="#C13584"/>
+      <stop offset="100%" stop-color="#833AB4"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<style>
+.v2-footer { padding:2rem 0; padding-bottom:calc(2rem + env(safe-area-inset-bottom, 0px)); }
+.v2-footer__inner { display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 clamp(1rem,3vw,2.5rem);gap:clamp(1rem,2vw,2rem);flex-wrap:wrap; }
+.v2-footer__logo { flex-shrink:0;display:flex;align-items:center;text-decoration:none; }
+.v2-footer__logo-img { height:clamp(48px,4.5vw,60px);width:auto;object-fit:contain;opacity:.95;transition:opacity .3s ease; }
+.v2-footer__logo:hover .v2-footer__logo-img { opacity:1; }
+.v2-footer__social { display:flex;align-items:center;gap:clamp(12px,1.5vw,20px); }
+.v2-footer__social-link { display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:transparent;border:1px solid var(--card-border);transition:all .3s ease;text-decoration:none; }
+.v2-footer__social-link svg { width:24px;height:24px; }
+
+/* === Brand colors for each social icon === */
+.v2-footer__social-link[data-brand="facebook"] { color:#1877F2; }
+.v2-footer__social-link[data-brand="facebook"]:hover { border-color:#1877F2;background:rgba(24,119,242,.08);transform:translateY(-2px); }
+
+.v2-footer__social-link[data-brand="x"] { color:#14171A; }
+html.dark .v2-footer__social-link[data-brand="x"],
+[data-theme="dark"] .v2-footer__social-link[data-brand="x"] { color:#E7E9EA; }
+.v2-footer__social-link[data-brand="x"]:hover { border-color:#536471;background:rgba(83,100,113,.08);transform:translateY(-2px); }
+
+.v2-footer__social-link[data-brand="line"] { color:#06C755; }
+.v2-footer__social-link[data-brand="line"]:hover { border-color:#06C755;background:rgba(6,199,85,.08);transform:translateY(-2px); }
+
+/* Instagram: gradient effect on the SVG icon */
+.v2-footer__social-link[data-brand="instagram"] { color:#E4405F;position:relative; }
+.v2-footer__social-link[data-brand="instagram"] svg { fill:url(#ig-gradient); }
+.v2-footer__social-link[data-brand="instagram"]:hover { border-color:#E4405F;background:rgba(228,64,95,.08);transform:translateY(-2px); }
+
+.v2-footer__copy { font-size:clamp(10px,0.7vw,12px);font-weight:500;color:var(--text-faint);letter-spacing:.5px;margin:0;white-space:nowrap; }
+@media(max-width:640px){
+  .v2-footer__inner {
+    flex-direction:column !important;
+    align-items:center !important;
+    text-align:center !important;
+    gap:1rem !important;
+    padding-left: calc(1rem + env(safe-area-inset-left)) !important;
+    padding-right: calc(1rem + env(safe-area-inset-right)) !important;
+  }
+  .v2-footer__logo { justify-content:center !important; }
+  .v2-footer__social { justify-content:center !important; }
+  .v2-footer__copy { text-align:center !important; white-space:normal !important; }
+}
+</style>
+  </div>
+
+  <script src="https://www.museumthailand.com/js-legacy/i18n.js?v=1788258817"></script>
+  <script src="https://www.museumthailand.com/js-legacy/main.js?v=1788258817"></script>
+  <script src="/livewire/livewire.min.js?id=57eb113f"   data-csrf="" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+  <script>
+    document.addEventListener('livewire:init', function() {
+      if (typeof Livewire !== 'undefined') {
+        Livewire.hook('request', function({ fail }) {
+          fail(function({ status, preventDefault }) {
+            if (status === 419) {
+              preventDefault();
+              window.location.href = "https://www.museumthailand.com/login";
+            }
+          });
+        });
+      }
+    });
+  </script>
+  <script>
+(function() {
+  const canvas = document.getElementById('bgPatternCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let currentPattern = localStorage.getItem('bg-pattern') || 'shapes';
+  let animationId = null;
+  let particles = [];
+  let meshNodes = [];
+
+  // ───── Utility ─────
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function updateButtons() {
+    const btnShapes = document.getElementById('patternBtnShapes');
+    const btnMesh = document.getElementById('patternBtnMesh');
+    if (btnShapes) {
+      btnShapes.style.background = currentPattern === 'shapes' ? 'var(--primary-blue)' : 'transparent';
+      btnShapes.style.color = currentPattern === 'shapes' ? '#fff' : '#94a3b8';
+    }
+    if (btnMesh) {
+      btnMesh.style.background = currentPattern === 'mesh' ? 'var(--primary-blue)' : 'transparent';
+      btnMesh.style.color = currentPattern === 'mesh' ? '#fff' : '#94a3b8';
+    }
+  }
+
+  // ───── SHAPES pattern ─────
+  const shapeColors = [
+    'rgba(0, 99, 151, 0.07)', 'rgba(52, 152, 219, 0.06)',
+    'rgba(59, 130, 246, 0.06)', 'rgba(14, 165, 233, 0.05)',
+    'rgba(6, 182, 212, 0.05)',
+  ];
+
+  function createShapeParticles() {
+    const count = Math.min(Math.floor(window.innerWidth / 60), 25);
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        size: Math.random() * 30 + 15,
+        speedX: (Math.random() - 0.5) * 0.3, speedY: (Math.random() - 0.5) * 0.2,
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.005,
+        opacity: Math.random() * 0.5 + 0.3,
+        type: Math.floor(Math.random() * 5),
+        color: shapeColors[Math.floor(Math.random() * shapeColors.length)],
+      });
+    }
+  }
+
+  function drawDiamond(c, s) { c.beginPath(); c.moveTo(0, -s); c.lineTo(s * 0.6, 0); c.lineTo(0, s); c.lineTo(-s * 0.6, 0); c.closePath(); }
+  function drawLotus(c, s) { for (let i = 0; i < 5; i++) { const a = (i * Math.PI * 2) / 5 - Math.PI / 2; c.beginPath(); c.ellipse(Math.cos(a) * s * 0.3, Math.sin(a) * s * 0.3, s * 0.5, s * 0.2, a, 0, Math.PI * 2); c.fill(); } }
+  function drawTriangle(c, s) { c.beginPath(); c.moveTo(0, -s); c.lineTo(s * 0.85, s * 0.7); c.lineTo(-s * 0.85, s * 0.7); c.closePath(); }
+  function drawCircleRing(c, s) { c.beginPath(); c.arc(0, 0, s, 0, Math.PI * 2); c.stroke(); c.beginPath(); c.arc(0, 0, s * 0.6, 0, Math.PI * 2); c.stroke(); }
+  function drawCross(c, s) { const w = s * 0.25; c.beginPath(); c.rect(-w, -s, w * 2, s * 2); c.fill(); c.beginPath(); c.rect(-s, -w, s * 2, w * 2); c.fill(); }
+
+  function animateShapes() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      p.x += p.speedX; p.y += p.speedY; p.rotation += p.rotationSpeed;
+      if (p.x < -p.size * 2) p.x = canvas.width + p.size;
+      if (p.x > canvas.width + p.size * 2) p.x = -p.size;
+      if (p.y < -p.size * 2) p.y = canvas.height + p.size;
+      if (p.y > canvas.height + p.size * 2) p.y = -p.size;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rotation);
+      ctx.globalAlpha = p.opacity; ctx.fillStyle = p.color; ctx.strokeStyle = p.color; ctx.lineWidth = 1.5;
+      switch (p.type) {
+        case 0: drawDiamond(ctx, p.size); ctx.fill(); break;
+        case 1: drawLotus(ctx, p.size); break;
+        case 2: drawTriangle(ctx, p.size); ctx.stroke(); break;
+        case 3: drawCircleRing(ctx, p.size); break;
+        case 4: drawCross(ctx, p.size); break;
+      }
+      ctx.restore();
+    });
+    animationId = requestAnimationFrame(animateShapes);
+  }
+
+  // ───── MESH pattern ─────
+  function createMeshNodes() {
+    meshNodes = [];
+    const spacing = Math.max(80, Math.min(120, window.innerWidth / 14));
+    const cols = Math.ceil(canvas.width / spacing) + 2;
+    const rows = Math.ceil(canvas.height / spacing) + 2;
+    for (let row = -1; row < rows; row++) {
+      for (let col = -1; col < cols; col++) {
+        const offsetX = row % 2 === 0 ? 0 : spacing * 0.5;
+        const x = col * spacing + offsetX;
+        const y = row * spacing * 0.866;
+        const jx = (Math.random() - 0.5) * spacing * 0.3;
+        const jy = (Math.random() - 0.5) * spacing * 0.3;
+        meshNodes.push({ x: x + jx, y: y + jy, ox: x + jx, oy: y + jy, vx: (Math.random() - 0.5) * 0.15, vy: (Math.random() - 0.5) * 0.15 });
+      }
+    }
+  }
+
+  function getBaseColor() {
+    const blue = getComputedStyle(document.documentElement).getPropertyValue('--primary-blue').trim() || '#0284C7';
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(blue);
+    return result ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) } : { r: 0, g: 99, b: 151 };
+  }
+
+  function animateMesh() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const bc = getBaseColor();
+    const connDist = Math.max(100, Math.min(160, window.innerWidth / 10));
+
+    meshNodes.forEach(function(n) {
+      n.x += n.vx; n.y += n.vy;
+      n.vx += (n.ox - n.x) * 0.001; n.vy += (n.oy - n.y) * 0.001;
+      n.vx *= 0.998; n.vy *= 0.998;
+    });
+
+    // Edges
+    ctx.lineWidth = 0.5;
+    for (let i = 0; i < meshNodes.length; i++) {
+      for (let j = i + 1; j < meshNodes.length; j++) {
+        const d = Math.hypot(meshNodes[i].x - meshNodes[j].x, meshNodes[i].y - meshNodes[j].y);
+        if (d < connDist) {
+          ctx.strokeStyle = 'rgba(' + bc.r + ',' + bc.g + ',' + bc.b + ',' + ((1 - d / connDist) * 0.12) + ')';
+          ctx.beginPath(); ctx.moveTo(meshNodes[i].x, meshNodes[i].y); ctx.lineTo(meshNodes[j].x, meshNodes[j].y); ctx.stroke();
+        }
+      }
+    }
+
+    // Triangles
+    for (let i = 0; i < meshNodes.length; i++) {
+      for (let j = i + 1; j < meshNodes.length; j++) {
+        const dij = Math.hypot(meshNodes[i].x - meshNodes[j].x, meshNodes[i].y - meshNodes[j].y);
+        if (dij > connDist) continue;
+        for (let k = j + 1; k < meshNodes.length; k++) {
+          const dik = Math.hypot(meshNodes[i].x - meshNodes[k].x, meshNodes[i].y - meshNodes[k].y);
+          const djk = Math.hypot(meshNodes[j].x - meshNodes[k].x, meshNodes[j].y - meshNodes[k].y);
+          if (dik < connDist && djk < connDist) {
+            const avg = (dij + dik + djk) / 3;
+            ctx.fillStyle = 'rgba(' + bc.r + ',' + bc.g + ',' + bc.b + ',' + ((1 - avg / connDist) * 0.03) + ')';
+            ctx.beginPath(); ctx.moveTo(meshNodes[i].x, meshNodes[i].y); ctx.lineTo(meshNodes[j].x, meshNodes[j].y); ctx.lineTo(meshNodes[k].x, meshNodes[k].y); ctx.closePath(); ctx.fill();
+          }
+        }
+      }
+    }
+
+    // Dots
+    meshNodes.forEach(function(n) {
+      ctx.fillStyle = 'rgba(' + bc.r + ',' + bc.g + ',' + bc.b + ',0.15)';
+      ctx.beginPath(); ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2); ctx.fill();
+    });
+
+    animationId = requestAnimationFrame(animateMesh);
+  }
+
+  // ───── Start / switch ─────
+  function startPattern() {
+    if (animationId) cancelAnimationFrame(animationId);
+    resize();
+    if (currentPattern === 'shapes') {
+      createShapeParticles();
+      animateShapes();
+    } else {
+      createMeshNodes();
+      animateMesh();
+    }
+    updateButtons();
+  }
+
+  window.setBgPattern = function(type) {
+    currentPattern = type;
+    localStorage.setItem('bg-pattern', type);
+    startPattern();
+  };
+
+  startPattern();
+  window.addEventListener('resize', function() { resize(); if (currentPattern === 'shapes') createShapeParticles(); else createMeshNodes(); });
+})();
+</script>
+<script>
+(function() {
+  // ===== A11Y STATE =====
+  const A11Y_CLASSES = {
+    fontScale:      ['', 'a11y-font-scale-1', 'a11y-font-scale-2'],
+    letterSpacing:  ['', 'a11y-letter-spacing-1', 'a11y-letter-spacing-2'],
+  };
+
+  const A11Y_TOGGLES = {
+    largeCursor:    'a11y-large-cursor',
+    readingGuide:   'a11y-reading-guide',
+    highlightLinks: 'a11y-highlight-links',
+    colorAdjust:    'a11y-color-adjust',
+  };
+
+  // Load saved state
+  let state = {};
+  try {
+    state = JSON.parse(localStorage.getItem('museumA11y') || '{}');
+  } catch(e) {}
+
+  // Defaults
+  if (typeof state.fontScale !== 'number') state.fontScale = 0;
+  if (typeof state.letterSpacing !== 'number') state.letterSpacing = 0;
+  Object.keys(A11Y_TOGGLES).forEach(k => {
+    if (typeof state[k] !== 'boolean') state[k] = false;
+  });
+
+  function saveState() {
+    localStorage.setItem('museumA11y', JSON.stringify(state));
+  }
+
+  function applyState() {
+    const html = document.documentElement;
+
+    // Multi-level: fontScale
+    A11Y_CLASSES.fontScale.forEach(c => { if(c) html.classList.remove(c); });
+    if (state.fontScale > 0) html.classList.add(A11Y_CLASSES.fontScale[state.fontScale]);
+
+    // Multi-level: letterSpacing
+    A11Y_CLASSES.letterSpacing.forEach(c => { if(c) html.classList.remove(c); });
+    if (state.letterSpacing > 0) html.classList.add(A11Y_CLASSES.letterSpacing[state.letterSpacing]);
+
+    // Toggles
+    Object.entries(A11Y_TOGGLES).forEach(([key, cls]) => {
+      html.classList.toggle(cls, !!state[key]);
+    });
+
+    // Reading guide
+    const guide = document.getElementById('readingGuide');
+    if (guide) guide.style.display = state.readingGuide ? 'block' : 'none';
+
+    // Update UI
+    updateUI();
+    saveState();
+  }
+
+  function updateUI() {
+    // Multi-level indicators
+    ['fontScale', 'letterSpacing'].forEach(key => {
+      const container = document.getElementById('a11y' + capitalize(key) + 'Levels');
+      const card = document.getElementById('a11y' + capitalize(key) + 'Card');
+      if (container) {
+        container.querySelectorAll('.a11y-level-num').forEach(el => {
+          const idx = parseInt(el.dataset.idx);
+          el.classList.toggle('a11y-level-num--active', idx === state[key]);
+        });
+      }
+      if (card) card.classList.toggle('a11y-feature-card--active', state[key] > 0);
+    });
+
+    // Toggle checkmarks
+    Object.keys(A11Y_TOGGLES).forEach(key => {
+      const check = document.getElementById('a11y' + capitalize(key) + 'Check');
+      const card = document.getElementById('a11y' + capitalize(key) + 'Card');
+      if (check) {
+        const icon = check.querySelector('i');
+        if (icon) {
+          icon.style.color = state[key] ? '#14918B' : 'rgba(255,255,255,0.2)';
+        }
+      }
+      if (card) card.classList.toggle('a11y-feature-card--active', !!state[key]);
+    });
+  }
+
+  function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  // Public API
+  window.cycleA11yLevel = function(key) {
+    const max = A11Y_CLASSES[key].length - 1;
+    state[key] = (state[key] + 1) % (max + 1);
+    applyState();
+  };
+
+  window.toggleA11yFeature = function(key) {
+    state[key] = !state[key];
+    applyState();
+  };
+
+  window.enableAllA11y = function() {
+    state.fontScale = 1;
+    state.letterSpacing = 1;
+    Object.keys(A11Y_TOGGLES).forEach(k => state[k] = true);
+    applyState();
+  };
+
+  window.disableAllA11y = function() {
+    state.fontScale = 0;
+    state.letterSpacing = 0;
+    Object.keys(A11Y_TOGGLES).forEach(k => state[k] = false);
+    applyState();
+  };
+
+  window.closeA11yPanel = function() {
+    const panel = document.getElementById('a11yPanel');
+    const overlay = document.getElementById('a11yOverlay');
+    if (panel) panel.classList.remove('a11y-panel--open');
+    if (overlay) overlay.classList.remove('a11y-panel__overlay--visible');
+    document.body.style.overflow = '';
+  };
+
+  // Reading guide follows mouse
+  document.addEventListener('mousemove', function(e) {
+    const guide = document.getElementById('readingGuide');
+    if (guide && state.readingGuide) {
+      guide.style.top = e.clientY + 'px';
+    }
+  });
+
+  // Init on load
+  applyState();
+})();
+</script>
+<script>
+(function() {
+  // ===== DARK MODE TOGGLE =====
+  function isDarkMode() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  function updateLogo() {
+    const dark = isDarkMode();
+    document.querySelectorAll('.nav-logo--light').forEach(el => el.style.display = dark ? 'none' : '');
+    document.querySelectorAll('.nav-logo--dark').forEach(el => el.style.display = dark ? '' : 'none');
+  }
+
+  function updateDarkModeUI() {
+    const sunIcon = document.getElementById('darkModeIconSun');
+    const moonIcon = document.getElementById('darkModeIconMoon');
+    const btn = document.getElementById('darkModeToggleBtn');
+
+    if (isDarkMode()) {
+      if (sunIcon) { sunIcon.style.opacity = '1'; sunIcon.style.transform = 'rotate(0deg) scale(1)'; }
+      if (moonIcon) { moonIcon.style.opacity = '0'; moonIcon.style.transform = 'rotate(90deg) scale(0.5)'; }
+      if (btn) btn.title = 'Switch to light mode';
+    } else {
+      if (moonIcon) { moonIcon.style.opacity = '1'; moonIcon.style.transform = 'rotate(0deg) scale(1)'; }
+      if (sunIcon) { sunIcon.style.opacity = '0'; sunIcon.style.transform = 'rotate(-90deg) scale(0.5)'; }
+      if (btn) btn.title = 'Switch to dark mode';
+    }
+
+    updateLogo();
+  }
+
+  window.toggleDarkMode = function() {
+    const newDark = !isDarkMode();
+    if (newDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('museum-dark-mode', String(newDark));
+    updateDarkModeUI();
+
+    // Update loading screen background if still present
+    var ls = document.getElementById('loadingScreen');
+    if (ls) ls.style.background = newDark ? '#121212' : '#F7F7F5';
+  };
+
+  // Init
+  updateDarkModeUI();
+})();
+</script>
+<script>
+(function() {
+  var popup = document.getElementById('popupDialog');
+  if (!popup) return;
+
+  var frequency = popup.getAttribute('data-frequency') || 'once_per_session';
+  var storageKey = 'museum-popup-dismissed';
+
+  // Check if popup should be shown based on frequency
+  function shouldShowPopup() {
+    if (frequency === 'every_time') return true;
+
+    if (frequency === 'once_per_session') {
+      return sessionStorage.getItem(storageKey) !== '1';
+    }
+
+    if (frequency === 'once_per_day') {
+      var lastDismissed = localStorage.getItem(storageKey);
+      if (!lastDismissed) return true;
+      var today = new Date().toDateString();
+      return lastDismissed !== today;
+    }
+
+    return true;
+  }
+
+  // Mark popup as dismissed
+  function markDismissed() {
+    if (frequency === 'once_per_session') {
+      sessionStorage.setItem(storageKey, '1');
+    } else if (frequency === 'once_per_day') {
+      localStorage.setItem(storageKey, new Date().toDateString());
+    }
+  }
+
+  // Close popup
+  window.closePopupDialog = function() {
+    popup.classList.remove('popup-active');
+    popup.classList.add('popup-closing');
+    document.body.classList.remove('popup-open');
+    markDismissed();
+    setTimeout(function() {
+      popup.style.display = 'none';
+      popup.classList.remove('popup-closing');
+    }, 300);
+  };
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.style.display !== 'none') {
+      closePopupDialog();
+    }
+  });
+
+  // Show popup after a brief delay (let page settle)
+  if (shouldShowPopup()) {
+    setTimeout(function() {
+      popup.style.display = 'flex';
+      document.body.classList.add('popup-open');
+      // Trigger animation on next frame
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          popup.classList.add('popup-active');
+        });
+      });
+    }, 800);
+  }
+})();
+</script>
+<script>
+(function() {
+  const CONSENT_KEY = 'museum-cookie-consent';
+
+  // Support resetting cookie consent via URL parameter (e.g. ?reset-cookie=1 or ?cookie-test=1)
+  if (window.location.search.includes('reset-cookie=1') || window.location.search.includes('cookie-test=1')) {
+    localStorage.removeItem(CONSENT_KEY);
+    console.log('Cookie consent reset triggered via URL parameter.');
+  }
+
+  console.log('Cookie consent script loaded. Consent state:', localStorage.getItem(CONSENT_KEY));
+
+  window.showCookieBanner = function() {
+    const banner = document.getElementById('cookieConsentBanner');
+    if (!banner) {
+      console.warn('Cookie consent banner element not found in DOM.');
+      return;
+    }
+    console.log('Showing cookie consent banner...');
+    banner.classList.remove('hidden');
+    // Force reflow
+    banner.offsetHeight;
+    banner.classList.add('cookie-active');
+  };
+
+  window.closeCookieBanner = function(consentType) {
+    const banner = document.getElementById('cookieConsentBanner');
+    if (!banner) return;
+    console.log('Closing cookie consent banner. Choice:', consentType);
+    banner.classList.add('cookie-closing');
+    localStorage.setItem(CONSENT_KEY, consentType);
+    
+    // Smooth transition cleanup
+    setTimeout(function() {
+      banner.classList.remove('cookie-active', 'cookie-closing');
+      banner.classList.add('hidden');
+    }, 600);
+  };
+
+  window.acceptAllCookies = function() {
+    closeCookieBanner('all');
+  };
+
+  window.acceptNecessaryCookies = function() {
+    closeCookieBanner('necessary');
+  };
+
+  // Run initialization logic as soon as DOM is interactive
+  function initCookieConsent() {
+    if (!localStorage.getItem(CONSENT_KEY)) {
+      console.log('No prior consent found. Scheduling banner display...');
+      setTimeout(showCookieBanner, 1000);
+    } else {
+      console.log('Prior cookie consent choice found: ' + localStorage.getItem(CONSENT_KEY));
+    }
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initCookieConsent();
+  } else {
+    document.addEventListener('DOMContentLoaded', initCookieConsent);
+  }
+})();
+</script>
+  
+  <style>
+    /* Push Chatbase widget to the left of the dark mode toggle */
+    #chatbase-bubble-button { display: none !important; }
+    #chatbase-bubble-window { display: none !important; }
+  </style>
+  
+</body>
+</html>

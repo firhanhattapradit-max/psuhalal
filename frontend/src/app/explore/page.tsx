@@ -33,14 +33,10 @@ export default function ExplorePage() {
                 </div>
 
               </div>
-              <div className="px-6 pb-6 grid grid-cols-2 gap-3 mt-auto">
-                <Link href={prov.link} className="flex justify-center items-center py-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-xl font-medium transition-colors">
-                  รายละเอียด
+              <div className="px-6 pb-6 mt-auto">
+                <Link href={prov.link} className="flex justify-center items-center py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-bold transition-colors w-full shadow-md hover:shadow-lg">
+                  ดูรายละเอียดจังหวัด
                 </Link>
-                <a href={`https://www.google.com/maps/dir/?api=1&destination=${prov.enName},Thailand`} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors shadow-sm gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clipRule="evenodd" /></svg>
-                  นำทาง
-                </a>
               </div>
             </div>
           ))}

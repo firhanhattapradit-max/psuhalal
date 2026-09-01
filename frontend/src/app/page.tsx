@@ -81,7 +81,7 @@ export default function LandingPage() {
             ✨ The Future of Halal Tourism
           </motion.div>
           
-          <div className="h-32 md:h-40 flex items-center justify-center overflow-hidden mb-6 w-full">
+          <div className="h-32 md:h-40 flex items-center justify-center overflow-hidden mb-16 w-full">
             <AnimatePresence mode="wait">
               <motion.h1 
                 key={wordIdx}
@@ -101,7 +101,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full sm:w-auto mt-4"
           >
             <Link href="/map" className="group relative px-8 py-4 w-full sm:w-auto flex justify-center items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] transition-all duration-300 hover:-translate-y-1 overflow-hidden">
               <div className="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_forwards]"></div>
